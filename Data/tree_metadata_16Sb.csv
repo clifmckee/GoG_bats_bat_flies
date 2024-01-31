@@ -1,0 +1,18 @@
+Nickname,Isolate/Strain/Clone,Species,Host,Location,Accession,Group
+GoG_G10_10_Ra_GH,G10-10-Ra-GH,Eucampsipoda africana symbiont 1,Rousettus aegyptiacus,Ghana,GH,3
+GoG_G2_55_Ra_ST,G2-55-Ra-ST,Eucampsipoda africana symbiont 2,Rousettus aegyptiacus,Sao Tome,ST,3
+GoG_G2_61_Eh_ST,G2-61-Eh-ST,Cyclopodia greefi symbiont,Eidolon helvum,Sao Tome,ST,2
+Sym_C.dubia_KT751122,9_CycDub_Enterobacteriales,Cyclopodia dubia symbiont,,Madagascar,KT751122,1
+Sym_C.dubia_KT751123,8_CycDub_Enterobacteriales,Cyclopodia dubia symbiont,,Madagascar,KT751123,1
+Sym_C.dubia_KT751126,5_CycDub_Enterobacteriales,Cyclopodia dubia symbiont,,Madagascar,KT751126,1
+Sym_D.biannulata_KC597770,VR35,Dipseliopoda biannulata symbiont,,Kenya,KC597770,1
+Sym_E.africana_KC597710,BDP4416,Eucampsipoda africana symbiont,,Kenya,KC597710,1
+Sym_E.cf.latisterna_KC597754,P636,Eucampsipoda cf. latisterna symbiont,,China,KC597754,1
+Sym_E.cf.latisterna_KC597755,P639,Eucampsipoda cf. latisterna symbiont,,China,KC597755,1
+Sym_E.inermis_KC597725,JAE514,Eucampsipoda inermis symbiont,,Philippines,KC597725,1
+Sym_E.inermis_KC597758,P4496,Eucampsipoda inermis symbiont,,Philippines,KC597758,1
+Sym_E.madagascarensis_KT751117,J50_EucMad_Enterobacteriales,Eucampsipoda madagascarensis symbiont,,Madagascar,KT751117,1
+Sym_E.theodori_KT751115,J14_EucThe_Enterobacteriales,Eucampsipoda theodori symbiont,,Comoros,KT751115,1
+Sym_L.ferrarii_KC597751,P414,Leptocyclopodia ferrarii symbiont,,China,KC597751,1
+Sym_L.ferrarii_KC597757,P2650,Leptocyclopodia ferrarii symbiont,,China,KC597757,1
+Sym_Leptocyclopodia.sp_KC597727,JAE1033,Leptocyclopodia sp. symbiont,,Philippines,KC597727,1
