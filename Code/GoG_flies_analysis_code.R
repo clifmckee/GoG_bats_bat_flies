@@ -67,7 +67,7 @@ map_A <- ggplot() +
 # Make Gulf of Guinea map
 map_B <- ggplot() +
     geom_polygon(data=speciesDF, aes(x=long, y=lat, group=group, fill=sp), alpha=0.5) +
-    geom_map(data=world, map=world, aes(map_id=region), fill=NA, colour='grey50', size=0.1) +
+    geom_map(data=world, map=world, aes(map_id=region), fill=NA, colour='grey50', linewidth=0.1) +
     scale_fill_manual(name='Species', values=c('#009E73', '#E69F00')) +
     scale_x_continuous(name='Longitude', breaks=seq(0, 10, 1)) +
     scale_y_continuous(name='Latitude', breaks=seq(-2, 6, 1)) +
@@ -548,7 +548,7 @@ sum_jaccard_fit <- summary(jaccard_fit); sum_jaccard_fit
 cor.test(distance$jaccard, distance$main)
 
 # Plot mainland model fit for Bartonella dissimilarity
-ggplot(data=distance) +
+(bart_dissim <- ggplot(data=distance) +
   geom_smooth(aes(x=main, y=spear), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
   geom_text(aes(x=main, y=spear, label=label), size=3, colour='black', angle = 30) +
   annotate('text', x=300, y=0.25, colour='grey50',
@@ -556,7 +556,7 @@ ggplot(data=distance) +
                        '\nP =', round(sum_spear_fit$coefficients[2, 4], 3))) +
   scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
   scale_y_continuous(name='Community dissimilarity', limits=c(-0.01, 0.3), breaks=seq(0, 0.3, 0.1)) +
-  theme_cowplot(font_size=12)
+  theme_cowplot(font_size=12))
 ggsave('Results/GoG_model_fit.pdf', height=4, width=5, units='in')
 ggsave('Results/GoG_model_fit.png', height=4, width=5, units='in', bg='white', dpi=300)
 ggsave('Results/GoG_model_fit.tiff', height=4, width=5, units='in', bg='white', dpi=300)
@@ -679,7 +679,7 @@ df_e16S_tree_data <- data.frame(label = sort(e16S_root_tree$tip.label),
              size = 2, hjust = 1.1, vjust = -0.3, color = "grey50") +
   geom_treescale(x = 0, y = -0.5, width = 0.1, fontsize = 3) +
   xlim(0, 0.3) +
-  scale_color_manual(values=c('#000000', '#009E73', '#E69F00', '#CC79A7')) +
+  scale_color_manual(values=c('#000000', '#007E5C', '#B87F00', '#A36085')) +
   theme_tree() +
   theme(legend.position='none',
         plot.subtitle=element_text(size = 10, hjust = 0.125)) +
@@ -687,14 +687,15 @@ df_e16S_tree_data <- data.frame(label = sort(e16S_root_tree$tip.label),
 
 # Read in ectoparasite mitochondrial 16S rRNA data
 mt16Se <- read.csv('Data/GoG_genotyping_16Se.csv', head=T)
-m.mt16Se <- melt(mt16Se, id.vars=c('Species', 'Location'), measure.vars='Count')
+m.mt16Se <- melt(mt16Se, id.vars=c('Species', 'Location'), measure.vars='Count') %>%
+  filter(Location != "Nigeria")
 
 # Plot ectoparasite mitochondrial 16S rRNA data
 (gen_B <- ggplot(data=m.mt16Se, aes(x=Location, y=value, fill=Species)) +
     geom_col(position='stack') +
     scale_fill_manual(name='Bat fly\nhaplotype', values=c(C_greefi_cols[1], D_biannulata_cols, E_africana_cols[1:2])) +
-    scale_x_discrete(limits=c('Ghana', 'Nigeria', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
-                     labels=c('Ghana', 'Nigeria', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
+    scale_x_discrete(limits=c('Ghana', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
+                     labels=c('Ghana', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
                      name='Location') +
     scale_y_continuous(name='Count', limits=c(0, 100), breaks=seq(0, 100, 25)) +
     theme_cowplot(font_size=12) +
@@ -726,8 +727,8 @@ df_cytB_tree_data <- data.frame(label = sort(cytB_root_tree$tip.label),
     geom_text2(aes(subset = !isTip & as.numeric(label) >= 0, label = label),
                size = 2, hjust = 1.1, vjust = -0.3, color = "grey50") +
     geom_treescale(x = 0, y = -0.5, width = 0.1, fontsize = 3) +
-    xlim(0, 0.5) +
-    scale_color_manual(values=c('#000000', '#009E73', '#E69F00')) +
+    xlim(0, 0.6) +
+    scale_color_manual(values=c('#000000', '#007E5C', '#B87F00')) +
     theme_tree() +
     theme(legend.position='none',
           plot.subtitle=element_text(size = 10, hjust = 0.125)) +
@@ -735,14 +736,15 @@ df_cytB_tree_data <- data.frame(label = sort(cytB_root_tree$tip.label),
 
 # Read in ectoparasite mitochondrial cytB data
 mtcytB <- read.csv('Data/GoG_genotyping_cytB.csv', head=T)
-m.mtcytB <- melt(mtcytB, id.vars=c('Species', 'Location'), measure.vars='Count')
+m.mtcytB <- melt(mtcytB, id.vars=c('Species', 'Location'), measure.vars='Count') %>%
+  filter(Location != "Nigeria")
 
 # Plot ectoparasite mitochondrial cytB data
 (gen_D <- ggplot(data=m.mtcytB, aes(x=Location, y=value, fill=Species)) +
     geom_col(position='stack') +
     scale_fill_manual(name='Bat fly\nhaplotype', values=c(C_greefi_cols[1:2], E_africana_cols[1:5])) +
-    scale_x_discrete(limits=c('Ghana', 'Nigeria', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
-                     labels=c('Ghana', 'Nigeria', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
+    scale_x_discrete(limits=c('Ghana', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
+                     labels=c('Ghana', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
                      name='Location') +
     scale_y_continuous(name='Count', limits=c(0, 75), breaks=seq(0, 75, 25)) +
     theme_cowplot(font_size=12) +
@@ -775,7 +777,7 @@ df_b16S_tree_data <- data.frame(label = sort(b16S_root_tree$tip.label),
                size = 2, hjust = 1.1, vjust = -0.3, color = "grey50") +
     geom_treescale(x = 0, y = -0.5, width = 0.1, fontsize = 3) +
     xlim(0, 0.4) +
-    scale_color_manual(values=c('#000000', '#009E73', '#E69F00')) +
+    scale_color_manual(values=c('#000000', '#007E5C', '#B87F00')) +
     theme_tree() +
     theme(legend.position='none',
           plot.subtitle=element_text(size = 10, hjust = 0.125)) +
@@ -783,14 +785,15 @@ df_b16S_tree_data <- data.frame(label = sort(b16S_root_tree$tip.label),
 
 # Read in ectoparasite bacterial symbiont 16S rRNA data
 mt16Sb <- read.csv('Data/GoG_genotyping_16Sb.csv', head=T)
-m.mt16Sb <- melt(mt16Sb, id.vars=c('Species', 'Location'), measure.vars='Count')
+m.mt16Sb <- melt(mt16Sb, id.vars=c('Species', 'Location'), measure.vars='Count') %>%
+  filter(Location != "Nigeria")
 
 # Plot ectoparasite bacterial symbiont 16S rRNA data
 (gen_F <- ggplot(data=m.mt16Sb, aes(x=Location, y=value, fill=Species)) +
     geom_col(position='stack') +
     scale_fill_manual(name='Symbiont\nhaplotype', values=c(C_greefi_cols[1], E_africana_cols[1:2])) +
-    scale_x_discrete(limits=c('Ghana', 'Nigeria', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
-                     labels=c('Ghana', 'Nigeria', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
+    scale_x_discrete(limits=c('Ghana', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
+                     labels=c('Ghana', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
                      name='Location') +
     scale_y_continuous(name='Count', limits=c(0, 30), breaks=seq(0, 30, 10)) +
     ylab('Relative abundance') +
@@ -806,8 +809,8 @@ counts <- plot_grid(gen_B, gen_D, gen_F, labels=c('B', 'D', 'F'), label_size=16,
                     ncol=1, nrow=3, align='v')
 plot_grid(trees, counts, ncol=2)
 ggsave('Results/GoG_haplotyping.pdf', height=12, width=10, units='in')
-ggsave('Results/GoG_haplotyping.png', height=12, width=10, units='in', dpi=300)
-ggsave('Results/GoG_haplotyping.tiff', height=12, width=10, units='in', dpi=300)
+ggsave('Results/GoG_haplotyping.png', height=12, width=10, units='in', dpi=300, bg = "white")
+ggsave('Results/GoG_haplotyping.tiff', height=12, width=10, units='in', dpi=300, bg = "white")
 
 # Bat fly bacterial symbiont prevalence
 sym <- read.csv('Data/GoG_symbionts.csv', header=T)
@@ -815,6 +818,25 @@ sym.CI <- binom.wilson(sym$Pos, sym$Tested, conf.level=0.95)
 sym.CI <- cbind(sym[,1:2], sym.CI)
 write.csv(sym.CI, 'Results/sym_CI.csv')
 
+###-----------------------
+### Graphical abstract ---
+###-----------------------
+
+abstract_row1 <- plot_grid(map_B, gen_C,
+                           ncol = 2, axis = "lb", align = "hv")
+abstract_row2 <- plot_grid(div_A +
+                             scale_fill_viridis_d(direction=-1, option='C', name='Bartonella\nspecies',
+                                                  labels=c('E1', 'E2', 'E3', 'E4', 'E5', 'Ew', 'Eh6', 'Eh7')) +
+                             labs(y = "Bartonella relative abundance"),
+                           bart_dissim +
+                             scale_x_continuous(name='Distance between locations', limits=c(0, 605), breaks=seq(0, 600, 200)) +
+                             scale_y_continuous(name='Bartonella community dissimilarity', limits=c(-0.01, 0.3), breaks=seq(0, 0.3, 0.1)),
+                           ncol = 2, axis = "lb", align = "hv")
+
+abstract <- plot_grid(abstract_row1, abstract_row2, nrow = 2, rel_heights = c(5/9, 4/9), align = "v")
+ggsave('Results/GoG_graphical_abstract.pdf', height = 9, width = 10, units = "in")
+ggsave('Results/GoG_graphical_abstract.png', height = 9, width = 10, units = "in", dpi = 300, bg = "white")
+ggsave('Results/GoG_graphical_abstract.tiff', height = 9, width = 10, units = "in", dpi = 300, bg = "white")
 
 ###-------------------------------------------------------------------
 ### Supplementary Figure: Bartonella concatenated ftsZ + gltA tree ---

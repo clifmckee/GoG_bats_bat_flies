@@ -1,11 +1,11 @@
 Loc1,Loc2,Comparison,Dist,mtDNA,microsats
-BI,GH,Bioko-Mainland,35.86,0.00,0.00
-PR,GH,Príncipe-Mainland,217.23,0.50,0.05
-ST,GH,São Tomé-Mainland,242.36,0.31,0.04
-AN,GH,Annobón-Mainland,349.32,0.57,0.12
-PR,BI,Príncipe-Bioko,207.61,0.46,0.04
-ST,BI,São Tomé-Bioko,372.72,0.29,0.03
-AN,BI,Annobón-Bioko,604.56,0.50,0.11
-PR,ST,São Tomé-Príncipe,147.14,0.07,0.01
-PR,AN,Annobón-Príncipe,378.78,0.77,0.07
-ST,AN,Annobón-São Tomé,185.52,0.58,0.07
+BI,GH,Bioko-Mainland,36,0,0
+PR,GH,Príncipe-Mainland,217,0.5,0.05
+ST,GH,São Tomé-Mainland,242,0.31,0.04
+AN,GH,Annobón-Mainland,349,0.57,0.12
+PR,BI,Príncipe-Bioko,208,0.46,0.04
+ST,BI,São Tomé-Bioko,373,0.29,0.03
+AN,BI,Annobón-Bioko,605,0.5,0.11
+PR,ST,São Tomé-Príncipe,147,0.07,0.01
+PR,AN,Annobón-Príncipe,379,0.77,0.07
+ST,AN,Annobón-São Tomé,186,0.58,0.07

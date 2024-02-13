@@ -1,7 +1,7 @@
 Nickname,Isolate/Strain/Clone,Species,Host,Location,Accession,Group
-GoG_G10_10_Ra_GH,G10-10-Ra-GH,Eucampsipoda africana symbiont 1,Rousettus aegyptiacus,Ghana,GH,3
-GoG_G2_55_Ra_ST,G2-55-Ra-ST,Eucampsipoda africana symbiont 2,Rousettus aegyptiacus,Sao Tome,ST,3
-GoG_G2_61_Eh_ST,G2-61-Eh-ST,Cyclopodia greefi symbiont,Eidolon helvum,Sao Tome,ST,2
+GoG_G10_10_Ra_GH,G10-10-Ra-GH,Eucampsipoda africana symbiont 1,Rousettus aegyptiacus,Ghana,PP259997,3
+GoG_G2_55_Ra_ST,G2-55-Ra-ST,Eucampsipoda africana symbiont 2,Rousettus aegyptiacus,Sao Tome,PP259995,3
+GoG_G2_61_Eh_ST,G2-61-Eh-ST,Cyclopodia greefi symbiont,Eidolon helvum,Sao Tome,PP259996,2
 Sym_C.dubia_KT751122,9_CycDub_Enterobacteriales,Cyclopodia dubia symbiont,,Madagascar,KT751122,1
 Sym_C.dubia_KT751123,8_CycDub_Enterobacteriales,Cyclopodia dubia symbiont,,Madagascar,KT751123,1
 Sym_C.dubia_KT751126,5_CycDub_Enterobacteriales,Cyclopodia dubia symbiont,,Madagascar,KT751126,1
