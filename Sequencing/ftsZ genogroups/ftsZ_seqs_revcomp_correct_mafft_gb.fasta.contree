@@ -1,0 +1,617 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=515;
+	taxlabels
+	'Bartonella.sp_Cyc.dub_Eid.dup_KEL04-2'
+	'Bartonella.sp_Eidolon.helvum_E1_B23987_KE'
+	'Bartonella.sp_Eidolon.helvum_E2_B23979_KE'
+	'Bartonella.sp_Eidolon.helvum_E2_B24225_KE'
+	'Bartonella.sp_Eidolon.helvum_E2_B39294_GH'
+	'Bartonella.sp_Eidolon.helvum_E2_B40396_TA'
+	'Bartonella.sp_Eidolon.helvum_E2_B40400_TA'
+	'Bartonella.sp_Eidolon.helvum_E3_B32138_NI'
+	'Bartonella.sp_Eidolon.helvum_E3_B39300_GH'
+	'Bartonella.sp_Eidolon.helvum_E4_B39301_GH'
+	'Bartonella.sp_Eidolon.helvum_E5_B39233_GH'
+	'Bartonella.sp_Eidolon.helvum_E5_B39249_GH'
+	'Bartonella.sp_Eidolon.helvum_E5_B39296_GH'
+	'Bartonella.sp_Eidolon.helvum_E5_B40014_TA'
+	'Bartonella.sp_Eidolon.helvum_E5_B40908_UG'
+	Eh6-0510-A106_GH
+	Eh6-1109-Q131_GH
+	Eh7-0110-R16_GH
+	GoG_G10_11_Ra_GH
+	GoG_G10_18_Ra_GH
+	GoG_G10_19_Ra_GH
+	GoG_G10_20_Ra_GH
+	GoG_G10_21_Ra_GH_1
+	GoG_G10_24_Ra_GH
+	GoG_G10_28_Ra_GH
+	GoG_G10_30_Ra_GH
+	GoG_G10_31_Ra_GH
+	GoG_G10_32_Ra_GH
+	GoG_G10_35_Ra_GH
+	GoG_G10_36_Ra_GH
+	GoG_G10_43_Ra_GH
+	GoG_G10_44_Ra_GH
+	GoG_G10_45_Ra_GH
+	GoG_G10_48_Ra_GH
+	GoG_G10_4_Eh_GH
+	GoG_G10_50_Ra_GH
+	GoG_G10_51_Ra_GH
+	GoG_G10_52_Ra_GH
+	GoG_G10_5_Eh_GH_1
+	GoG_G10_5_Eh_GH_2
+	GoG_G10_6_Eh_GH
+	GoG_G11_10_Eh_GH
+	GoG_G11_12_Eh_GH
+	GoG_G11_14_Eh_GH
+	GoG_G11_16_Eh_GH
+	GoG_G11_17_Eh_GH
+	GoG_G11_18_Eh_GH
+	GoG_G11_1_Eh_GH
+	GoG_G11_2_Eh_GH
+	GoG_G11_4_Eh_GH
+	GoG_G11_7_Eh_GH
+	GoG_G11_9_Eh_GH
+	GoG_G1_11_Eh_ST
+	GoG_G1_12_Eh_ST
+	GoG_G1_13_Eh_ST
+	GoG_G1_15_Eh_ST
+	GoG_G1_19_Eh_ST_1
+	GoG_G1_19_Eh_ST_2
+	GoG_G1_1_Eh_PR
+	GoG_G1_22_Eh_PR
+	GoG_G1_23_Eh_ST
+	GoG_G1_24_Eh_ST_1
+	GoG_G1_24_Eh_ST_2
+	GoG_G1_25_Eh_ST
+	GoG_G1_27_Eh_ST
+	GoG_G1_29_Eh_ST
+	GoG_G1_31_Eh_ST
+	GoG_G1_32_Eh_ST
+	GoG_G1_34_Eh_ST
+	GoG_G1_35_Eh_ST
+	GoG_G1_36_Eh_ST
+	GoG_G1_38_Eh_ST
+	GoG_G1_39_Eh_ST
+	GoG_G1_3_Eh_PR
+	GoG_G1_40_Eh_ST
+	GoG_G1_41_Eh_PR
+	GoG_G1_42_Eh_ST
+	GoG_G1_43_Eh_UNK
+	GoG_G1_5_Eh_PR_1
+	GoG_G1_5_Eh_PR_2
+	GoG_G1_6_Eh_PR_1
+	GoG_G1_6_Eh_PR_2
+	GoG_G1_7_Eh_PR
+	GoG_G1_8_Eh_ST_1
+	GoG_G1_8_Eh_ST_2
+	GoG_G2_12_Eh_PR
+	GoG_G2_18_Eh_PR
+	GoG_G2_19_Eh_ST
+	GoG_G2_1_Eh_ST
+	GoG_G2_20_Eh_ST
+	GoG_G2_23_Eh_ST
+	GoG_G2_24_Eh_ST
+	GoG_G2_26_Eh_ST
+	GoG_G2_27_Eh_ST
+	GoG_G2_2_Eh_ST
+	GoG_G2_31_Eh_PR
+	GoG_G2_33_Eh_ST
+	GoG_G2_34_Eh_ST
+	GoG_G2_35_Eh_ST
+	GoG_G2_36_Eh_ST
+	GoG_G2_37_Eh_ST_1
+	GoG_G2_37_Eh_ST_2
+	GoG_G2_38_Eh_ST
+	GoG_G2_39_Eh_ST
+	GoG_G2_3_Eh_PR
+	GoG_G2_40_Eh_ST
+	GoG_G2_42_Eh_ST
+	GoG_G2_44_Eh_PR
+	GoG_G2_45_Eh_ST
+	GoG_G2_46_Eh_ST_1
+	GoG_G2_46_Eh_ST_2
+	GoG_G2_47_Eh_ST
+	GoG_G2_48_Eh_ST
+	GoG_G2_49_Eh_ST
+	GoG_G2_4_Eh_PR
+	GoG_G2_50_Eh_ST
+	GoG_G2_51_Eh_ST
+	GoG_G2_52_Eh_PR
+	GoG_G2_53_Eh_ST
+	GoG_G2_54_Eh_PR
+	GoG_G2_55_Ra_ST
+	GoG_G2_58_Eh_ST_1
+	GoG_G2_58_Eh_ST_2
+	GoG_G2_59_Eh_ST
+	GoG_G2_5_Eh_ST
+	GoG_G2_60_Eh_ST
+	GoG_G2_62_Eh_ST
+	GoG_G2_63_Eh_ST
+	GoG_G2_64_Eh_ST
+	GoG_G2_65_Eh_ST
+	GoG_G2_66_Eh_ST
+	GoG_G2_67_Eh_ST
+	GoG_G2_68_Eh_ST
+	GoG_G2_6_Eh_ST
+	GoG_G2_70_Eh_ST
+	GoG_G2_71_Eh_PR
+	GoG_G2_73_Eh_PR
+	GoG_G2_74_Eh_PR
+	GoG_G2_76_Eh_PR
+	GoG_G2_77_Eh_PR
+	GoG_G2_79_Eh_ST
+	GoG_G2_7_Eh_ST
+	GoG_G2_81_Eh_PR
+	GoG_G2_82_Eh_PR
+	GoG_G2_84_Eh_ST
+	GoG_G2_86_Eh_ST
+	GoG_G2_87_Eh_ST
+	GoG_G2_8_Eh_ST_1
+	GoG_G2_8_Eh_ST_2
+	GoG_G2_90_Eh_ST
+	GoG_G2_91_Eh_ST
+	GoG_G2_92_Eh_ST
+	GoG_G3_12_Eh_PR_1
+	GoG_G3_12_Eh_PR_2
+	GoG_G3_14_Ra_PR
+	GoG_G3_15_Ra_PR
+	GoG_G3_16_Eh_PR
+	GoG_G3_17_Eh_PR
+	GoG_G3_18_Ra_PR
+	GoG_G3_19_Eh_PR_1
+	GoG_G3_19_Eh_PR_2
+	GoG_G3_21_Eh_PR
+	GoG_G3_22_Eh_PR
+	GoG_G3_23_Eh_PR
+	GoG_G3_25_Eh_PR_1
+	GoG_G3_25_Eh_PR_2
+	GoG_G3_27_Eh_PR_1
+	GoG_G3_27_Eh_PR_2
+	GoG_G3_28_Eh_PR
+	GoG_G3_2_Eh_ST
+	GoG_G3_30_Eh_ST
+	GoG_G3_32_Eh_ST
+	GoG_G3_33_Eh_ST
+	GoG_G3_35_Eh_ST
+	GoG_G3_37_Eh_PR
+	GoG_G3_38_Eh_PR
+	GoG_G3_41_Ra_PR
+	GoG_G3_43_Eh_ST
+	GoG_G3_44_Eh_PR
+	GoG_G3_45_Eh_PR
+	GoG_G3_48_Eh_ST
+	GoG_G3_49_Eh_ST
+	GoG_G3_4_Eh_ST
+	GoG_G3_50_Eh_ST
+	GoG_G3_51_Eh_ST
+	GoG_G3_52_Eh_ST
+	GoG_G3_53_Eh_ST
+	GoG_G3_54_Eh_PR
+	GoG_G3_55_Eh_PR
+	GoG_G3_58_Eh_ST
+	GoG_G3_59_Eh_ST
+	GoG_G3_5_Eh_ST
+	GoG_G3_60_Eh_ST
+	GoG_G3_61_Eh_ST_1
+	GoG_G3_61_Eh_ST_2
+	GoG_G3_62_Eh_ST
+	GoG_G3_64_Eh_ST
+	GoG_G3_66_Eh_PR
+	GoG_G3_67_Eh_ST_1
+	GoG_G3_67_Eh_ST_2
+	GoG_G3_6_Eh_ST
+	GoG_G3_71_Eh_PR
+	GoG_G3_72_Eh_PR_1
+	GoG_G3_72_Eh_PR_2
+	GoG_G3_74_Eh_ST
+	GoG_G3_75_Eh_PR
+	GoG_G3_77_Eh_ST
+	GoG_G3_78_Eh_PR
+	GoG_G3_7_Eh_ST
+	GoG_G3_80_Eh_PR
+	GoG_G3_83_Eh_PR_1
+	GoG_G3_83_Eh_PR_2
+	GoG_G3_85_Eh_PR
+	GoG_G3_86_Eh_ST
+	GoG_G3_87_Eh_ST_1
+	GoG_G3_87_Eh_ST_2
+	GoG_G3_88_Eh_ST
+	GoG_G3_89_Eh_ST
+	GoG_G3_8_Eh_PR
+	GoG_G3_90_Eh_ST
+	GoG_G3_91_Eh_ST_1
+	GoG_G3_91_Eh_ST_2
+	GoG_G3_92_Eh_ST
+	GoG_G3_93_Eh_PR
+	GoG_G4_11_Eh_ST_1
+	GoG_G4_11_Eh_ST_2
+	GoG_G4_12_Eh_ST
+	GoG_G4_13_Eh_ST
+	GoG_G4_14_Eh_ST
+	GoG_G4_15_Eh_PR_1
+	GoG_G4_15_Eh_PR_2
+	GoG_G4_16_Eh_PR
+	GoG_G4_17_Eh_ST
+	GoG_G4_19_Eh_ST
+	GoG_G4_1_Eh_ST
+	GoG_G4_22_Eh_PR
+	GoG_G4_23_Eh_ST
+	GoG_G4_24_Eh_ST
+	GoG_G4_27_Eh_ST
+	GoG_G4_29_Eh_BI
+	GoG_G4_2_Eh_ST
+	GoG_G4_30_Eh_BI
+	GoG_G4_33_Eh_BI
+	GoG_G4_38_Eh_BI
+	GoG_G4_3_Eh_PR
+	GoG_G4_40_Eh_BI
+	GoG_G4_41_Eh_BI
+	GoG_G4_42_Eh_BI
+	GoG_G4_44_Eh_BI
+	GoG_G4_46_Eh_BI
+	GoG_G4_47_Eh_BI
+	GoG_G4_48_Eh_BI
+	GoG_G4_49_Eh_BI
+	GoG_G4_51_Eh_BI
+	GoG_G4_53_Eh_BI_1
+	GoG_G4_53_Eh_BI_2
+	GoG_G4_54_Eh_BI
+	GoG_G4_58_Eh_BI
+	GoG_G4_62_Eh_BI
+	GoG_G4_68_Eh_BI
+	GoG_G4_69_Eh_BI_1
+	GoG_G4_69_Eh_BI_2
+	GoG_G4_6_Eh_ST
+	GoG_G4_74_Eh_BI
+	GoG_G4_76_Eh_BI
+	GoG_G4_77_Eh_BI
+	GoG_G4_78_Eh_BI
+	GoG_G4_79_Eh_BI
+	GoG_G4_7_Eh_ST
+	GoG_G4_80_Eh_BI
+	GoG_G4_85_Eh_BI
+	GoG_G4_90_Eh_BI
+	GoG_G4_91_Eh_BI
+	GoG_G5_10_Eh_GH
+	GoG_G5_11_Eh_GH
+	GoG_G5_12_Eh_GH
+	GoG_G5_13_Eh_GH_1
+	GoG_G5_13_Eh_GH_2
+	GoG_G5_14_Eh_GH
+	GoG_G5_15_Eh_GH
+	GoG_G5_1_Eh_GH_1
+	GoG_G5_1_Eh_GH_2
+	GoG_G5_2_Eh_GH
+	GoG_G5_3_Eh_GH
+	GoG_G5_4_Eh_GH_1
+	GoG_G5_4_Eh_GH_2
+	GoG_G5_6_Eh_GH
+	GoG_G5_8_Eh_GH
+	GoG_G6_11_Eh_BI
+	GoG_G6_18_Eh_BI
+	GoG_G6_19_Eh_BI
+	GoG_G6_25_Eh_BI
+	GoG_G6_26_Eh_BI
+	GoG_G6_27_Eh_BI
+	GoG_G6_28_Eh_BI
+	GoG_G6_33_Eh_BI
+	GoG_G6_35_Eh_BI
+	GoG_G6_40_Eh_BI
+	GoG_G6_41_Eh_BI
+	GoG_G6_53_Eh_BI
+	GoG_G6_56_Eh_BI
+	GoG_G6_57_Eh_BI
+	GoG_G6_58_Eh_BI
+	GoG_G6_61_Hm_BI_1
+	GoG_G6_61_Hm_BI_2
+	GoG_G6_63_Eh_BI
+	GoG_G6_65_Eh_BI
+	GoG_G6_71_Eh_BI
+	GoG_G6_74_Eh_BI
+	GoG_G6_78_Eh_BI
+	GoG_G6_88_Eh_BI
+	GoG_G6_89_Eh_BI_1
+	GoG_G6_89_Eh_BI_2
+	GoG_G6_91_Eh_BI
+	GoG_G6_92_Eh_BI
+	GoG_G7_10_Eh_BI
+	GoG_G7_11_Eh_BI
+	GoG_G7_12_Eh_BI
+	GoG_G7_13_Eh_BI
+	GoG_G7_17_Eh_BI
+	GoG_G7_19_Eh_BI
+	GoG_G7_1_Eh_BI_2
+	GoG_G7_21_Eh_AN
+	GoG_G7_23_Eh_AN
+	GoG_G7_24_Eh_AN
+	GoG_G7_25_Eh_AN
+	GoG_G7_26_Eh_AN
+	GoG_G7_27_Eh_AN
+	GoG_G7_28_Eh_AN
+	GoG_G7_29_Eh_AN
+	GoG_G7_2_Eh_BI_1
+	GoG_G7_2_Eh_BI_2
+	GoG_G7_30_Eh_AN
+	GoG_G7_31_Eh_AN
+	GoG_G7_32_Eh_AN_1
+	GoG_G7_32_Eh_AN_2
+	GoG_G7_33_Eh_AN_1
+	GoG_G7_33_Eh_AN_2
+	GoG_G7_34_Eh_AN
+	GoG_G7_35_Eh_AN
+	GoG_G7_36_Eh_AN_1
+	GoG_G7_36_Eh_AN_2
+	GoG_G7_37_Eh_AN_1
+	GoG_G7_37_Eh_AN_2
+	GoG_G7_38_Eh_AN
+	GoG_G7_39_Eh_AN
+	GoG_G7_40_Eh_AN
+	GoG_G7_41_Eh_AN
+	GoG_G7_42_Eh_AN
+	GoG_G7_43_Eh_AN
+	GoG_G7_45_Eh_AN
+	GoG_G7_46_Eh_AN
+	GoG_G7_47_Eh_AN
+	GoG_G7_50_Eh_AN
+	GoG_G7_51_Eh_AN_1
+	GoG_G7_51_Eh_AN_2
+	GoG_G7_52_Eh_AN
+	GoG_G7_53_Eh_AN
+	GoG_G7_54_Eh_AN
+	GoG_G7_55_Eh_AN
+	GoG_G7_56_Eh_AN
+	GoG_G7_57_Eh_AN
+	GoG_G7_59_Eh_AN_1
+	GoG_G7_59_Eh_AN_2
+	GoG_G7_60_Eh_AN
+	GoG_G7_62_Eh_AN
+	GoG_G7_63_Eh_AN
+	GoG_G7_64_Eh_AN
+	GoG_G7_65_Eh_AN_1
+	GoG_G7_65_Eh_AN_2
+	GoG_G7_66_Eh_AN_1
+	GoG_G7_66_Eh_AN_2
+	GoG_G7_67_Eh_AN_1
+	GoG_G7_67_Eh_AN_2
+	GoG_G7_68_Eh_AN_1
+	GoG_G7_68_Eh_AN_2
+	GoG_G7_6_Eh_BI
+	GoG_G7_70_Eh_AN
+	GoG_G7_71_Eh_AN_1
+	GoG_G7_71_Eh_AN_2
+	GoG_G7_72_Eh_AN
+	GoG_G7_73_Eh_AN
+	GoG_G7_74_Eh_AN
+	GoG_G7_75_Eh_AN
+	GoG_G7_76_Eh_AN
+	GoG_G7_77_Eh_AN_1
+	GoG_G7_77_Eh_AN_2
+	GoG_G7_78_Eh_AN
+	GoG_G7_79_Eh_AN_1
+	GoG_G7_79_Eh_AN_2
+	GoG_G7_80_Eh_AN_1
+	GoG_G7_80_Eh_AN_2
+	GoG_G7_81_Eh_AN
+	GoG_G7_82_Eh_AN
+	GoG_G7_83_Eh_AN
+	GoG_G7_85_Eh_AN
+	GoG_G7_86_Eh_AN
+	GoG_G7_87_Eh_AN_1
+	GoG_G7_87_Eh_AN_2
+	GoG_G7_88_Eh_AN
+	GoG_G7_89_Eh_AN
+	GoG_G7_90_Eh_AN_1
+	GoG_G7_90_Eh_AN_2
+	GoG_G7_91_Eh_AN
+	GoG_G7_92_Eh_AN
+	GoG_G7_93_Eh_AN_1
+	GoG_G7_93_Eh_AN_2
+	GoG_G8_10_Eh_AN_1
+	GoG_G8_10_Eh_AN_2
+	GoG_G8_10_Eh_AN_3
+	GoG_G8_10_Eh_AN_4
+	GoG_G8_12_Eh_AN
+	GoG_G8_22_Eh_AN
+	GoG_G8_25_Eh_AN_1
+	GoG_G8_25_Eh_AN_2
+	GoG_G8_25_Eh_AN_3
+	GoG_G8_25_Eh_AN_4
+	GoG_G8_27_Eh_AN
+	GoG_G8_30_Eh_AN_1
+	GoG_G8_30_Eh_AN_2
+	GoG_G8_33_Eh_AN
+	GoG_G8_35_Eh_AN
+	GoG_G8_36_Eh_AN
+	GoG_G8_38_Eh_AN_1
+	GoG_G8_38_Eh_AN_2
+	GoG_G8_38_Eh_AN_3
+	GoG_G8_38_Eh_AN_4
+	GoG_G8_39_Eh_AN_1
+	GoG_G8_39_Eh_AN_2
+	GoG_G8_40_Eh_AN_1
+	GoG_G8_40_Eh_AN_2
+	GoG_G8_41_Eh_AN_1
+	GoG_G8_41_Eh_AN_2
+	GoG_G8_42_Eh_AN_1
+	GoG_G8_42_Eh_AN_2
+	GoG_G8_45_Eh_AN
+	GoG_G8_4_Eh_AN
+	GoG_G8_54_Eh_AN_1
+	GoG_G8_54_Eh_AN_2
+	GoG_G8_54_Eh_AN_3
+	GoG_G8_56_Eh_AN_1
+	GoG_G8_56_Eh_AN_2
+	GoG_G8_66_Eh_PR
+	GoG_G8_68_Eh_GH
+	GoG_G8_6_Eh_AN_1
+	GoG_G8_6_Eh_AN_2
+	GoG_G8_70_Eh_GH_1
+	GoG_G8_70_Eh_GH_2
+	GoG_G8_73_Eh_GH_1
+	GoG_G8_73_Eh_GH_2
+	GoG_G8_76_Eh_GH
+	GoG_G8_78_Eh_GH_1
+	GoG_G8_78_Eh_GH_2
+	GoG_G8_80_Eh_GH_1
+	GoG_G8_80_Eh_GH_2
+	GoG_G8_81_Eh_GH
+	GoG_G8_82_Eh_GH_1
+	GoG_G8_82_Eh_GH_2
+	GoG_G8_83_Eh_GH
+	GoG_G8_85_Eh_GH_1
+	GoG_G8_85_Eh_GH_2
+	GoG_G8_86_Eh_GH_1
+	GoG_G8_86_Eh_GH_2
+	GoG_G8_86_Eh_GH_3
+	GoG_G8_87_Eh_GH_1
+	GoG_G8_87_Eh_GH_2
+	GoG_G8_89_Eh_GH
+	GoG_G8_90_Eh_GH_1
+	GoG_G8_90_Eh_GH_2
+	GoG_G8_91_Eh_GH
+	GoG_G8_93_Eh_GH_1
+	GoG_G8_93_Eh_GH_2
+	GoG_G8_9_Eh_AN
+	GoG_G9_10_Eh_GH_1
+	GoG_G9_10_Eh_GH_2
+	GoG_G9_11_Eh_GH
+	GoG_G9_12_Eh_GH
+	GoG_G9_14_Eh_GH
+	GoG_G9_15_Eh_GH
+	GoG_G9_17_Eh_GH
+	GoG_G9_20_Eh_GH
+	GoG_G9_21_Eh_GH
+	GoG_G9_22_Eh_GH
+	GoG_G9_24_Eh_GH
+	GoG_G9_27_Eh_GH_1
+	GoG_G9_27_Eh_GH_2
+	GoG_G9_29_Eh_GH
+	GoG_G9_2_Eh_BI_1
+	GoG_G9_2_Eh_BI_2
+	GoG_G9_30_Eh_GH_1
+	GoG_G9_30_Eh_GH_2
+	GoG_G9_36_Eh_GH
+	GoG_G9_37_Eh_GH
+	GoG_G9_58_Eh_GH_1
+	GoG_G9_58_Eh_GH_2
+	GoG_G9_58_Eh_GH_3
+	GoG_G9_5_Eh_GH
+	GoG_G9_62_Eh_GH_1
+	GoG_G9_62_Eh_GH_2
+	GoG_G9_66_Eh_GH_1
+	GoG_G9_66_Eh_GH_2
+	GoG_G9_67_Eh_GH
+	GoG_G9_68_Eh_GH
+	GoG_G9_70_Eh_GH
+	GoG_G9_71_Eh_GH
+	GoG_G9_78_Eh_GH
+	GoG_G9_87_Eh_GH
+	'n1-01_Rou.aeg_Ra-191_B42969_KE'
+	'n1-02_Rou.aeg_Ra-255_B42970_KE'
+	'n1-06_Eid.hel_E1-105_B42975_KE'
+	'n1-07_Eid.hel_E2-114_B42976_KE'
+	'n1-08_Eid.hel_E3-106_B42977_KE'
+	'n1-09_Eid.hel_Ew-111_B42978_KE'
+	'n1-13_Eid.hel_E-Nig-712_B42982_NI'
+	'n1-14_Eid.hel_E-Nig-718_B42983_NI'
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Eh6-0510-A106_GH:0.0,(Eh6-1109-Q131_GH:3.0E-6,((((((('n1-06_Eid.hel_E1-105_B42975_KE':3.0E-6,((((((('Bartonella.sp_Eidolon.helvum_E1_B23987_KE':0.0,GoG_G4_24_Eh_ST:0.0):0.0,GoG_G2_34_Eh_ST:0.0):3.0E-6,GoG_G4_27_Eh_ST:3.0E-6)[&label=34]:3.0E-6,(GoG_G2_31_Eh_PR:3.0E-6,GoG_G3_38_Eh_PR:3.0E-6)[&label=32]:3.0E-6)[&label=55]:3.0E-6,GoG_G3_55_Eh_PR:3.0E-6)[&label=52]:3.0E-6,GoG_G3_60_Eh_ST:0.001581)[&label=89]:0.001577,GoG_G4_23_Eh_ST:3.0E-6)[&label=33]:3.0E-6)[&label=27]:3.0E-6,GoG_G9_58_Eh_GH_3:0.001878)[&label=57]:3.0E-6,'n1-13_Eid.hel_E-Nig-712_B42982_NI':3.0E-6)[&label=48]:2.82E-4,GoG_G7_93_Eh_AN_2:0.004633)[&label=99,!name="E1",!collapse={"collapsed",0.1553635966},!color=#ff0000]:0.043406,((((((((((((((((((((((((((((((((('n1-07_Eid.hel_E2-114_B42976_KE':0.0,GoG_G9_62_Eh_GH_1:0.0):0.0,GoG_G3_88_Eh_ST:0.0):0.0,GoG_G2_33_Eh_ST:0.0):0.0,GoG_G4_53_Eh_BI_1:0.0):0.0,GoG_G2_73_Eh_PR:0.0):0.0,GoG_G2_49_Eh_ST:0.0):0.0,GoG_G4_13_Eh_ST:0.0):0.0,GoG_G1_41_Eh_PR:0.0):0.0,GoG_G7_36_Eh_AN_2:0.0):0.0,GoG_G1_42_Eh_ST:0.0):0.0,'Bartonella.sp_Eidolon.helvum_E2_B23979_KE':0.0):0.0,GoG_G7_60_Eh_AN:0.0):0.0,GoG_G2_8_Eh_ST_2:0.0):0.0,GoG_G9_5_Eh_GH:0.0):0.0,GoG_G2_50_Eh_ST:0.0):0.0,GoG_G7_21_Eh_AN:0.0):0.0,GoG_G2_48_Eh_ST:0.0):0.0,GoG_G9_20_Eh_GH:0.0):0.0,GoG_G3_64_Eh_ST:0.0):0.0,GoG_G2_87_Eh_ST:0.0):0.0,GoG_G2_53_Eh_ST:0.0):0.0,GoG_G4_17_Eh_ST:0.0):0.0,GoG_G4_12_Eh_ST:0.0):3.0E-6,GoG_G8_86_Eh_GH_3:3.0E-6)[&label=22]:3.0E-6,GoG_G2_86_Eh_ST:3.0E-6)[&label=13]:3.0E-6,GoG_G1_25_Eh_ST:3.0E-6)[&label=10]:3.0E-6,(((GoG_G3_78_Eh_PR:3.0E-6,GoG_G5_1_Eh_GH_1:0.002146)[&label=57]:3.0E-6,GoG_G1_43_Eh_UNK:3.0E-6)[&label=55]:3.0E-6,GoG_G3_90_Eh_ST:3.0E-6)[&label=17]:3.0E-6)[&label=9]:3.0E-6,(((GoG_G2_47_Eh_ST:3.0E-6,GoG_G3_92_Eh_ST:3.0E-6)[&label=11]:3.0E-6,((GoG_G8_86_Eh_GH_1:0.001588,GoG_G11_1_Eh_GH:0.001588)[&label=29]:3.0E-6,GoG_G9_30_Eh_GH_2:0.00159)[&label=14]:3.0E-6)[&label=7]:3.0E-6,((GoG_G3_87_Eh_ST_2:0.003177,GoG_G2_46_Eh_ST_1:0.028679)[&label=54]:3.0E-6,GoG_G1_1_Eh_PR:3.0E-6)[&label=37]:3.0E-6)[&label=13]:3.0E-6)[&label=15]:3.0E-6,(((GoG_G5_1_Eh_GH_2:3.0E-6,(GoG_G3_91_Eh_ST_2:0.001575,GoG_G2_46_Eh_ST_2:3.0E-6)[&label=44]:3.0E-6)[&label=35]:3.0E-6,GoG_G7_92_Eh_AN:3.0E-6)[&label=33]:3.0E-6,GoG_G3_50_Eh_ST:3.0E-6)[&label=53]:3.0E-6)[&label=73]:3.0E-6,GoG_G9_2_Eh_BI_2:0.004801)[&label=97]:0.009685,GoG_G8_54_Eh_AN_2:3.0E-6)[&label=93]:0.001827,((((((((((((((((('Bartonella.sp_Eidolon.helvum_E2_B24225_KE':0.0,GoG_G4_1_Eh_ST:0.0):0.0,GoG_G2_64_Eh_ST:0.0):0.0,GoG_G2_26_Eh_ST:0.0):0.0,GoG_G1_15_Eh_ST:0.0):3.0E-6,GoG_G7_32_Eh_AN_1:3.0E-6)[&label=83]:3.0E-6,(GoG_G1_19_Eh_ST_2:3.0E-6,GoG_G7_31_Eh_AN:0.003221)[&label=35]:3.0E-6)[&label=45]:3.0E-6,GoG_G2_6_Eh_ST:0.001589)[&label=47]:0.004791,GoG_G1_5_Eh_PR_1:0.00534)[&label=54]:2.0E-6,GoG_G1_19_Eh_ST_1:3.0E-6)[&label=54]:2.0E-6,GoG_G7_64_Eh_AN:0.003201)[&label=52]:3.0E-6,GoG_G7_76_Eh_AN:3.0E-6)[&label=25]:3.0E-6,((((((((((((('Bartonella.sp_Eidolon.helvum_E2_B40400_TA':0.0,GoG_G7_26_Eh_AN:0.0):0.0,GoG_G1_3_Eh_PR:0.0):0.0,GoG_G8_76_Eh_GH:0.0):0.0,GoG_G3_16_Eh_PR:0.0):0.0,GoG_G1_22_Eh_PR:0.0):0.0,GoG_G3_45_Eh_PR:0.0):0.0,GoG_G2_71_Eh_PR:0.0):0.0,GoG_G8_10_Eh_AN_1:0.0):0.0,GoG_G3_66_Eh_PR:0.0):0.0,GoG_G4_16_Eh_PR:0.0):0.0,GoG_G3_22_Eh_PR:0.0):0.0,GoG_G1_7_Eh_PR:0.0):3.0E-6,GoG_G8_68_Eh_GH:3.0E-6)[&label=19]:3.0E-6)[&label=30]:3.0E-6,GoG_G7_25_Eh_AN:3.0E-6)[&label=39]:3.0E-6,((((((('Bartonella.sp_Eidolon.helvum_E2_B39294_GH':0.0,GoG_G7_47_Eh_AN:0.0):0.0,GoG_G2_37_Eh_ST_2:0.0):3.0E-6,GoG_G3_75_Eh_PR:3.0E-6)[&label=94]:3.0E-6,(GoG_G1_5_Eh_PR_2:3.0E-6,GoG_G7_83_Eh_AN:0.001595)[&label=50]:3.0E-6)[&label=64]:0.003209,(((('Bartonella.sp_Eidolon.helvum_E2_B40396_TA':0.0,GoG_G2_58_Eh_ST_2:0.0):3.0E-6,GoG_G7_90_Eh_AN_1:3.0E-6)[&label=62]:3.0E-6,GoG_G10_5_Eh_GH_2:3.0E-6)[&label=44]:3.0E-6,(((GoG_G3_58_Eh_ST:3.0E-6,GoG_G3_77_Eh_ST:3.0E-6)[&label=70]:3.0E-6,GoG_G3_59_Eh_ST:3.0E-6)[&label=99]:0.001589,(((((GoG_G8_33_Eh_AN:0.0,GoG_G7_77_Eh_AN_2:0.0):0.0,GoG_G3_52_Eh_ST:0.0):3.0E-6,GoG_G7_80_Eh_AN_1:3.0E-6)[&label=88]:3.0E-6,GoG_G7_45_Eh_AN:3.0E-6)[&label=82]:3.0E-6,GoG_G2_70_Eh_ST:0.001596)[&label=97]:0.001592)[&label=22]:3.0E-6)[&label=33]:3.0E-6)[&label=38]:0.004065,GoG_G4_14_Eh_ST:3.0E-6)[&label=66]:3.0E-6,(((GoG_G3_30_Eh_ST:3.0E-6,GoG_G3_2_Eh_ST:3.0E-6)[&label=100]:0.00655,GoG_G7_29_Eh_AN:0.003289)[&label=99]:0.001545,GoG_G7_91_Eh_AN:0.004955)[&label=98]:0.004234)[&label=73]:0.003069)[&label=65]:3.0E-6,GoG_G7_59_Eh_AN_1:3.0E-6)[&label=41]:3.0E-6,GoG_G3_12_Eh_PR_1:3.0E-6)[&label=35]:3.0E-6,GoG_G8_82_Eh_GH_2:3.0E-6)[&label=89]:0.006195)[&label=98,!name="E2",!collapse={"collapsed",0.1126680391},!color=#cccc00]:0.02208,((((((((((((((((((((((((((((((((('Bartonella.sp_Eidolon.helvum_E5_B39233_GH':0.0,GoG_G1_29_Eh_ST:0.0):0.0,GoG_G8_25_Eh_AN_3:0.0):0.0,GoG_G4_6_Eh_ST:0.0):0.0,GoG_G4_38_Eh_BI:0.0):0.0,GoG_G8_73_Eh_GH_2:0.0):0.0,GoG_G8_93_Eh_GH_2:0.0):0.0,GoG_G6_25_Eh_BI:0.0):0.0,GoG_G4_58_Eh_BI:0.0):0.0,GoG_G8_73_Eh_GH_1:0.0):0.0,GoG_G3_23_Eh_PR:0.0):0.0,GoG_G1_36_Eh_ST:0.0):0.0,GoG_G2_40_Eh_ST:0.0):0.0,GoG_G3_89_Eh_ST:0.0):0.0,GoG_G4_48_Eh_BI:0.0):0.0,GoG_G6_26_Eh_BI:0.0):0.0,GoG_G3_51_Eh_ST:0.0):0.0,GoG_G6_53_Eh_BI:0.0):0.0,GoG_G8_38_Eh_AN_3:0.0):0.0,GoG_G1_24_Eh_ST_2:0.0):0.0,GoG_G3_17_Eh_PR:0.0):0.0,GoG_G2_52_Eh_PR:0.0):0.0,GoG_G6_11_Eh_BI:0.0):0.0,GoG_G2_74_Eh_PR:0.0):0.0,GoG_G7_42_Eh_AN:0.0):0.0,GoG_G3_6_Eh_ST:0.0):0.0,GoG_G8_25_Eh_AN_1:0.0):3.0E-6,(('Bartonella.sp_Eidolon.helvum_E5_B39296_GH':3.0E-6,(GoG_G8_87_Eh_GH_2:3.0E-6,GoG_G11_16_Eh_GH:3.0E-6)[&label=53]:3.0E-6)[&label=16]:3.0E-6,((((((GoG_G8_27_Eh_AN:3.0E-6,(GoG_G8_4_Eh_AN:3.0E-6,GoG_G7_40_Eh_AN:0.001619)[&label=48]:1.0E-6)[&label=43]:1.0E-6,GoG_G1_24_Eh_ST_1:0.004404)[&label=39]:3.0E-6,GoG_G2_36_Eh_ST:0.004922)[&label=45]:3.0E-6,(GoG_G7_1_Eh_BI_2:3.0E-6,GoG_G8_93_Eh_GH_1:3.0E-6)[&label=56]:3.0E-6)[&label=40]:3.0E-6,GoG_G11_7_Eh_GH:3.0E-6)[&label=24]:3.0E-6,GoG_G2_62_Eh_ST:3.0E-6)[&label=11]:3.0E-6)[&label=20]:3.0E-6)[&label=22]:3.0E-6,GoG_G7_53_Eh_AN:3.0E-6)[&label=46]:3.0E-6,(((((((GoG_G8_40_Eh_AN_2:0.0,GoG_G2_42_Eh_ST:0.0):0.0,GoG_G1_38_Eh_ST:0.0):0.0,GoG_G6_58_Eh_BI:0.0):3.0E-6,GoG_G3_37_Eh_PR:3.0E-6)[&label=76]:3.0E-6,(GoG_G1_8_Eh_ST_2:0.001616,GoG_G8_40_Eh_AN_1:3.0E-6)[&label=56]:3.0E-6)[&label=67]:3.0E-6,GoG_G6_78_Eh_BI:0.003269)[&label=90]:0.001618,(((((GoG_G8_9_Eh_AN:0.0,GoG_G7_11_Eh_BI:0.0):0.0,GoG_G2_59_Eh_ST:0.0):3.0E-6,GoG_G2_90_Eh_ST:3.0E-6)[&label=78]:3.0E-6,GoG_G5_3_Eh_GH:3.0E-6)[&label=75]:3.0E-6,GoG_G4_7_Eh_ST:0.008249)[&label=85]:0.003245)[&label=26]:3.0E-6)[&label=19]:3.0E-6,(((((((((GoG_G8_91_Eh_GH:3.0E-6,((GoG_G2_58_Eh_ST_1:0.001623,GoG_G11_10_Eh_GH:0.002233)[&label=49]:3.0E-6,GoG_G4_22_Eh_PR:0.002498)[&label=31]:3.0E-6)[&label=27]:3.0E-6,((((((((((((((((((((((((((((GoG_G3_86_Eh_ST:0.0,GoG_G5_15_Eh_GH:0.0):0.0,GoG_G4_29_Eh_BI:0.0):0.0,GoG_G8_38_Eh_AN_1:0.0):0.0,GoG_G8_36_Eh_AN:0.0):0.0,GoG_G2_54_Eh_PR:0.0):0.0,GoG_G8_35_Eh_AN:0.0):0.0,GoG_G7_51_Eh_AN_1:0.0):0.0,'Bartonella.sp_Eidolon.helvum_E5_B40014_TA':0.0):0.0,GoG_G5_4_Eh_GH_1:0.0):0.0,GoG_G7_79_Eh_AN_2:0.0):0.0,GoG_G3_53_Eh_ST:0.0):0.0,GoG_G8_22_Eh_AN:0.0):0.0,GoG_G8_42_Eh_AN_2:0.0):0.0,GoG_G3_4_Eh_ST:0.0):0.0,GoG_G8_90_Eh_GH_1:0.0):0.0,GoG_G2_27_Eh_ST:0.0):0.0,GoG_G7_80_Eh_AN_2:0.0):0.0,GoG_G4_77_Eh_BI:0.0):0.0,GoG_G6_27_Eh_BI:0.0):0.0,GoG_G3_87_Eh_ST_1:0.0):0.0,GoG_G8_90_Eh_GH_2:0.0):0.0,GoG_G6_89_Eh_BI_1:0.0):0.0,'Bartonella.sp_Eidolon.helvum_E5_B39249_GH':0.0):0.0,GoG_G3_61_Eh_ST_1:0.0):0.0,GoG_G7_90_Eh_AN_2:0.0):0.0,GoG_G7_56_Eh_AN:0.0):3.0E-6,GoG_G2_3_Eh_PR:3.0E-6)[&label=16]:3.0E-6,(GoG_G7_65_Eh_AN_1:3.0E-6,(GoG_G7_52_Eh_AN:0.00163,GoG_G11_4_Eh_GH:0.003354)[&label=38]:3.0E-6)[&label=32]:3.0E-6)[&label=12]:3.0E-6)[&label=12]:3.0E-6,(GoG_G8_42_Eh_AN_1:3.0E-6,GoG_G2_4_Eh_PR:3.0E-6)[&label=13]:3.0E-6)[&label=15]:3.0E-6,(((GoG_G1_6_Eh_PR_1:0.002365,GoG_G7_71_Eh_AN_1:0.00163)[&label=55]:3.0E-6,GoG_G7_32_Eh_AN_2:0.001633)[&label=37]:3.0E-6,GoG_G2_92_Eh_ST:3.0E-6)[&label=9]:3.0E-6)[&label=9]:3.0E-6,((((GoG_G7_37_Eh_AN_1:3.0E-6,GoG_G4_40_Eh_BI:3.0E-6)[&label=63]:3.0E-6,GoG_G7_17_Eh_BI:3.0E-6)[&label=60]:3.0E-6,GoG_G9_27_Eh_GH_1:3.0E-6)[&label=55]:3.0E-6,GoG_G7_54_Eh_AN:3.0E-6)[&label=50]:3.0E-6)[&label=8]:3.0E-6,((GoG_G7_87_Eh_AN_1:0.004923,GoG_G9_10_Eh_GH_2:0.006611)[&label=26]:3.0E-6,GoG_G7_36_Eh_AN_1:0.001632)[&label=12]:3.0E-6)[&label=29]:3.0E-6,GoG_G7_62_Eh_AN:0.004902)[&label=42]:0.001616,GoG_G3_49_Eh_ST:3.0E-6)[&label=30]:3.0E-6,GoG_G1_8_Eh_ST_1:3.0E-6)[&label=12]:3.0E-6)[&label=16]:3.0E-6,(((GoG_G3_67_Eh_ST_2:3.0E-6,((GoG_G9_36_Eh_GH:0.0,GoG_G6_35_Eh_BI:0.0):3.0E-6,GoG_G2_68_Eh_ST:3.0E-6)[&label=93]:0.003287)[&label=28]:3.0E-6,GoG_G4_15_Eh_PR_1:3.0E-6)[&label=18]:2.0E-6,((((GoG_G7_55_Eh_AN:3.0E-6,GoG_G1_13_Eh_ST:3.0E-6)[&label=83]:0.003211,(GoG_G9_66_Eh_GH_1:3.0E-6,GoG_G7_68_Eh_AN_1:3.0E-6)[&label=85]:3.0E-6)[&label=18]:3.0E-6,(((((((((((((((((((((GoG_G6_33_Eh_BI:0.0,GoG_G7_81_Eh_AN:0.0):0.0,GoG_G7_88_Eh_AN:0.0):0.0,GoG_G4_54_Eh_BI:0.0):0.0,GoG_G3_93_Eh_PR:0.0):0.0,GoG_G8_56_Eh_AN_2:0.0):0.0,GoG_G3_19_Eh_PR_1:0.0):0.0,GoG_G2_66_Eh_ST:0.0):0.0,GoG_G7_67_Eh_AN_1:0.0):0.0,GoG_G4_47_Eh_BI:0.0):0.0,GoG_G6_40_Eh_BI:0.0):0.0,GoG_G8_56_Eh_AN_1:0.0):0.0,GoG_G3_27_Eh_PR_1:0.0):0.0,GoG_G7_66_Eh_AN_2:0.0):0.0,GoG_G4_85_Eh_BI:0.0):0.0,GoG_G3_21_Eh_PR:0.0):0.0,GoG_G8_87_Eh_GH_1:0.0):0.0,GoG_G3_91_Eh_ST_1:0.0):0.0,GoG_G7_30_Eh_AN:0.0):0.0,GoG_G7_27_Eh_AN:0.0):3.0E-6,GoG_G2_23_Eh_ST:3.0E-6)[&label=35]:3.0E-6,(((GoG_G8_41_Eh_AN_1:3.0E-6,GoG_G5_2_Eh_GH:0.003496)[&label=28]:3.0E-6,(GoG_G3_67_Eh_ST_1:0.001645,GoG_G1_6_Eh_PR_2:3.0E-6)[&label=33]:1.0E-6)[&label=23]:3.0E-6,GoG_G6_65_Eh_BI:3.0E-6)[&label=23]:3.0E-6)[&label=19]:3.0E-6)[&label=12]:3.0E-6,(GoG_G6_61_Hm_BI_2:3.0E-6,(GoG_G5_12_Eh_GH:3.0E-6,((((((('Bartonella.sp_Eidolon.helvum_E5_B40908_UG':0.0,GoG_G11_12_Eh_GH:0.0):0.0,GoG_G2_7_Eh_ST:0.0):0.0,GoG_G2_79_Eh_ST:0.0):0.0,GoG_G6_57_Eh_BI:0.0):0.0,GoG_G9_17_Eh_GH:0.0):3.0E-6,GoG_G1_35_Eh_ST:3.0E-6)[&label=86]:3.0E-6,(GoG_G1_31_Eh_ST:3.0E-6,GoG_G1_32_Eh_ST:3.0E-6)[&label=99]:0.003256)[&label=100]:0.016565)[&label=63]:0.006501)[&label=41]:0.001605)[&label=21]:0.004902)[&label=28]:0.004952)[&label=17]:0.003255,GoG_G3_62_Eh_ST:0.00331)[&label=80]:0.009926,GoG_G7_59_Eh_AN_2:2.0E-6)[&label=83,!name="E5",!collapse={"collapsed",0.09843831149999999},!color=#660066]:0.025549)[&label=98]:0.028451)[&label=88]:0.021398,((((('Bartonella.sp_Eidolon.helvum_E4_B39301_GH':0.0,GoG_G4_62_Eh_BI:0.0):3.0E-6,GoG_G1_11_Eh_ST:3.0E-6)[&label=87]:3.0E-6,(((((((GoG_G7_2_Eh_BI_1:3.0E-6,GoG_G7_89_Eh_AN:0.001716)[&label=51]:3.0E-6,GoG_G5_13_Eh_GH_2:3.0E-6)[&label=42]:3.0E-6,GoG_G6_74_Eh_BI:3.0E-6)[&label=20]:3.0E-6,((((GoG_G7_2_Eh_BI_2:3.0E-6,(GoG_G7_13_Eh_BI:0.001619,GoG_G3_80_Eh_PR:3.0E-6)[&label=62]:3.0E-6)[&label=80]:3.0E-6,GoG_G5_13_Eh_GH_1:3.0E-6)[&label=58]:3.0E-6,GoG_G3_33_Eh_ST:3.0E-6)[&label=73]:3.0E-6,GoG_G8_39_Eh_AN_2:3.0E-6)[&label=78]:3.0E-6)[&label=16]:3.0E-6,((((((((((((((((((GoG_G9_78_Eh_GH:0.0,GoG_G6_88_Eh_BI:0.0):0.0,GoG_G6_92_Eh_BI:0.0):0.0,GoG_G9_21_Eh_GH:0.0):0.0,GoG_G2_20_Eh_ST:0.0):0.0,GoG_G6_63_Eh_BI:0.0):0.0,GoG_G8_83_Eh_GH:0.0):0.0,GoG_G3_7_Eh_ST:0.0):0.0,GoG_G4_90_Eh_BI:0.0):0.0,GoG_G6_41_Eh_BI:0.0):0.0,GoG_G2_84_Eh_ST:0.0):0.0,GoG_G4_80_Eh_BI:0.0):0.0,GoG_G8_78_Eh_GH_1:0.0):0.0,GoG_G8_39_Eh_AN_1:0.0):0.0,GoG_G9_87_Eh_GH:0.0):0.0,GoG_G9_29_Eh_GH:0.0):0.0,GoG_G3_74_Eh_ST:0.0):0.0,GoG_G9_14_Eh_GH:0.0):3.0E-6,(GoG_G8_78_Eh_GH_2:3.0E-6,GoG_G3_28_Eh_PR:3.0E-6)[&label=15]:3.0E-6)[&label=8]:3.0E-6)[&label=25]:3.0E-6,GoG_G2_60_Eh_ST:3.0E-6)[&label=34]:3.0E-6,GoG_G2_38_Eh_ST:0.001556)[&label=73]:0.001556)[&label=99,!name="E4",!collapse={"collapsed",0.12061410789999999},!color=#003399]:0.066689,(((((Eh7-0110-R16_GH:0.004197,GoG_G4_42_Eh_BI:3.0E-6)[&label=68]:0.002098,GoG_G3_54_Eh_PR:3.0E-6)[&label=39]:2.0E-6,GoG_G3_25_Eh_PR_2:3.0E-6)[&label=41]:3.0E-6,GoG_G3_25_Eh_PR_1:3.0E-6)[&label=63]:3.0E-6,'Bartonella.sp_Cyc.dub_Eid.dup_KEL04-2':3.0E-6)[&label=100,!name="Eh7",!collapse={"collapsed",0.0},!color=#ff00ff]:0.184288)[&label=92]:0.044166,(((((((((('n1-08_Eid.hel_E3-106_B42977_KE':0.0,'Bartonella.sp_Eidolon.helvum_E3_B32138_NI':0.0):0.0,'Bartonella.sp_Eidolon.helvum_E3_B39300_GH':0.0):0.0,GoG_G6_56_Eh_BI:0.0):0.0,GoG_G3_8_Eh_PR:0.0):0.0,GoG_G7_72_Eh_AN:0.0):3.0E-6,'n1-14_Eid.hel_E-Nig-718_B42983_NI':3.0E-6)[&label=89]:3.0E-6,GoG_G11_18_Eh_GH:3.0E-6)[&label=74]:3.0E-6,GoG_G7_28_Eh_AN:0.009495)[&label=69]:3.0E-6,GoG_G6_89_Eh_BI_2:0.001584)[&label=100,!name="E3",!collapse={"collapsed",0.11212931849999996},!color=#009933]:0.058337,((((((((('n1-01_Rou.aeg_Ra-191_B42969_KE':0.0,GoG_G10_11_Ra_GH:0.0):0.0,GoG_G10_36_Ra_GH:0.0):0.0,GoG_G10_18_Ra_GH:0.0):0.0,GoG_G10_30_Ra_GH:0.0):3.0E-6,GoG_G10_31_Ra_GH:3.0E-6)[&label=84]:3.0E-6,GoG_G10_43_Ra_GH:3.0E-6)[&label=81]:3.0E-6,GoG_G2_55_Ra_ST:0.001553)[&label=98]:0.003124,(((((GoG_G10_48_Ra_GH:3.0E-6,'n1-02_Rou.aeg_Ra-255_B42970_KE':3.0E-6)[&label=99]:0.001558,GoG_G10_19_Ra_GH:0.001564)[&label=45]:3.0E-6,(((GoG_G10_35_Ra_GH:3.0E-6,GoG_G10_51_Ra_GH:3.0E-6)[&label=49]:3.0E-6,GoG_G10_32_Ra_GH:3.0E-6)[&label=48]:3.0E-6,(((GoG_G10_20_Ra_GH:3.0E-6,GoG_G10_50_Ra_GH:3.0E-6)[&label=80]:3.0E-6,GoG_G10_45_Ra_GH:3.0E-6)[&label=44]:3.0E-6,GoG_G3_41_Ra_PR:0.001569)[&label=35]:3.0E-6)[&label=24]:3.0E-6)[&label=79]:0.001567,GoG_G10_28_Ra_GH:0.00313)[&label=24]:3.0E-6,(GoG_G3_14_Ra_PR:3.0E-6,GoG_G3_15_Ra_PR:3.0E-6)[&label=100]:0.004716)[&label=39]:3.0E-6)[&label=91]:0.00633,((((GoG_G3_18_Ra_PR:0.0,GoG_G10_52_Ra_GH:0.0):3.0E-6,GoG_G10_44_Ra_GH:3.0E-6)[&label=70]:3.0E-6,GoG_G10_21_Ra_GH_1:3.0E-6)[&label=96]:0.002795,GoG_G10_24_Ra_GH:0.005306)[&label=96]:0.008584)[&label=99,!name="B. rousetti",!collapse={"collapsed",0.12370589639999996},!color=#ff9900]:0.042368)[&label=97]:0.054792)[&label=60]:0.013848)[&label=52]:0.019989,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((('n1-09_Eid.hel_Ew-111_B42978_KE':0.0,GoG_G5_6_Eh_GH:0.0):0.0,GoG_G7_73_Eh_AN:0.0):0.0,GoG_G8_70_Eh_GH_1:0.0):0.0,GoG_G9_68_Eh_GH:0.0):0.0,GoG_G7_19_Eh_BI:0.0):0.0,GoG_G7_78_Eh_AN:0.0):0.0,GoG_G7_63_Eh_AN:0.0):0.0,GoG_G7_74_Eh_AN:0.0):0.0,GoG_G8_66_Eh_PR:0.0):0.0,GoG_G2_81_Eh_PR:0.0):0.0,GoG_G8_54_Eh_AN_3:0.0):0.0,GoG_G4_51_Eh_BI:0.0):0.0,GoG_G8_54_Eh_AN_1:0.0):0.0,GoG_G3_35_Eh_ST:0.0):0.0,GoG_G7_70_Eh_AN:0.0):0.0,GoG_G9_37_Eh_GH:0.0):0.0,GoG_G8_6_Eh_AN_1:0.0):0.0,GoG_G8_30_Eh_AN_2:0.0):0.0,GoG_G7_39_Eh_AN:0.0):0.0,GoG_G9_22_Eh_GH:0.0):0.0,GoG_G4_53_Eh_BI_2:0.0):0.0,GoG_G8_10_Eh_AN_2:0.0):0.0,GoG_G9_10_Eh_GH_1:0.0):0.0,GoG_G4_33_Eh_BI:0.0):0.0,GoG_G7_93_Eh_AN_1:0.0):0.0,GoG_G8_10_Eh_AN_4:0.0):0.0,GoG_G9_30_Eh_GH_1:0.0):0.0,GoG_G3_44_Eh_PR:0.0):0.0,GoG_G7_57_Eh_AN:0.0):0.0,GoG_G7_43_Eh_AN:0.0):0.0,GoG_G5_14_Eh_GH:0.0):0.0,GoG_G4_76_Eh_BI:0.0):0.0,GoG_G6_19_Eh_BI:0.0):0.0,GoG_G9_12_Eh_GH:0.0):0.0,GoG_G8_10_Eh_AN_3:0.0):0.0,GoG_G9_15_Eh_GH:0.0):0.0,GoG_G2_2_Eh_ST:0.0):0.0,GoG_G7_23_Eh_AN:0.0):0.0,GoG_G2_82_Eh_PR:0.0):0.0,GoG_G4_68_Eh_BI:0.0):0.0,GoG_G3_43_Eh_ST:0.0):0.0,GoG_G2_76_Eh_PR:0.0):0.0,GoG_G6_71_Eh_BI:0.0):0.0,GoG_G7_10_Eh_BI:0.0):0.0,GoG_G9_70_Eh_GH:0.0):0.0,GoG_G4_2_Eh_ST:0.0):0.0,GoG_G7_38_Eh_AN:0.0):0.0,GoG_G7_87_Eh_AN_2:0.0):0.0,GoG_G3_5_Eh_ST:0.0):0.0,GoG_G8_45_Eh_AN:0.0):0.0,GoG_G6_28_Eh_BI:0.0):0.0,GoG_G7_41_Eh_AN:0.0):0.0,GoG_G3_48_Eh_ST:0.0):0.0,GoG_G8_85_Eh_GH_2:0.0):0.0,GoG_G2_63_Eh_ST:0.0):0.0,GoG_G7_86_Eh_AN:0.0):0.0,GoG_G7_71_Eh_AN_2:0.0):0.0,GoG_G1_34_Eh_ST:0.0):0.0,GoG_G2_19_Eh_ST:0.0):0.0,GoG_G2_35_Eh_ST:0.0):0.0,GoG_G3_85_Eh_PR:0.0):0.0,GoG_G5_8_Eh_GH:0.0):0.0,GoG_G5_11_Eh_GH:0.0):0.0,GoG_G8_70_Eh_GH_2:0.0):0.0,GoG_G6_61_Hm_BI_1:0.0):0.0,GoG_G1_12_Eh_ST:0.0):0.0,GoG_G7_46_Eh_AN:0.0):0.0,GoG_G1_27_Eh_ST:0.0):0.0,GoG_G10_4_Eh_GH:0.0):0.0,GoG_G8_80_Eh_GH_2:0.0):0.0,GoG_G4_78_Eh_BI:0.0):0.0,GoG_G2_18_Eh_PR:0.0):0.0,GoG_G8_86_Eh_GH_2:0.0):0.0,GoG_G2_24_Eh_ST:0.0):0.0,GoG_G9_71_Eh_GH:0.0):0.0,GoG_G2_12_Eh_PR:0.0):0.0,GoG_G8_89_Eh_GH:0.0):0.0,GoG_G7_79_Eh_AN_1:0.0):0.0,GoG_G5_10_Eh_GH:0.0):0.0,GoG_G7_35_Eh_AN:0.0):0.0,GoG_G4_74_Eh_BI:0.0):0.0,GoG_G7_75_Eh_AN:0.0):0.0,GoG_G4_3_Eh_PR:0.0):0.0,GoG_G2_51_Eh_ST:0.0):0.0,GoG_G8_81_Eh_GH:0.0):0.0,GoG_G8_85_Eh_GH_1:0.0):0.0,GoG_G8_30_Eh_AN_1:0.0):0.0,GoG_G3_32_Eh_ST:0.0):0.0,GoG_G6_91_Eh_BI:0.0):0.0,GoG_G2_39_Eh_ST:0.0):0.0,GoG_G7_50_Eh_AN:0.0):3.0E-6,GoG_G4_41_Eh_BI:3.0E-6)[&label=15]:3.0E-6,(((GoG_G9_58_Eh_GH_2:3.0E-6,GoG_G3_19_Eh_PR_2:0.004983)[&label=53]:3.0E-6,GoG_G9_24_Eh_GH:0.001598)[&label=45]:3.0E-6,(GoG_G11_17_Eh_GH:3.0E-6,GoG_G11_2_Eh_GH:3.0E-6)[&label=58]:3.0E-6)[&label=18]:3.0E-6)[&label=17]:3.0E-6,GoG_G4_30_Eh_BI:3.0E-6)[&label=10]:3.0E-6,((GoG_G9_58_Eh_GH_1:3.0E-6,GoG_G8_41_Eh_AN_2:0.001653)[&label=50]:3.0E-6,GoG_G7_82_Eh_AN:3.0E-6)[&label=17]:3.0E-6)[&label=13]:3.0E-6,(((((GoG_G4_11_Eh_ST_2:3.0E-6,(GoG_G7_67_Eh_AN_2:3.0E-6,GoG_G7_65_Eh_AN_2:0.00322)[&label=79]:0.001603)[&label=40]:3.0E-6,(GoG_G7_34_Eh_AN:0.001598,GoG_G7_6_Eh_BI:0.025119)[&label=34]:1.0E-6)[&label=11]:3.0E-6,((GoG_G1_40_Eh_ST:0.001597,(GoG_G10_5_Eh_GH_1:0.00163,GoG_G2_37_Eh_ST_1:0.001603)[&label=72]:3.0E-6)[&label=29]:3.0E-6,GoG_G4_46_Eh_BI:3.0E-6)[&label=8]:3.0E-6,(GoG_G2_45_Eh_ST:3.0E-6,(((GoG_G8_25_Eh_AN_2:3.0E-6,GoG_G9_62_Eh_GH_2:3.0E-6)[&label=88]:3.0E-6,GoG_G3_12_Eh_PR_2:0.001708)[&label=81]:0.001604,(GoG_G9_27_Eh_GH_2:3.0E-6,GoG_G9_66_Eh_GH_2:0.001782)[&label=88]:0.001599)[&label=29]:3.0E-6)[&label=5]:3.0E-6)[&label=1]:3.0E-6,GoG_G4_79_Eh_BI:3.0E-6)[&label=11]:3.0E-6,GoG_G2_1_Eh_ST:3.0E-6)[&label=6]:3.0E-6)[&label=8]:3.0E-6,(GoG_G7_77_Eh_AN_1:3.0E-6,(GoG_G6_18_Eh_BI:3.0E-6,(GoG_G2_44_Eh_PR:3.0E-6,GoG_G11_9_Eh_GH:3.0E-6)[&label=71]:3.0E-6)[&label=15]:3.0E-6)[&label=12]:3.0E-6)[&label=4]:3.0E-6,(GoG_G3_71_Eh_PR:3.0E-6,GoG_G2_8_Eh_ST_1:0.001603)[&label=39]:3.0E-6)[&label=4]:3.0E-6,(((GoG_G4_91_Eh_BI:0.0,GoG_G7_12_Eh_BI:0.0):0.0,GoG_G2_67_Eh_ST:0.0):3.0E-6,GoG_G4_49_Eh_BI:3.0E-6)[&label=11]:3.0E-6)[&label=11]:3.0E-6,(((GoG_G4_11_Eh_ST_1:3.0E-6,GoG_G1_39_Eh_ST:3.0E-6)[&label=43]:3.0E-6,(GoG_G8_25_Eh_AN_4:0.001601,((((GoG_G7_68_Eh_AN_2:3.0E-6,GoG_G8_38_Eh_AN_4:0.001597)[&label=74]:3.0E-6,GoG_G8_38_Eh_AN_2:0.001602)[&label=52]:0.001597,GoG_G3_83_Eh_PR_1:3.0E-6)[&label=71]:1.0E-6,GoG_G3_72_Eh_PR_2:0.001632)[&label=48]:3.0E-6)[&label=32]:3.0E-6)[&label=31]:3.0E-6,GoG_G7_24_Eh_AN:3.0E-6)[&label=11]:3.0E-6)[&label=10]:3.0E-6,(((GoG_G2_65_Eh_ST:3.0E-6,(GoG_G8_12_Eh_AN:3.0E-6,GoG_G8_80_Eh_GH_1:0.001612)[&label=36]:3.0E-6)[&label=64]:2.0E-6,GoG_G2_5_Eh_ST:0.009832)[&label=26]:3.0E-6,((GoG_G3_83_Eh_PR_2:0.001942,GoG_G4_19_Eh_ST:0.003224)[&label=68]:1.0E-6,GoG_G11_14_Eh_GH:3.0E-6)[&label=54]:3.0E-6)[&label=15]:3.0E-6)[&label=10]:3.0E-6,GoG_G1_23_Eh_ST:0.001598)[&label=4]:3.0E-6,GoG_G8_6_Eh_AN_2:3.0E-6)[&label=12]:3.0E-6,(((GoG_G9_11_Eh_GH:3.0E-6,GoG_G3_27_Eh_PR_2:0.001641)[&label=54]:1.0E-6,GoG_G9_2_Eh_BI_1:0.001598)[&label=36]:3.0E-6,(GoG_G2_91_Eh_ST:3.0E-6,GoG_G8_82_Eh_GH_1:3.0E-6)[&label=61]:3.0E-6)[&label=24]:3.0E-6)[&label=8]:3.0E-6,GoG_G10_6_Eh_GH:3.0E-6)[&label=24]:3.0E-6,GoG_G7_85_Eh_AN:3.0E-6)[&label=24]:3.0E-6,((GoG_G4_69_Eh_BI_1:3.0E-6,(GoG_G2_77_Eh_PR:3.0E-6,((GoG_G5_4_Eh_GH_2:0.001605,GoG_G7_33_Eh_AN_2:3.0E-6)[&label=94]:0.001605,GoG_G3_61_Eh_ST_2:0.003221)[&label=50]:3.0E-6)[&label=89]:0.001595)[&label=57]:3.0E-6,GoG_G4_69_Eh_BI_2:3.0E-6)[&label=37]:3.0E-6)[&label=22]:0.001606,((((GoG_G4_15_Eh_PR_2:3.0E-6,(GoG_G7_37_Eh_AN_2:3.0E-6,GoG_G7_51_Eh_AN_2:0.001599)[&label=28]:0.001598)[&label=11]:3.0E-6,GoG_G3_72_Eh_PR_1:3.0E-6)[&label=17]:3.0E-6,GoG_G9_67_Eh_GH:3.0E-6)[&label=22]:3.0E-6,GoG_G7_33_Eh_AN_1:3.0E-6)[&label=31]:1.0E-6)[&label=77]:0.001612,GoG_G7_66_Eh_AN_1:3.0E-6)[&label=100,!name="Ew",!collapse={"collapsed",0.105295274},!color=#993300]:0.07114)[&label=100,!name="Eh6",!collapse={"collapsed",0.0},!color=#999999]:0.204808):3.0E-6,GoG_G4_44_Eh_BI:0.0);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=8;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="Midpoint";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

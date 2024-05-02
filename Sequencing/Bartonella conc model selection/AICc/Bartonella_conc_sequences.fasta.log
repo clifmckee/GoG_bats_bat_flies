@@ -1,0 +1,353 @@
+IQ-TREE multicore version 2.1.1 COVID-edition for Windows 64-bit built Aug 20 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    DESKTOP-7HQB3DG (AVX2, FMA3, 7 GB RAM)
+Command: iqtree2 -s C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta -m MFP -AICc -B 1000
+Seed:    721041 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Nov 29 14:40:36 2020
+Kernel:  AVX+FMA - 1 threads (4 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 4 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 114 sequences with 1247 columns, 713 distinct patterns
+528 parsimony-informative, 89 singleton sites, 630 constant sites
+                                                 Gap/Ambiguity  Composition  p-value
+   1  B._acomydis_KS2_1                                  9.70%    passed     97.84%
+   2  B._birtlesii_IBS325                                0.00%    passed     91.27%
+   3  B._florenciae_R4                                   0.00%    passed     95.63%
+   4  B._alsatica_IBS382                                 0.00%    passed     76.54%
+   5  B._phoceensis_16120                                0.00%    passed     99.39%
+   6  B._callosciuri_BR1_1                               9.70%    passed     94.90%
+   7  B._coopersplainsensis_AUST_NH20                    9.38%    passed     99.66%
+   8  B._japonica_Fuji_18_1                              9.70%    passed     99.55%
+   9  B._vinsonii_arupensis_Pm136co                      0.00%    passed     89.06%
+  10  B._vinsonii_vinsonii_Baker                         9.14%    passed     85.90%
+  11  B._vinsonii_berkhoffii_Tweed                       0.00%    passed     93.13%
+  12  B._taylorii_8TBB                                   0.00%    passed     85.47%
+  13  B._pachyuromydis_FN15_2                            9.70%    passed     92.93%
+  14  B._sp._Meriones.libycus_B29771                     0.32%    passed     85.55%
+  15  B._sp._Sekeetamys.calurus_FG1_1                    9.70%    passed     77.43%
+  16  B._sp._Chaerephon.plicatus_SK157                   0.00%    passed     90.11%
+  17  B._sp._Chaerephon.plicatus_SK194                   0.00%    passed     63.19%
+  18  B._sp._Myotis.blythii_Vesp_4_B44601                0.24%    passed     90.27%
+  19  B._sp._Myotis.blythii_Vesp_5_B44622                0.00%    passed     95.75%
+  20  B._sp._Rhinolophus.ferrumequinum_Rhin_1_B44706     0.00%    passed     87.34%
+  21  B._sp._Eidolon.helvum_Ew_111                       2.25%    passed     83.31%
+  22  B._sp._Chaerephon.plicatus_SK165                   2.33%    passed     50.59%
+  23  B._henselae_Houston_1                              0.00%    passed     88.44%
+  24  B._koehlerae_C_29                                  0.00%    passed     90.56%
+  25  B._quintana_Toulouse                               0.00%    passed     85.73%
+  26  B._washoensis_Sb944nv                              0.00%    passed     65.03%
+  27  B._sp._Eptesicus.nilssoni_1157_3                  31.36%    passed     56.10%
+  28  B._sp._Myotis.blythii_Vesp_2_B44722                0.00%    passed     64.42%
+  29  B._sp._Eptesicus.serotinus_Vesp_3_B44724           2.17%    passed     70.28%
+  30  B._sp._Myotis.emarginatus_Vesp_1_B44731            0.16%    passed     82.97%
+  31  B._sp._Myotis.daubentonii_1160_1                  31.36%    passed     43.22%
+  32  B._mayotimonensis_EYL_2008                        44.67%    passed     46.88%
+  33  B._sp._Hipposideros.armiger_KK182                  0.00%    passed     86.99%
+  34  B._sp._Hipposideros.fulvus_CR224                   0.00%    passed     48.91%
+  35  B._sp._Hipposideros.armiger_KK200a                 0.00%    passed     85.49%
+  36  B._sp._Triaenops.persicus_T_837                    0.00%    passed     85.30%
+  37  B._sp._Rhinolophus.ferrumequinum_Rhin_2_B44658     0.24%    passed     88.87%
+  38  B._sp._Rhinolophus.ferrumequinum_Rhin_3_B44712     1.20%    passed     83.48%
+  39  B._sp._Hipposideros.larvatus_KP277                 0.00%    passed     55.85%
+  40  B._sp._Rhinolophus.euryale_Rhin_4_B44528           0.96%    passed     66.08%
+  41  B._sp._Eidolon.helvum_E1_105                       4.81%    passed     88.28%
+  42  B._sp._Eidolon.helvum_E2_114                       0.00%    passed     92.15%
+  43  B._sp._Eidolon.helvum_E5_B40014                    0.64%    passed     53.02%
+  44  B._sp._Miniopterus.fuliginosus_No.05              12.11%    passed     82.18%
+  45  B._sp._Miniopterus.fuliginosus_No.07              12.11%    passed     77.23%
+  46  B._sp._Miniopterus.schreibersii_Mini_1_B44530      0.00%    passed     88.22%
+  47  B._sp._Miniopterus.schreibersii_Mini_1.1_B44608    0.48%    passed     94.48%
+  48  B._sp._Miniopterus.schreibersii_Mini_2_B44599      2.25%    passed     68.47%
+  49  B._sp._Miniopterus.schreibersii_Mini_3_B44593      0.00%    passed     77.39%
+  50  B._sp._Myotis.blythii_Vesp_10_B44602               0.24%    passed     71.80%
+  51  B._sp._Rhinolophus.ferrumequinum_Rhin_5_B44552     0.40%    passed     84.74%
+  52  B._rattaustraliani_AUST_NH4                        0.00%    passed     72.80%
+  53  B._sp._Coleura.afra_C_583                          3.85%    passed     85.94%
+  54  B._sp._Taphozous.melanopogon_KP283b                1.68%    passed     79.75%
+  55  B._sp._Hipposideros.vittatus_H_556                 0.08%    passed     48.28%
+  56  B._sp._Rousettus.aegyptiacus_R_191                 0.16%    passed     34.77%
+  57  B._sp._Eidolon.helvum_E3_106                       0.00%    passed     32.77%
+  58  B._sp._Myotis.blythii_Vesp_6_B44711                0.24%    passed     85.15%
+  59  B._sp._Myotis.emarginatus_Vesp_7_B44732            0.56%    passed     79.43%
+  60  B._sp._Myotis.blythii_Vesp_8_B44591                0.72%    passed     70.10%
+  61  B._sp._Myotis.emarginatus_Vesp_9_B44544            0.00%    passed     97.37%
+  62  B._sp._Myotis.daubentonii_2574_1                  31.36%    passed     28.83%
+  63  B._lascolai_Pteronotus.parnellii_C102              1.36%    passed     85.53%
+  64  B._sp._Artibeus.jamaicensis_D1                    28.95%    passed     60.42%
+  65  B._sp._Desmodus.rotundus_DR22                     28.87%    passed     74.91%
+  66  B._sp._Desmodus.rotundus_DR24                     28.87%    passed     74.53%
+  67  B._clarridgeiae_73                                 0.00%    passed     78.88%
+  68  B._sp._Meles.anakuma_JB15                          0.00%    passed     69.67%
+  69  B._rochalimae_ATCCBAA_1498                         0.00%    passed     57.29%
+  70  B._sp._Rattus.norvegicus_1_1C                      0.00%    passed     34.20%
+  71  B._sp._Myodes.glareolus_A296                      10.67%    passed     82.86%
+  72  B._sp._Tamiasciurus.hudsonicus_AR_15_3             0.00%    passed     72.69%
+  73  B._sp._Myotis.emarginatus_Vesp_12_B44617           0.16%    passed     84.63%
+  74  B._sp._Eidolon.helvum_E4_B39301                    0.64%    passed     67.33%
+  75  B._bovis_91_4                                      0.00%    passed     45.37%
+  76  B._capreoli_IBS193                                11.07%    passed     58.54%
+  77  B._sp._Rusa.timorensis_Pangjai_1                  11.07%    passed     33.86%
+  78  B._chomelii_Ru15                                   0.64%    passed     68.71%
+  79  B._melophagi_K_2C                                  0.00%    passed     49.78%
+  80  B._schoenbuchensis_R1                              0.00%    passed     65.43%
+  81  B._sp._Cervus.nippon_WD12.1                        0.00%    passed     60.53%
+  82  B._rolaini_Noctilio.albiventris_C65                1.44%    passed     24.27%
+  83  B._sp._Desmodus.rotundus_DR13                     28.87%    passed     36.93%
+  84  B._sp._Pteronotus.parnellii_F14                   28.87%    passed     11.00%
+  85  B._sp._Desmodus.rotundus_A14                      28.87%    passed     66.94%
+  86  B._sp._Sturnira.lilium_J3                         28.39%    passed     41.79%
+  87  B._sp._Desmodus.rotundus_M9                       28.87%    passed     51.88%
+  88  B._elizabethae_F9251                               0.00%    passed     87.38%
+  89  B._mastomydis_008                                  0.80%    passed     91.58%
+  90  B._queenslandensis_AUST_NH15                       0.00%    passed     81.39%
+  91  B._tribocorum_BM1374166                            0.00%    passed     89.88%
+  92  B._grahamii_as4aup                                 0.00%    passed     89.60%
+  93  B._rattimassiliensis_15908                         0.00%    passed     93.33%
+  94  B._sp._Pipistrellus.pygmaeus_Vesp_13_B44718        4.89%    passed     48.55%
+  95  B._silvatica_Fuji_23_1                             9.70%    passed     89.51%
+  96  B._doshiae_NCTC12862                               0.00%    passed     99.22%
+  97  B._sp._Gerbillus.pyramidum_OE5_1                   9.70%    passed     95.33%
+  98  B._sp._Sekeetamys.calurus_FG3_1                    9.70%    passed     98.43%
+  99  B._sp._Pteronotus.parnellii_F9                    28.87%    passed     42.49%
+ 100  B._sp._Myotis.blythii_Vesp_11_B44721              14.84%    passed     55.98%
+ 101  B._australis_Aust_NH1                              0.00%    passed     57.67%
+ 102  B._antechini_MU1_F19                               1.44%    passed     74.16%
+ 103  B._woyliei_WC1                                     2.00%    passed      9.32%
+ 104  B._ancashensis_20.00                               0.00%    passed     66.22%
+ 105  B._bandicootii_BA1                                 1.44%    passed     16.53%
+ 106  B._sp._Akodon.sp_6076                             28.71%    passed     52.67%
+ 107  B._sp._Hylaeamys.sp_13060                         28.23%    passed     80.25%
+ 108  B._sp._Eidolon.helvum_Eh6_0510_A106               13.39%    passed     53.11%
+ 109  B._sp._Eidolon.helvum_Eh6_1109_Q131               17.16%    passed     74.85%
+ 110  B._sp._Eidolon.helvum_Eh7_0110_R16                13.07%    passed     60.74%
+ 111  B._thailandensis_Bthai                            33.92%    passed     40.11%
+ 112  B._tamiae_Th239                                    0.00%    passed     73.74%
+ 113  B._apis_BBC0122                                    0.00%    failed      0.00%
+ 114  Brucella_abortus_Biovar_3_Tulya                    0.00%    failed      0.00%
+****  TOTAL                                              6.50%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.039 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -27708.669
+Optimal log-likelihood: -27707.900
+Rate parameters:  A-C: 1.97637  A-G: 7.95523  A-T: 0.64789  C-G: 0.41183  C-T: 8.52335  G-T: 1.00000
+Base frequencies:  A: 0.268  C: 0.170  G: 0.252  T: 0.311
+Proportion of invariable sites: 0.462
+Gamma shape alpha: 0.702
+Parameters optimization took 1 rounds (0.247 sec)
+Time for fast ML tree search: 2.251 seconds
+
+NOTE: ModelFinder requires 29 MB RAM!
+ModelFinder will test up to 286 DNA models (sample size: 1247) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         33764.541    233 67995.083    68102.728    69190.022
+  2  GTR+F+I       29731.200    234 59930.401    60039.077    61130.469
+  3  GTR+F+G4      27958.011    234 56384.022    56492.698    57584.090
+  4  GTR+F+I+G4    27707.763    235 55885.526    55995.239    57090.723
+  5  GTR+F+R2      28790.328    235 58050.655    58160.369    59255.852
+  6  GTR+F+R3      28010.044    237 56494.088    56605.894    57709.542
+  7  GTR+F+R4      27854.959    239 56187.917    56301.840    57413.628
+  8  GTR+F+R5      27785.321    241 56052.642    56168.705    57288.609
+  9  GTR+F+R6      27752.732    243 55991.464    56109.693    57237.688
+ 10  GTR+F+R7      27666.113    245 55822.226    55942.645    57078.707
+ 11  GTR+F+R8      27661.883    247 55817.766    55940.400    57084.504
+ 12  GTR+F+R9      27658.848    249 55815.696    55940.571    57092.692
+ 23  SYM+R7        27784.499    242 56052.997    56170.141    57294.093
+ 24  SYM+R8        27784.442    244 56056.884    56176.206    57308.237
+ 36  TVM+F+R7      27653.704    244 55795.408    55914.730    57046.761
+ 37  TVM+F+R8      27653.800    246 55799.600    55921.124    57061.210
+ 49  TVMe+R7       27789.435    241 56060.869    56176.933    57296.837
+WARNING: Log-likelihood -27793.3 of TVMe+R8 worse than TVMe+R7 -27789.4
+ 50  TVMe+R8       27793.267    243 56072.534    56190.763    57318.758
+ 62  TIM3+F+R7     27712.291    243 55910.582    56028.811    57156.806
+ 63  TIM3+F+R8     27712.660    245 55915.320    56035.740    57171.802
+ 75  TIM3e+R7      27841.752    240 56163.504    56278.494    57394.343
+ 76  TIM3e+R8      27841.107    242 56166.215    56283.358    57407.311
+ 88  TIM2+F+R7     27727.761    243 55941.522    56059.751    57187.747
+ 89  TIM2+F+R8     27727.890    245 55945.779    56066.199    57202.261
+101  TIM2e+R7      27832.297    240 56144.593    56259.583    57375.432
+102  TIM2e+R8      27831.898    242 56147.795    56264.939    57388.891
+114  TIM+F+R7      27691.932    243 55869.863    55988.092    57116.088
+115  TIM+F+R8      27691.529    245 55873.058    55993.477    57129.539
+127  TIMe+R7       27817.865    240 56115.730    56230.720    57346.569
+128  TIMe+R8       27817.259    242 56118.518    56235.661    57359.614
+140  TPM3u+F+R7    27714.337    242 55912.674    56029.817    57153.770
+141  TPM3u+F+R8    27714.648    244 55917.297    56036.618    57168.650
+153  TPM3+F+R7     27714.337    242 55912.674    56029.817    57153.770
+154  TPM3+F+R8     27714.648    244 55917.297    56036.618    57168.650
+166  TPM2u+F+R7    27729.909    242 55943.817    56060.960    57184.913
+167  TPM2u+F+R8    27730.012    244 55948.023    56067.345    57199.376
+179  TPM2+F+R7     27729.909    242 55943.817    56060.960    57184.913
+180  TPM2+F+R8     27730.012    244 55948.023    56067.345    57199.376
+192  K3Pu+F+R7     27694.800    242 55873.601    55990.744    57114.697
+193  K3Pu+F+R8     27694.556    244 55877.113    55996.434    57128.466
+205  K3P+R7        27828.427    239 56134.855    56248.777    57360.565
+206  K3P+R8        27828.075    241 56138.151    56254.214    57374.118
+218  TN+F+R7       27734.105    242 55952.209    56069.353    57193.305
+219  TN+F+R8       27733.957    244 55955.913    56075.234    57207.266
+231  TNe+R7        27842.635    239 56163.271    56277.193    57388.981
+WARNING: Log-likelihood -27884.6 of TNe+R8 worse than TNe+R7 -27842.6
+232  TNe+R8        27884.633    241 56251.265    56367.329    57487.233
+244  HKY+F+R7      27736.739    241 55955.478    56071.542    57191.446
+245  HKY+F+R8      27736.638    243 55959.277    56077.506    57205.501
+257  K2P+R7        27852.988    238 56181.975    56294.837    57402.558
+258  K2P+R8        27852.739    240 56185.478    56300.468    57416.317
+270  F81+F+R7      30383.669    240 61247.339    61362.329    62478.178
+271  F81+F+R8      30383.831    242 61251.663    61368.806    62492.759
+283  JC+R7         30145.630    237 60765.260    60877.066    61980.714
+284  JC+R8         30145.893    239 60769.787    60883.709    61995.497
+Akaike Information Criterion:           TVM+F+R7
+Corrected Akaike Information Criterion: TVM+F+R7
+Bayesian Information Criterion:         TVM+F+R7
+Best-fit model: TVM+F+R7 chosen according to AICc
+
+All model information printed to C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.model.gz
+CPU time for ModelFinder: 716.375 seconds (0h:11m:56s)
+Wall-clock time for ModelFinder: 719.580 seconds (0h:11m:59s)
+Generating 1000 samples for ultrafast bootstrap (seed: 721041)...
+
+NOTE: 21 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -27653.704
+Optimal log-likelihood: -27653.578
+Rate parameters:  A-C: 2.04872  A-G: 8.49033  A-T: 0.65813  C-G: 0.40752  C-T: 8.49033  G-T: 1.00000
+Base frequencies:  A: 0.268  C: 0.170  G: 0.252  T: 0.311
+Site proportion and rates:  (0.567,0.018) (0.046,0.293) (0.031,0.307) (0.067,0.633) (0.143,1.640) (0.108,3.740) (0.039,7.293)
+Parameters optimization took 1 rounds (0.587 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.358884 sec (of wall-clock time) 0.359375 sec(of CPU time)
+Computing RapidNJ tree took 0.001230 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -27876.705
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.727 second
+Computing log-likelihood of 98 initial trees ... 2.931 seconds
+Current best score: -27653.578
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -27651.162
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -27629.863
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -27617.055
+Iteration 10 / LogL: -27626.765 / Time: 0h:0m:17s
+Iteration 20 / LogL: -27628.673 / Time: 0h:0m:25s
+Finish initializing candidate tree set (20)
+Current best tree score: -27617.055 / CPU time: 23.990
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 23: -27616.073
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -27611.119
+Iteration 30 / LogL: -27614.687 / Time: 0h:0m:36s (0h:2m:1s left)
+Iteration 40 / LogL: -27614.178 / Time: 0h:0m:44s (0h:1m:37s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 42: -27610.894
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 49: -27609.695
+Iteration 50 / LogL: -27615.318 / Time: 0h:0m:53s (0h:1m:48s left)
+Log-likelihood cutoff on original alignment: -27678.714
+Iteration 60 / LogL: -27611.037 / Time: 0h:1m:0s (0h:1m:31s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 61: -27609.533
+Iteration 70 / LogL: -27610.059 / Time: 0h:1m:7s (0h:1m:29s left)
+Iteration 80 / LogL: -27624.624 / Time: 0h:1m:13s (0h:1m:15s left)
+Iteration 90 / LogL: -27609.709 / Time: 0h:1m:19s (0h:1m:3s left)
+Iteration 100 / LogL: -27610.545 / Time: 0h:1m:26s (0h:0m:53s left)
+Log-likelihood cutoff on original alignment: -27671.628
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 110 / LogL: -27624.858 / Time: 0h:1m:32s (0h:1m:16s left)
+Iteration 120 / LogL: -27637.140 / Time: 0h:1m:38s (0h:1m:6s left)
+Iteration 130 / LogL: -27609.567 / Time: 0h:1m:44s (0h:0m:56s left)
+Iteration 140 / LogL: -27611.196 / Time: 0h:1m:50s (0h:0m:47s left)
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -27609.469
+Iteration 150 / LogL: -27617.821 / Time: 0h:1m:57s (0h:0m:39s left)
+Log-likelihood cutoff on original alignment: -27671.628
+Iteration 160 / LogL: -27610.960 / Time: 0h:2m:4s (0h:0m:31s left)
+TREE SEARCH COMPLETED AFTER 162 ITERATIONS / Time: 0h:2m:5s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -27609.469
+2. Current log-likelihood: -27609.439
+3. Current log-likelihood: -27609.397
+4. Current log-likelihood: -27609.357
+5. Current log-likelihood: -27609.319
+6. Current log-likelihood: -27609.283
+7. Current log-likelihood: -27609.248
+8. Current log-likelihood: -27609.216
+9. Current log-likelihood: -27609.185
+10. Current log-likelihood: -27609.152
+11. Current log-likelihood: -27609.122
+12. Current log-likelihood: -27609.093
+13. Current log-likelihood: -27609.065
+14. Current log-likelihood: -27609.049
+15. Current log-likelihood: -27609.023
+16. Current log-likelihood: -27609.010
+17. Current log-likelihood: -27608.996
+18. Current log-likelihood: -27608.981
+19. Current log-likelihood: -27608.967
+20. Current log-likelihood: -27608.952
+21. Current log-likelihood: -27608.938
+22. Current log-likelihood: -27608.925
+23. Current log-likelihood: -27608.913
+24. Current log-likelihood: -27608.900
+25. Current log-likelihood: -27608.889
+26. Current log-likelihood: -27608.877
+27. Current log-likelihood: -27608.866
+28. Current log-likelihood: -27608.854
+29. Current log-likelihood: -27608.844
+30. Current log-likelihood: -27608.832
+Optimal log-likelihood: -27608.818
+Rate parameters:  A-C: 2.01588  A-G: 8.56081  A-T: 0.64894  C-G: 0.43242  C-T: 8.56081  G-T: 1.00000
+Base frequencies:  A: 0.268  C: 0.170  G: 0.252  T: 0.311
+Site proportion and rates:  (0.560,0.015) (0.057,0.296) (0.039,0.296) (0.055,0.734) (0.140,1.636) (0.112,3.768) (0.036,7.451)
+Parameters optimization took 30 rounds (13.578 sec)
+BEST SCORE FOUND : -27608.818
+Creating bootstrap support values...
+Split supports printed to NEXUS file C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.splits.nex
+Total tree length: 8.903
+
+Total number of iterations: 162
+CPU time used for tree search: 123.547 sec (0h:2m:3s)
+Wall-clock time used for tree search: 124.494 sec (0h:2m:4s)
+Total CPU time used: 138.766 sec (0h:2m:18s)
+Total wall-clock time used: 140.010 sec (0h:2m:20s)
+
+Computing bootstrap consensus tree...
+Reading input file C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.splits.nex...
+114 taxa and 781 splits.
+Consensus tree written to C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.contree
+Reading input trees file C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.contree
+Log-likelihood of consensus tree: -27616.160
+
+Analysis results written to: 
+  IQ-TREE report:                C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.iqtree
+  Maximum-likelihood tree:       C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.treefile
+  Likelihood distances:          C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.splits.nex
+  Consensus tree:                C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.contree
+  Screen log file:               C:\iqtree-2.1.1-Windows\bin\Bartonella_conc_sequences.fasta.log
+
+Date and Time: Sun Nov 29 14:54:58 2020

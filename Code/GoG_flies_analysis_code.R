@@ -1,5 +1,7 @@
 ### Code for Gulf of Guinea bat flies study
-### Works: 2024-01-31
+### Works: 2024-04-30
+
+# Preamble ----------------------------------------------------------------
 
 # Load packages
 library(vegan)
@@ -19,9 +21,10 @@ library(readxl)
 library(broom)
 library(here)
 
-###########################
-### Map of study system ###
-###########################
+# Working directory
+here()
+
+# Map of study system -----------------------------------------------------
 
 # Read in IUCN species distributions
 load(file='Data/mammterr.RData')
@@ -91,9 +94,7 @@ map_B <- ggplot() +
 combo_map <- plot_grid(map_A, map_B, labels=c('A', 'B'), label_size=16, ncol=2, axis = "lb", align='hv')
 ggsave('Results/GoG_maps.pdf', plot = combo_map, height=5, width=10, units='in')
 
-###############################
-### Ectoparasite prevalence ###
-###############################
+# Ectoparasite prevalence -------------------------------------------------
 
 # Read in data and filter to Eidolon helvum
 Eh_flies <- read_excel("Data/bat_fly_prevalence.xlsx", sheet = "Islands raw spreadsheet") %>%
@@ -132,12 +133,19 @@ prop.test(x = flies_prev_islands$bats_w_flies,
           n = flies_prev_islands$n_bats,
           alternative = "two.sided") %>%
   tidy()
+fly.prev.glm <- glm(prevalence ~ Island,
+                    data = flies_prev_islands,
+                    family = binomial(link = "logit"),
+                    weights = n_bats)
+summary(fly.prev.glm)
+emmeans(fly.prev.glm, specs = pairwise ~ Island)
 
 # Calculate difference in fly counts between islands for Eidolon helvum
 kruskal.test(Nycteribiid_count ~ Island, data = Eh_flies) %>%
   tidy()
-glm(Nycteribiid_count ~ Island, data = Eh_flies, family = poisson(link = "log")) %>%
-  tidy()
+fly.count.glm <- glm(Nycteribiid_count ~ Island, data = Eh_flies, family = poisson(link = "log"))
+summary(fly.count.glm)
+emmeans(fly.count.glm, specs = pairwise ~ Island)
 ggplot(Eh_flies, aes(x = Island, y = Nycteribiid_count)) +
   geom_boxplot(outlier.color = NA, color = "black", fill = NA, width = 0.5) +
   geom_jitter(shape = 1, size = 0.5, width = 0.25) +
@@ -162,17 +170,24 @@ flies_prev_age <- Eh_flies %>%
                           round(prev_lower, 2), "–",
                           round(prev_upper, 2), ")"))
 
-# Calculate difference in prevalence between ages for Eidolon helvum
+# Calculate difference in prevalence between age groups for Eidolon helvum
 prop.test(x = flies_prev_age$bats_w_flies,
           n = flies_prev_age$n_bats,
           alternative = "two.sided") %>%
   tidy()
+fly.prev.age.glm <- glm(prevalence ~ age_recode,
+                    data = flies_prev_age,
+                    family = binomial(link = "logit"),
+                    weights = n_bats)
+summary(fly.prev.age.glm)
+emmeans(fly.prev.age.glm, specs = pairwise ~ age_recode)
 
-# Calculate difference in fly counts between islands for Eidolon helvum
+# Calculate difference in fly counts between ages for Eidolon helvum
 kruskal.test(Nycteribiid_count ~ age_recode, data = Eh_flies) %>%
   tidy()
-glm(Nycteribiid_count ~ age_recode, data = Eh_flies, family = poisson(link = "log")) %>%
-  tidy()
+fly.count.age.glm <- glm(Nycteribiid_count ~ age_recode, data = Eh_flies, family = poisson(link = "log"))
+summary(fly.count.age.glm)
+emmeans(fly.count.age.glm, specs = pairwise ~ age_recode)
 ggplot(Eh_flies, aes(x = age_recode, y = Nycteribiid_count)) +
   geom_boxplot(outlier.color = NA, color = "black", fill = NA, width = 0.5) +
   geom_jitter(shape = 1, size = 0.5, width = 0.25) +
@@ -202,12 +217,19 @@ prop.test(x = flies_prev_sex$bats_w_flies,
           n = flies_prev_sex$n_bats,
           alternative = "two.sided") %>%
   tidy()
+fly.prev.sex.glm <- glm(prevalence ~ sex_recode,
+                        data = flies_prev_sex,
+                        family = binomial(link = "logit"),
+                        weights = n_bats)
+summary(fly.prev.sex.glm)
+emmeans(fly.prev.sex.glm, specs = pairwise ~ sex_recode)
 
 # Calculate difference in fly counts between sexes for Eidolon helvum
 kruskal.test(Nycteribiid_count ~ sex_recode, data = Eh_flies) %>%
   tidy()
-glm(Nycteribiid_count ~ sex_recode, data = Eh_flies, family = poisson(link = "log")) %>%
-  tidy()
+fly.count.sex.glm <- glm(Nycteribiid_count ~ sex_recode, data = Eh_flies, family = poisson(link = "log"))
+summary(fly.count.sex.glm)
+emmeans(fly.count.sex.glm, specs = pairwise ~ sex_recode)
 ggplot(Eh_flies, aes(x = sex_recode, y = Nycteribiid_count)) +
   geom_boxplot(outlier.color = NA, color = "black", fill = NA, width = 0.5) +
   geom_jitter(shape = 1, size = 0.5, width = 0.25) +
@@ -216,11 +238,9 @@ ggplot(Eh_flies, aes(x = sex_recode, y = Nycteribiid_count)) +
   theme_cowplot(font_size=12) +
   theme(axis.text.x=element_text(angle=45, hjust=1))
 
-#############################
-### Bartonella prevalence ###
-#############################
+# Bartonella prevalence ---------------------------------------------------
 
-# Bat fly Bartonella prevalence
+# Bat fly Bartonella prevalence by location
 prev <- read.csv('Data/GoG_prevalence.csv', header=T)
 prev.CI <- binom.wilson(prev$Pos, prev$Tested, conf.level=0.95)
 prev.CI <- cbind(prev[,1:2], prev.CI)
@@ -239,6 +259,22 @@ prop.test(x=prev.CI[1:5,]$x, n=prev.CI[1:5,]$n,
 prop.test(x=prev.CI[6:8,]$x, n=prev.CI[6:8,]$n,
           alternative='two.sided')
 
+# GLM for Bartonella prevalence for C. greefi
+bart.prev.Cg.glm <- glm(mean ~ Location,
+                    data = prev.CI %>% filter(Species == "C. greefi"),
+                    family = binomial(link = "logit"),
+                    weights = n)
+summary(bart.prev.Cg.glm)
+emmeans(bart.prev.Cg.glm, specs = pairwise ~ Location)
+
+# GLM for Bartonella prevalence for E. africana
+bart.prev.Ea.glm <- glm(mean ~ Location,
+                        data = prev.CI %>% filter(Species == "E. africana"),
+                        family = binomial(link = "logit"),
+                        weights = n)
+summary(bart.prev.Ea.glm)
+emmeans(bart.prev.Ea.glm, specs = pairwise ~ Location)
+
 # Plot prevalence
 ggplot(data=prev.CI, aes(x=Location, y=mean)) +
   geom_pointrange(aes(ymin=lower, ymax=upper), size=1) +
@@ -250,12 +286,57 @@ ggplot(data=prev.CI, aes(x=Location, y=mean)) +
   theme(axis.text.x=element_text(angle=45, hjust=1)) +
   facet_grid(~Species)
 ggsave('Results/GoG_prevalence_by_species.pdf', height=4, width=5, units='in')
-ggsave('Results/GoG_prevalence_by_species.png', height=4, width=5, units='in', dpi=300)
-ggsave('Results/GoG_prevalence_by_species.tiff', height=4, width=5, units='in', dpi=300)
+ggsave('Results/GoG_prevalence_by_species.png', height=4, width=5, units='in', dpi=600)
+ggsave('Results/GoG_prevalence_by_species.tiff', height=4, width=5, units='in', dpi=600)
 
-############################
-### Bartonella diversity ###
-############################
+# Bartonella prevalence by time
+year_prev <- read.csv('Data/GoG_year_prevalence.csv', header=T) %>%
+  mutate(binom.wilson(x = Pos, n = Tested, conf.level=0.95),
+         mean = round(mean, 2),
+         lower = round(lower, 2),
+         upper = round(upper, 2))
+
+# Calculate difference in prevalence by year for C. greefi
+prop.test(x = year_prev %>% filter(Species == "C. greefi") %>% pull(Pos),
+          n = year_prev %>% filter(Species == "C. greefi") %>% pull(Tested))
+glm(mean ~ factor(Year),
+    data = year_prev %>% filter(Species == "C. greefi"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+glm(mean ~ Year,
+    data = year_prev %>% filter(Species == "C. greefi"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+
+# Calculate difference in prevalence by year for E. africana
+prop.test(x = year_prev %>% filter(Species == "E. africana") %>% pull(Pos),
+          n = year_prev %>% filter(Species == "E. africana") %>% pull(Tested))
+glm(mean ~ factor(Year),
+    data = year_prev %>% filter(Species == "E. africana"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+glm(mean ~ Year,
+    data = year_prev %>% filter(Species == "E. africana"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+
+# Plot prevalence by year
+ggplot(data=year_prev, aes(x=factor(Year), y=mean)) +
+  geom_pointrange(aes(ymin=lower, ymax=upper), size=1) +
+  xlab('Year') +
+  ylab('Prevalence') +
+  theme_cowplot(font_size=12) +
+  theme(axis.text.x=element_text(angle=45, hjust=1)) +
+  facet_grid(~Species, scales = "free_x")
+ggsave('Results/GoG_prevalence_by_year.pdf', height=4, width=5, units='in')
+ggsave('Results/GoG_prevalence_by_year.png', height=4, width=5, units='in', dpi=600)
+ggsave('Results/GoG_prevalence_by_year.tiff', height=4, width=5, units='in', dpi=600)
+
+# Bartonella diversity ----------------------------------------------------
 
 # Calculation of diversity measures
 counts <- read.csv(file='Data/GoG_flies_counts.csv', header=T)
@@ -274,7 +355,7 @@ m.counts <- melt(counts, id_vars=c('Species', 'Location')) %>%
 # Stacked bar plot of relative abundance data by Bartonella species
 (div_A <- ggplot(data=m.counts, aes(x=Location, y=value, fill=variable)) +
     geom_col(position='fill') +
-    scale_fill_viridis_d(direction=-1, option='C', name='Species',
+    scale_fill_viridis_d(direction=-1, option='C', name='Genogroup',
                        labels=c('E1', 'E2', 'E3', 'E4', 'E5', 'Ew', 'Eh6', 'Eh7')) +
     scale_x_discrete(limits=c('Ghana', 'Bioko', 'Principe', 'Sao Tome', 'Annobon'),
                      labels=c('Ghana', 'Bioko', 'Príncipe', 'São Tomé', 'Annobón'),
@@ -299,12 +380,10 @@ m.counts <- melt(counts, id_vars=c('Species', 'Location')) %>%
 plot_grid(div_A, div_B, labels=c('A', 'B'), label_size=16,
           ncol=2, rel_widths=c(0.49, 0.51), align='v')
 ggsave('Results/GoG_div.pdf', height=4, width=10, units='in')
-ggsave('Results/GoG_div.png', height=4, width=10, units='in', dpi=300, bg = "white")
-ggsave('Results/GoG_div.tiff', height=4, width=10, units='in', dpi=300, bg = "white")
+ggsave('Results/GoG_div.png', height=4, width=10, units='in', dpi=600, bg = "white")
+ggsave('Results/GoG_div.tiff', height=4, width=10, units='in', dpi=600, bg = "white")
 
-######################################################
-### Demographic predictors of Bartonella infection ###
-######################################################
+# Demographic predictors of Bartonella infection --------------------------
 
 # Read in predictor data
 predictors <- read_excel('Data/GoG_predictors_redo.xlsx', sheet = 1) %>%
@@ -346,6 +425,12 @@ prop.test(x = bart_prev_locations$n_pos,
           n = bart_prev_locations$n_flies,
           alternative = "two.sided") %>%
   tidy()
+bart.prev.loc.glm <- glm(prevalence ~ Location,
+                    data = bart_prev_locations,
+                    family = binomial(link = "logit"),
+                    weights = n_flies)
+summary(bart.prev.loc.glm)
+emmeans(bart.prev.loc.glm, specs = pairwise ~ Location)
 
 # Repeat test without Bioko
 prop.test(x = predictors_BI %>%
@@ -358,8 +443,14 @@ prop.test(x = predictors_BI %>%
             summarize(n_flies = n(),
                       n_pos = sum(Pos)) %>%
             pull(n_flies),
-          alternative = "two.sided") %>%
-  tidy()
+          alternative = "two.sided")
+bart.prev.loc.noBI.glm <- glm(prevalence ~ Location,
+                         data = bart_prev_locations %>%
+                           filter(Location != "Bioko"),
+                         family = binomial(link = "logit"),
+                         weights = n_flies)
+summary(bart.prev.loc.noBI.glm)
+emmeans(bart.prev.loc.noBI.glm, specs = pairwise ~ Location)
 
 # Plot prevalence by location
 location_prev_plot <- ggplot(data = bart_prev_locations, aes(x = Location, y = prevalence)) +
@@ -379,12 +470,29 @@ bart_prev_age <- predictors %>%
   mutate(prev_CI = paste0(round(prevalence, 2), " (",
                           round(prev_lower, 2), "–",
                           round(prev_upper, 2), ")"))
+bart_prev_age_noBI <- predictors %>%
+  filter(Location != "Bioko") %>%
+  group_by(Age2_recode) %>%
+  summarize(n_flies = n(),
+            n_pos = sum(Pos)) %>%
+  mutate(binom.wilson(x = n_pos, n = n_flies)) %>%
+  select(!c(x, n)) %>%
+  rename(prevalence = mean, prev_lower = lower, prev_upper = upper) %>%
+  mutate(prev_CI = paste0(round(prevalence, 2), " (",
+                          round(prev_lower, 2), "–",
+                          round(prev_upper, 2), ")"))
 
 # Calculate difference in prevalence between ages for Eidolon helvum
 prop.test(x = bart_prev_age$n_pos,
           n = bart_prev_age$n_flies,
           alternative = "two.sided") %>%
   tidy()
+bart.prev.age.glm <- glm(prevalence ~ Age2_recode,
+                         data = bart_prev_age,
+                         family = binomial(link = "logit"),
+                         weights = n_flies)
+summary(bart.prev.age.glm)
+emmeans(bart.prev.age.glm, specs = pairwise ~ Age2_recode)
 
 # Repeat test without Bioko
 prop.test(x = predictors_BI %>%
@@ -399,6 +507,12 @@ prop.test(x = predictors_BI %>%
             pull(n_flies),
           alternative = "two.sided") %>%
   tidy()
+bart.prev.age.noBI.glm <- glm(prevalence ~ Age2_recode,
+                              data = bart_prev_age_noBI,
+                              family = binomial(link = "logit"),
+                              weights = n_flies)
+summary(bart.prev.age.noBI.glm)
+emmeans(bart.prev.age.noBI.glm, specs = pairwise ~ Age2_recode)
 
 # Plot prevalence by age
 age_prev_plot <- ggplot(data = bart_prev_age, aes(x = Age2_recode, y = prevalence)) +
@@ -419,12 +533,29 @@ bart_prev_sex <- predictors %>%
   mutate(prev_CI = paste0(round(prevalence, 2), " (",
                           round(prev_lower, 2), "–",
                           round(prev_upper, 2), ")"))
+bart_prev_sex_noBI <- predictors %>%
+  filter(Location != "Bioko") %>%
+  group_by(Sex_recode) %>%
+  summarize(n_flies = n(),
+            n_pos = sum(Pos)) %>%
+  mutate(binom.wilson(x = n_pos, n = n_flies)) %>%
+  select(!c(x, n)) %>%
+  rename(prevalence = mean, prev_lower = lower, prev_upper = upper) %>%
+  mutate(prev_CI = paste0(round(prevalence, 2), " (",
+                          round(prev_lower, 2), "–",
+                          round(prev_upper, 2), ")"))
 
-# Calculate difference in prevalence between ages for Eidolon helvum
+# Calculate difference in prevalence between sexes for Eidolon helvum
 prop.test(x = bart_prev_sex$n_pos,
           n = bart_prev_sex$n_flies,
           alternative = "two.sided") %>%
   tidy()
+bart.prev.sex.glm <- glm(prevalence ~ Sex_recode,
+                         data = bart_prev_sex,
+                         family = binomial(link = "logit"),
+                         weights = n_flies)
+summary(bart.prev.sex.glm)
+emmeans(bart.prev.sex.glm, specs = pairwise ~ Sex_recode)
 
 # Repeat test without Bioko
 prop.test(x = predictors_BI %>%
@@ -439,8 +570,14 @@ prop.test(x = predictors_BI %>%
             pull(n_flies),
           alternative = "two.sided") %>%
   tidy()
+bart.prev.sex.noBI.glm <- glm(prevalence ~ Sex_recode,
+                         data = bart_prev_sex_noBI,
+                         family = binomial(link = "logit"),
+                         weights = n_flies)
+summary(bart.prev.sex.noBI.glm)
+emmeans(bart.prev.sex.noBI.glm, specs = pairwise ~ Sex_recode)
 
-# Plot prevalence by age
+# Plot prevalence by sex
 sex_prev_plot <- ggplot(data = bart_prev_sex, aes(x = Sex_recode, y = prevalence)) +
   geom_pointrange(aes(ymin = prev_lower, ymax = prev_upper), size=1) +
   xlab("Sex") +
@@ -495,12 +632,10 @@ plot_grid(top_line, age_distrib_plot,
           labels = c("", "D"), label_size = 16,
           nrow = 2)
 ggsave('Results/GoG_prev.pdf', height=8, width=10, units='in')
-ggsave('Results/GoG_prev.png', height=8, width=10, units='in', dpi=300, bg = "white")
-ggsave('Results/GoG_prev.tiff', height=8, width=10, units='in', dpi=300, bg = "white")
+ggsave('Results/GoG_prev.png', height=8, width=10, units='in', dpi=600, bg = "white")
+ggsave('Results/GoG_prev.tiff', height=8, width=10, units='in', dpi=600, bg = "white")
 
-#############################
-### Isolation by distance ###
-#############################
+# Isolation by distance ---------------------------------------------------
 
 # Input physical distances and bat genetic data
 bat_dist <- read.csv('Data/Bat_phys_genet_dist.csv', head=T)
@@ -515,22 +650,28 @@ write.csv(bart.bray, 'Data/bray_matrix.csv', row.names = FALSE)
 bart.jaccard <- as.matrix(vegdist(counts[1:5, 3:10], method = "jaccard"))
 write.csv(bart.jaccard, 'Data/jaccard_matrix.csv', row.names = FALSE)
 
+bart.euclidean <- as.matrix(vegdist(counts[1:5, 3:10], method = "euclidean"))
+write.csv(bart.euclidean, 'Data/euclidean_matrix.csv', row.names = FALSE)
+
 # Remove lower triangle (redundant because symmetrical)
 bart.spearman[upper.tri(bart.spearman)] <- NA
 bart.bray[upper.tri(bart.bray)] <- NA
 bart.jaccard[upper.tri(bart.jaccard)] <- NA
+bart.euclidean[upper.tri(bart.euclidean)] <- NA
 # Melt data into long format
 spear <- melt(bart.spearman[1:5, 1:5])
 bray <- melt(bart.bray[1:5, 1:5])
 jaccard <- melt(bart.jaccard[1:5, 1:5])
+euclidean <- melt(bart.euclidean[1:5, 1:5])
 # Filter out values for self dissimilarity and missing values (from lower triangle)
 spear <- spear[which(spear$Var1!=spear$Var2 & spear$value!='NA'),]
 bray <- bray[which(bray$Var1!=bray$Var2 & bray$value!='NA'),]
 jaccard <- jaccard[which(jaccard$Var1!=jaccard$Var2 & jaccard$value!='NA'),]
+euclidean <- euclidean[which(euclidean$Var1!=euclidean$Var2 & euclidean$value!='NA'),]
 # Pull all distances together
 distance <- data.frame(label=c('BI-MA', 'PR-MA', 'ST-MA', 'AN-MA', 'PR-BI', 'ST-BI', 'AN-BI', 'ST-PR', 'AN-PR', 'AN-ST'),
                        loc1=spear$Var1, loc2=spear$Var2,
-                       spear=spear$value, bray=bray$value, jaccard=jaccard$value,
+                       spear=spear$value, bray=bray$value, jaccard=jaccard$value, euclidean=euclidean$value,
                        main=bat_dist$Dist, bat_mtDNA=bat_dist$mtDNA, bat_microsats=bat_dist$microsats)
 write.csv(distance, 'Results/distance.csv')
 
@@ -547,80 +688,101 @@ jaccard_fit <- lm(jaccard~main, data=distance)
 sum_jaccard_fit <- summary(jaccard_fit); sum_jaccard_fit
 cor.test(distance$jaccard, distance$main)
 
-# Plot mainland model fit for Bartonella dissimilarity
-(bart_dissim <- ggplot(data=distance) +
-  geom_smooth(aes(x=main, y=spear), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
-  geom_text(aes(x=main, y=spear, label=label), size=3, colour='black', angle = 30) +
-  annotate('text', x=300, y=0.25, colour='grey50',
-           label=paste('R =', round(sqrt(sum_spear_fit$r.squared), 2),
-                       '\nP =', round(sum_spear_fit$coefficients[2, 4], 3))) +
-  scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
-  scale_y_continuous(name='Community dissimilarity', limits=c(-0.01, 0.3), breaks=seq(0, 0.3, 0.1)) +
-  theme_cowplot(font_size=12))
-ggsave('Results/GoG_model_fit.pdf', height=4, width=5, units='in')
-ggsave('Results/GoG_model_fit.png', height=4, width=5, units='in', bg='white', dpi=300)
-ggsave('Results/GoG_model_fit.tiff', height=4, width=5, units='in', bg='white', dpi=300)
+euclidean_fit <- lm(euclidean~main, data=distance)
+sum_euclidean_fit <- summary(euclidean_fit); sum_euclidean_fit
+cor.test(distance$euclidean, distance$main)
 
 # Mainland model fit for bat mtDNA
 mtDNA_fit <- lm(bat_mtDNA~main, data=distance)
 sum_mtDNA_fit <- summary(mtDNA_fit); sum_mtDNA_fit
 cor.test(distance$bat_mtDNA, distance$main)
 
-# Plot mainland model fit for bat mtDNA
-(batIBD_A <- ggplot(data=distance) +
-  geom_smooth(aes(x=main, y=bat_mtDNA), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
-  geom_text(aes(x=main, y=bat_mtDNA, label=label), size=3, colour='black', angle = 30) +
-  annotate('text', x=300, y=0.95, colour='grey50',
-           label=paste('R =', round(sqrt(sum_mtDNA_fit$r.squared), 2),
-                       '\nP =', round(sum_mtDNA_fit$coefficients[2, 4], 3))) +
-  scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
-  scale_y_continuous(name='Genetic distance, bat mtDNA', limits=c(-0.1, 1.1), breaks=seq(0, 1, 0.2)) +
-  theme_cowplot(font_size=12))
-
 # Mainland model fit for bat microsatellites
 microsats_fit <- lm(bat_microsats~main, data=distance)
 sum_microsats_fit <- summary(microsats_fit); sum_microsats_fit
 cor.test(distance$bat_microsats, distance$main)
-
-# Plot mainland model fit for bat microsatellites
-(batIBD_B <- ggplot(data=distance) +
-  geom_smooth(aes(x=main, y=bat_microsats), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
-  geom_text(aes(x=main, y=bat_microsats, label=label), size=3, colour='black', angle = 30) +
-  annotate('text', x=300, y=0.15, colour='grey50',
-           label=paste('R =', round(sqrt(sum_microsats_fit$r.squared), 2),
-                       '\nP =', round(sum_microsats_fit$coefficients[2, 4], 3))) +
-  scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
-  scale_y_continuous(name='Genetic distance, bat microsatellites', limits=c(-0.03, 0.17), breaks=seq(0, 0.16, 0.04)) +
-  theme_cowplot(font_size=12))
 
 # Bartonella fit for bat mtDNA
 spear_mtDNA <- lm(spear~bat_mtDNA, data=distance)
 sum_spear_mtDNA <- summary(spear_mtDNA); spear_mtDNA
 cor.test(distance$spear, distance$bat_mtDNA)
 
+# Bartonella fit for bat microsatellites
+spear_microsats <- lm(spear~bat_microsats, data=distance)
+sum_spear_microsats <- summary(spear_microsats); sum_spear_microsats
+cor.test(distance$spear, distance$bat_microsats)
+
+# Read in data for Mantel tests
+spear.mat <- as.matrix(read.csv('Data/spearman_matrix.csv', head=T))
+spear.mat[upper.tri(spear.mat, diag = TRUE)] <- NA
+main.mat <- as.matrix(read.csv('Data/main_matrix.csv', head=F))
+main.mat[upper.tri(main.mat, diag = TRUE)] <- NA
+mtDNA.mat <- as.matrix(read.csv('Data/mtDNA_matrix.csv', head=F))
+mtDNA.mat[upper.tri(mtDNA.mat, diag = TRUE)] <- NA
+micro.mat <- as.matrix(read.csv('Data/microsatellites_matrix.csv', head=F))
+micro.mat[upper.tri(micro.mat, diag = TRUE)] <- NA
+
+# Perform Mantel tests
+spear.main.mantel <- mantel(spear.mat, main.mat)
+mtDNA.main.mantel <- mantel(mtDNA.mat, main.mat)
+micro.main.mantel <- mantel(micro.mat, main.mat)
+spear.mtDNA.mantel <- mantel(spear.mat, mtDNA.mat)
+spear.micro.mantel <- mantel(spear.mat, micro.mat)
+
+# Plot mainland model fit for Bartonella dissimilarity
+(bart_dissim <- ggplot(data=distance) +
+    geom_smooth(aes(x=main, y=spear), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
+    geom_text(aes(x=main, y=spear, label=label), size=3, colour='black', angle = 30) +
+    annotate('text', x=300, y=0.25, colour='grey50',
+             label=paste('Mantel R =', round(spear.main.mantel$statistic, 2),
+                         '\nMantel P =', round(spear.main.mantel$signif, 3))) +
+    scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
+    scale_y_continuous(name='Community dissimilarity', limits=c(-0.01, 0.3), breaks=seq(0, 0.3, 0.1)) +
+    theme_cowplot(font_size=12))
+ggsave('Results/GoG_model_fit.pdf', height=4, width=5, units='in')
+ggsave('Results/GoG_model_fit.png', height=4, width=5, units='in', bg='white', dpi=600)
+ggsave('Results/GoG_model_fit.tiff', height=4, width=5, units='in', bg='white', dpi=600)
+
+# Plot mainland model fit for bat mtDNA
+(batIBD_A <- ggplot(data=distance) +
+  geom_smooth(aes(x=main, y=bat_mtDNA), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
+  geom_text(aes(x=main, y=bat_mtDNA, label=label), size=3, colour='black', angle = 30) +
+  annotate('text', x=300, y=0.95, colour='grey50',
+           label=paste('Mantel R =', round(mtDNA.main.mantel$statistic, 2),
+                       '\n Mantel P =', round(mtDNA.main.mantel$signif, 3))) +
+  scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
+  scale_y_continuous(name='Genetic distance, bat mtDNA', limits=c(-0.1, 1.1), breaks=seq(0, 1, 0.2)) +
+  theme_cowplot(font_size=12))
+
+# Plot mainland model fit for bat microsatellites
+(batIBD_B <- ggplot(data=distance) +
+  geom_smooth(aes(x=main, y=bat_microsats), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
+  geom_text(aes(x=main, y=bat_microsats, label=label), size=3, colour='black', angle = 30) +
+  annotate('text', x=300, y=0.15, colour='grey50',
+           label=paste('Mantel R =', round(micro.main.mantel$statistic, 2),
+                       '\nMantel P =', round(micro.main.mantel$signif, 3))) +
+  scale_x_continuous(name='Distance', limits=c(0, 605), breaks=seq(0, 600, 200)) +
+  scale_y_continuous(name='Genetic distance, bat microsatellites', limits=c(-0.03, 0.17), breaks=seq(0, 0.16, 0.04)) +
+  theme_cowplot(font_size=12))
+
 # Plot Bartonella fit for bat mtDNA
 (batIBD_C <- ggplot(data=distance) +
   geom_smooth(aes(x=bat_mtDNA, y=spear), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
   geom_text(aes(x=bat_mtDNA, y=spear, label=label), size=3, colour='black', angle = 30) +
   annotate('text', x=0.4, y=0.25, colour='grey50',
-           label=paste('R =', round(sqrt(sum_spear_mtDNA$r.squared), 2),
-                       '\nP =', round(sum_spear_mtDNA$coefficients[2, 4], 2))) +
+           label=paste('Mantel R =', round(spear.mtDNA.mantel$statistic, 2),
+                       '\nMantel P =', round(spear.mtDNA.mantel$signif, 2))) +
   scale_x_continuous(name='Genetic distance, bat mtDNA', limits=c(0, 0.8), breaks=seq(0, 0.8, 0.2)) +
   scale_y_continuous(name='Community dissimilarity', limits=c(0, 0.3), breaks=seq(0, 0.3, 0.06)) +
   theme_cowplot(font_size=12))
-
-# Bartonella fit for bat microsatellites
-spear_microsats <- lm(spear~bat_microsats, data=distance)
-sum_spear_microsats <- summary(spear_microsats); sum_spear_microsats
-cor.test(distance$spear, distance$bat_microsats)
 
 # Plot Bartonella fit for bat microsatellites
 (batIBD_D <- ggplot(data=distance) +
   geom_smooth(aes(x=bat_microsats, y=spear), method='lm', colour='grey50', fill='grey50', alpha=0.5) +
   geom_text(aes(x=bat_microsats, y=spear, label=label), size=3, colour='black', angle = 30) +
   annotate('text', x=0.0625, y=0.25, colour='grey50',
-           label=paste('R =', round(sqrt(sum_spear_microsats$r.squared), 2),
-                       '\nP =', round(sum_spear_microsats$coefficients[2, 4], 2))) +
+           label=paste('Mantel R =', round(spear.micro.mantel$statistic, 2),
+                       '\nMantel P =', round(spear.micro.mantel$signif, 2))) +
   scale_x_continuous(name='Genetic distance, bat microsatellites', limits=c(0, 0.13), breaks=seq(0, 0.16, 0.04)) +
   scale_y_continuous(name='Community dissimilarity', limits=c(0, 0.3), breaks=seq(0, 0.3 , 0.06)) +
   theme_cowplot(font_size=12))
@@ -629,25 +791,125 @@ cor.test(distance$spear, distance$bat_microsats)
 plot_grid(batIBD_A, batIBD_B, batIBD_C, batIBD_D, labels=c('A', 'B', 'C', 'D'), label_size=16,
           nrow=2, ncol=2, align='v')
 ggsave('Results/GoG_bat_IBD.pdf', height=8, width=10, units='in')
-ggsave('Results/GoG_bat_IBD.png', height=8, width=10, bg='white', units='in', dpi=300)
-ggsave('Results/GoG_bat_IBD.tiff', height=8, width=10, bg='white', units='in', dpi=300)
+ggsave('Results/GoG_bat_IBD.png', height=8, width=10, bg='white', units='in', dpi=600)
 
-# Read in data for Mantel tests
-spear.mat <- as.matrix(read.csv('Data/spearman_matrix.csv', head=T))
-main.mat <- as.matrix(read.csv('Data/main_matrix.csv', head=F))
-mtDNA.mat <- as.matrix(read.csv('Data/mtDNA_matrix.csv', head=F))
-micro.mat <- as.matrix(read.csv('Data/microsatellites_matrix.csv', head=F))
+# Beta diversity and PERMANOVA --------------------------------------------
 
-# Perform Mantel tests
-mantel(spear.mat, main.mat)
-mantel(mtDNA.mat, main.mat)
-mantel(micro.mat, main.mat)
-mantel(spear.mat, mtDNA.mat)
-mantel(spear.mat, micro.mat)
+# Read in Bartonella community composition across individual bat flies
+comm_comp <- read.csv("Data/bart_comm_comp.csv")
 
-################################################
-### Phylogenetic analysis of genotyping data ###
-################################################
+# Separate species counts and location information
+comm_comp_sp <- comm_comp %>%
+  select(E1:Eh7)
+comm_comp_env <- comm_comp %>%
+  select(Location)
+
+# Calculate Euclidean distance matrix
+bart.dist <- vegdist(comm_comp_sp, method = "euclidean")
+bart.dist.mat <- as.matrix(bart.dist, labels = TRUE)
+
+# PERMANOVA
+bart.perm <- adonis2(comm_comp_sp ~ Location, data = comm_comp_env, permutations = 999, method = "euclidean")
+bart.perm
+
+# Beta dispersion test (for homoscedasticity)
+bart.beta.disper <- betadisper(bart.dist, comm_comp_env %>% pull(Location), type = "median", bias.adjust = TRUE)
+anova(bart.beta.disper)
+TukeyHSD(bart.beta.disper)
+bart.permutest <- permutest(bart.beta.disper, pairwise = TRUE, permutations = 999); bart.permutest
+
+# Analysis of similarities
+bart.ano <- with(comm_comp_env, anosim(bart.dist, Location))
+summary(bart.ano)
+plot(bart.ano)
+
+# In this part, we define a function NMDS.scree() that automatically 
+# performs a NMDS for 1-10 dimensions and plots the nr of dimensions vs the stress
+NMDS.scree <- function(x) { #where x is the name of the data frame variable
+  plot(rep(1, 1), replicate(1, metaMDS(x, distance = "euclidean", k = 1, trymax = 20)$stress),
+       xlim = c(1, 10), ylim = c(0, 0.5), xlab = "# of Dimensions", ylab = "Stress", main = "NMDS stress plot")
+  for (i in 1:10) {
+    points(rep(i + 1, 1), replicate(1, metaMDS(x, distance = "euclidean", k = i + 1, trymax = 20)$stress))
+  }
+}
+# Use the function that we just defined to choose the optimal number of dimensions
+par(mfrow = c(2, 1))
+set.seed(20240430)
+NMDS.scree(comm_comp_sp)
+abline(a = 0.05, b = 0, col = "red")
+
+# Perform nonmetric multidimensional scaling (NMDS) ordination
+set.seed(20240430)
+island.spp_NMS <-
+  metaMDS(comm_comp_sp,
+          distance = "euclidean",
+          k = 3,
+          maxit = 999, 
+          trymax = 250,
+          wascores = TRUE)
+
+# Test goodness of fit
+all(goodness(island.spp_NMS) < 0.05)
+# Stress plot
+stressplot(island.spp_NMS, main = "Shepards diagram")
+# --> manually save to file as 7x7 PDF
+
+# Association of NMDS with locations
+ef <- envfit(island.spp_NMS, comm_comp_env, permu = 999)
+rownames(ef$factors$centroids) <- c("Annobón", "Bioko", "Ghana", "Príncipe", "São Tomé")
+
+# Plot NMDS ordination by locations
+species_scale <- as.data.frame(island.spp_NMS$species)
+par(mfrow = c(1, 1))
+plot(island.spp_NMS, display = "sites", type = "points",
+     xlim = c(-1.1, 1.3),
+     main = "NMDS ordination")
+ordiellipse(
+  island.spp_NMS,
+  comm_comp_env %>% pull(Location),
+  display = "sites",
+  draw = c("polygon"),
+  col = NA,
+  border = viridis::turbo(n = 5, begin = 0.1, end = 0.9),
+  lwd = 2.5,
+  alpha = 0.1
+)
+plot(ef, col = viridis::turbo(n = 5, begin = 0.1, end = 0.9), cex = 0.7)
+orditorp(island.spp_NMS, display = "species", col = "grey50", cex = 0.7)
+arrows(x0 = 0, y0 = 0, x1 = species_scale$MDS1, y1 = species_scale$MDS2, length = 0, col = "grey50")
+# --> manually save to file as 7x7 PDF
+
+# Create physical distance matrix of locations for individual fly matrix
+bat_dist_rename <- bat_dist %>%
+  mutate(Loc1 = case_when(Loc1 == "AN" ~ "Annobon",
+                          Loc1 == "BI" ~ "Bioko",
+                          Loc1 == "GH" ~ "Ghana",
+                          Loc1 == "PR" ~ "Principe",
+                          Loc1 == "ST" ~ "Sao Tome"),
+         Loc2 = case_when(Loc2 == "AN" ~ "Annobon",
+                          Loc2 == "BI" ~ "Bioko",
+                          Loc2 == "GH" ~ "Ghana",
+                          Loc2 == "PR" ~ "Principe",
+                          Loc2 == "ST" ~ "Sao Tome")) %>%
+  select(Loc1, Loc2, Dist)
+# All pairwise combinations of individual flies
+loc_grid <- expand.grid(comm_comp_env$Location, comm_comp_env$Location)
+merge_grid <- full_join(x = loc_grid, y = bat_dist_rename, by = c("Var1" = "Loc1", "Var2" = "Loc2")) %>%
+  full_join(y = bat_dist_rename, by = c("Var1" = "Loc2", "Var2" = "Loc1")) %>%
+  rowwise() %>%
+  mutate(main_dist = sum(Dist.x, Dist.y, na.rm = TRUE)) %>%
+  select(-c(Dist.x, Dist.y))
+# Create complete matrix
+merge_grid_mat <- matrix(merge_grid$main_dist,
+                         nrow = nrow(comm_comp_env),
+                         ncol = nrow(comm_comp_env))
+merge_grid_mat[upper.tri(merge_grid_mat, diag = TRUE)] <- NA
+bart.dist.mat[upper.tri(bart.dist.mat, diag = TRUE)] <- NA
+
+# Mantel test for IBD
+mantel(xdis = merge_grid_mat, ydis = bart.dist.mat, permutations = 999)
+
+# Phylogenetic analysis of genotyping data --------------------------------
 
 # Color palettes
 C_greefi_cols <- colorRampPalette(c('#009E73', '#000000'))(3)
@@ -660,7 +922,7 @@ D_biannulata_cols <- '#CC79A7'
 e16S_tree_data <- read.csv("Data/tree_metadata_16Se.csv", header = TRUE)
 
 # Read in tree
-e16S_tree <- read.tree("Sequencing/16Se model selection rerun/AICc/16Se_seqs_mafft_gb_haplotypes.fasta.contree")
+e16S_tree <- read.tree("Sequencing/16Se model selection rerun/BIC/16Se_seqs_mafft_gb_haplotypes.fasta.contree")
 
 # Root tree at midpoint
 e16S_root_tree <- midpoint.root(e16S_tree)
@@ -709,7 +971,7 @@ m.mt16Se <- melt(mt16Se, id.vars=c('Species', 'Location'), measure.vars='Count')
 cytB_tree_data <- read.csv("Data/tree_metadata_cytB.csv")
 
 # Read in tree
-cytB_tree <- read.tree("Sequencing/cytB model selection/cytB AICc/cytB_seqs_mafft_gb_haplotypes.fasta.contree")
+cytB_tree <- read.tree("Sequencing/cytB model selection/cytB BIC/cytB_seqs_mafft_gb_haplotypes.fasta.contree")
 
 # Root tree at midpoint
 cytB_root_tree <- midpoint.root(cytB_tree)
@@ -727,7 +989,7 @@ df_cytB_tree_data <- data.frame(label = sort(cytB_root_tree$tip.label),
     geom_text2(aes(subset = !isTip & as.numeric(label) >= 0, label = label),
                size = 2, hjust = 1.1, vjust = -0.3, color = "grey50") +
     geom_treescale(x = 0, y = -0.5, width = 0.1, fontsize = 3) +
-    xlim(0, 0.6) +
+    xlim(0, 0.7) +
     scale_color_manual(values=c('#000000', '#007E5C', '#B87F00')) +
     theme_tree() +
     theme(legend.position='none',
@@ -758,7 +1020,7 @@ m.mtcytB <- melt(mtcytB, id.vars=c('Species', 'Location'), measure.vars='Count')
 b16S_tree_data <- read.csv("Data/tree_metadata_16Sb.csv")
 
 # Read in tree
-b16S_tree <- read.tree("Sequencing/16Sb model selection/16Sb AICc/16Sb_seqs_mafft_gb_haplotypes.fasta.contree")
+b16S_tree <- read.tree("Sequencing/16Sb model selection/16Sb BIC/16Sb_seqs_mafft_gb_haplotypes.fasta.contree")
 
 # Root tree at midpoint
 b16S_root_tree <- midpoint.root(b16S_tree)
@@ -803,14 +1065,14 @@ m.mt16Sb <- melt(mt16Sb, id.vars=c('Species', 'Location'), measure.vars='Count')
     labs(subtitle = "bacterial symbiont 16S rRNA"))
 
 # Combine diversity correlate plots
-trees <- plot_grid(gen_A, gen_C, gen_E, labels=c('A', 'C', 'E'), label_size=16,
+hap.trees <- plot_grid(gen_A, gen_C, gen_E, labels=c('A', 'C', 'E'), label_size=16,
                    ncol=1, nrow=3)
-counts <- plot_grid(gen_B, gen_D, gen_F, labels=c('B', 'D', 'F'), label_size=16,
+hap.counts <- plot_grid(gen_B, gen_D, gen_F, labels=c('B', 'D', 'F'), label_size=16,
                     ncol=1, nrow=3, align='v')
-plot_grid(trees, counts, ncol=2)
+plot_grid(hap.trees, hap.counts, ncol=2)
 ggsave('Results/GoG_haplotyping.pdf', height=12, width=10, units='in')
-ggsave('Results/GoG_haplotyping.png', height=12, width=10, units='in', dpi=300, bg = "white")
-ggsave('Results/GoG_haplotyping.tiff', height=12, width=10, units='in', dpi=300, bg = "white")
+ggsave('Results/GoG_haplotyping.png', height=12, width=10, units='in', dpi=600, bg = "white")
+ggsave('Results/GoG_haplotyping.tiff', height=12, width=10, units='in', dpi=600, bg = "white")
 
 # Bat fly bacterial symbiont prevalence
 sym <- read.csv('Data/GoG_symbionts.csv', header=T)
@@ -818,14 +1080,56 @@ sym.CI <- binom.wilson(sym$Pos, sym$Tested, conf.level=0.95)
 sym.CI <- cbind(sym[,1:2], sym.CI)
 write.csv(sym.CI, 'Results/sym_CI.csv')
 
-###-----------------------
-### Graphical abstract ---
-###-----------------------
+# Bat fly bacterial symbiont prevalence by year
+year_sym <- read.csv('Data/GoG_year_symbionts.csv', header=T) %>%
+  mutate(binom.wilson(x = Pos, n = Tested, conf.level=0.95))
+
+# Calculate difference in prevalence by year for C. greefi
+prop.test(x = year_sym %>% filter(Species == "C. greefi") %>% pull(Pos),
+          n = year_sym %>% filter(Species == "C. greefi") %>% pull(Tested))
+glm(mean ~ factor(Year),
+    data = year_sym %>% filter(Species == "C. greefi"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+glm(mean ~ Year,
+    data = year_sym %>% filter(Species == "C. greefi"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+
+# Calculate difference in prevalence by year for E. africana
+prop.test(x = year_sym %>% filter(Species == "E. africana") %>% pull(Pos),
+          n = year_sym %>% filter(Species == "E. africana") %>% pull(Tested))
+glm(mean ~ factor(Year),
+    data = year_sym %>% filter(Species == "E. africana"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+glm(mean ~ Year,
+    data = year_sym %>% filter(Species == "E. africana"),
+    family = binomial(link = "logit"),
+    weights = Tested) %>%
+  summary()
+
+# Plot prevalence by year
+ggplot(data=year_sym, aes(x=factor(Year), y=mean)) +
+  geom_pointrange(aes(ymin=lower, ymax=upper), size=1) +
+  xlab('Year') +
+  ylab('Prevalence') +
+  theme_cowplot(font_size=12) +
+  theme(axis.text.x=element_text(angle=45, hjust=1)) +
+  facet_grid(~Species, scales = "free_x")
+ggsave('Results/GoG_symbionts_by_year.pdf', height=4, width=5, units='in')
+ggsave('Results/GoG_symbionts_by_year.png', height=4, width=5, units='in', dpi=600)
+ggsave('Results/GoG_symbionts_by_year.tiff', height=4, width=5, units='in', dpi=600)
+
+# Graphical abstract ------------------------------------------------------
 
 abstract_row1 <- plot_grid(map_B, gen_C,
                            ncol = 2, axis = "lb", align = "hv")
 abstract_row2 <- plot_grid(div_A +
-                             scale_fill_viridis_d(direction=-1, option='C', name='Bartonella\nspecies',
+                             scale_fill_viridis_d(direction=-1, option='C', name='Bartonella\ngenogroup',
                                                   labels=c('E1', 'E2', 'E3', 'E4', 'E5', 'Ew', 'Eh6', 'Eh7')) +
                              labs(y = "Bartonella relative abundance"),
                            bart_dissim +
@@ -838,9 +1142,7 @@ ggsave('Results/GoG_graphical_abstract.pdf', height = 9, width = 10, units = "in
 ggsave('Results/GoG_graphical_abstract.png', height = 9, width = 10, units = "in", dpi = 300, bg = "white")
 ggsave('Results/GoG_graphical_abstract.tiff', height = 9, width = 10, units = "in", dpi = 300, bg = "white")
 
-###-------------------------------------------------------------------
-### Supplementary Figure: Bartonella concatenated ftsZ + gltA tree ---
-###-------------------------------------------------------------------
+# Bartonella concatenated ftsZ + gltA tree --------------------------------
 
 # Read in tree data
 Bart_conc_tree_data <- read.csv("Data/Bart_conc_tree_metadata.csv")
@@ -873,5 +1175,4 @@ ggtree(root_Bart_conc_tree) %<+% df_Bart_conc_tree_data +
   theme_tree() +
   theme(legend.position = "none")
 ggsave("Results/Bart_conc_tree.pdf", height = 12, width = 10, units = "in")
-ggsave("Results/Bart_conc_tree.png", height = 12, width = 10, units = "in", dpi = 300)
-ggsave("Results/Bart_conc_tree.tiff", height = 12, width = 10, units = "in", dpi = 300)
+ggsave("Results/Bart_conc_tree.png", height = 12, width = 10, units = "in", dpi = 600)

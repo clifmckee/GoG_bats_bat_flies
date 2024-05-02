@@ -1,0 +1,1046 @@
+IQ-TREE multicore version 2.1.3 COVID-edition for Mac OS X 64-bit built Oct  4 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    Emilys-MacBook-Air-5.local (AVX2, FMA3, 16 GB RAM)
+Command: bin/iqtree2 -s /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta -m MFP -B 1000
+Seed:    438663 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Apr 23 19:54:51 2024
+Kernel:  AVX+FMA - 1 threads (4 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 4 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 1 sites contain only gaps or ambiguous characters.
+Alignment has 542 sequences with 522 columns, 395 distinct patterns
+190 parsimony-informative, 38 singleton sites, 294 constant sites
+                                           Gap/Ambiguity  Composition  p-value
+   1  Eh6-0710-A106_GH                            36.59%    passed     83.07%
+   2  Eh6-1109-Q131_GH                            34.29%    passed     78.17%
+   3  1-06_Eid.hel_E1-105_B42975_KE               27.20%    passed     73.22%
+   4  GoG_G4_85_Eh_BI                             24.90%    passed     86.20%
+   5  GoG_G2_31_Eh_PR                             33.72%    passed     54.02%
+   6  GoG_G2_81_Eh_PR                             71.46%    passed     88.73%
+   7  GoG_G7_17_Eh_BI_1                           68.58%    passed     87.31%
+   8  GoG_G1_42_Eh_ST                             73.37%    passed     65.60%
+   9  GoG_G4_22_Eh_PR                             24.90%    passed     86.20%
+  10  GoG_G4_27_Eh_ST                             24.90%    passed     86.20%
+  11  GoG_G9_64_Eh_GH                             27.01%    passed     76.53%
+  12  GoG_G7_53_Eh_AN_1                           75.10%    passed     52.22%
+  13  GoG_G7_53_Eh_AN_3                           75.10%    passed     52.22%
+  14  GoG_G3_55_Eh_PR                             25.48%    passed     87.56%
+  15  Bartonella.sp_Eidolon.helvum_E1_B23987_KE   33.14%    passed     61.20%
+  16  GoG_G7_45_Eh_AN_1                           35.63%    passed     70.82%
+  17  GoG_G7_53_Eh_AN_2                           70.88%    passed     95.29%
+  18  GoG_G7_62_Eh_AN_1                           66.09%    passed     96.10%
+  19  GoG_G7_89_Eh_AN                             25.10%    passed     88.17%
+  20  GoG_G6_80_Eh_BI                             24.71%    passed     88.51%
+  21  GoG_G7_57_Eh_AN                             74.14%    passed     49.31%
+  22  GoG_G7_45_Eh_AN_2                           34.29%    passed     31.66%
+  23  GoG_G6_47_Eh_BI_1                           42.91%    passed     71.28%
+  24  GoG_G9_85_Eh_GH                             25.48%    passed     82.67%
+  25  GoG_G8_1_Eh_AN                              26.44%    passed     88.60%
+  26  GoG_G3_47_Eh_ST                             38.12%    passed     85.54%
+  27  1-13_Eid.hel_E-Nig-712_B42982_NI            32.57%    passed     76.49%
+  28  GoG_G2_52_Eh_PR                             26.05%    passed     82.27%
+  29  GoG_G3_60_Eh_ST                             31.03%    passed     69.28%
+  30  GoG_G4_25_Eh_ST                             25.48%    passed     82.67%
+  31  GoG_G6_47_Eh_BI_2                           40.23%    passed     75.78%
+  32  GoG_G7_53_Eh_AN_4                           70.11%    passed     52.76%
+  33  Bartonella.sp_Eidolon.helvum_E5_B39249_GH   33.14%    passed     74.76%
+  34  GoG_G1_8_Eh_ST                              26.82%    passed     95.50%
+  35  GoG_G7_59_Eh_AN                             73.75%    passed     31.68%
+  36  GoG_G6_59_Eh_BI                             24.71%    passed     96.91%
+  37  GoG_G9_25_Eh_GH                             24.71%    passed     96.91%
+  38  GoG_G7_22_Eh_AN                             25.29%    passed     95.11%
+  39  GoG_G7_30_Eh_AN                             24.33%    passed     95.86%
+  40  GoG_G1_35_Eh_ST                             25.29%    passed     95.11%
+  41  GoG_G2_87_Eh_ST                             27.20%    passed     96.16%
+  42  GoG_G4_38_Eh_BI                             30.46%    passed     89.60%
+  43  GoG_G11_4_Eh_GH_2                           46.74%    passed     61.81%
+  44  GoG_G7_88_Eh_AN                             63.60%    passed     39.57%
+  45  GoG_G2_23_Eh_ST                             26.05%    passed     89.35%
+  46  GoG_G2_7_Eh_ST                              28.74%    passed     95.22%
+  47  GoG_G11_7_Eh_GH                             36.59%    passed     87.07%
+  48  GoG_G8_16_Eh_AN                             45.02%    passed     47.62%
+  49  GoG_G5_2_Eh_GH                              25.48%    passed     96.47%
+  50  GoG_G3_53_Eh_ST                             25.67%    passed     96.27%
+  51  GoG_G9_19_Eh_GH                             24.52%    passed     97.00%
+  52  GoG_G8_90_Eh_GH_2                           68.20%    passed     87.54%
+  53  Bartonella.sp_Eidolon.helvum_E5_B40014_TA   33.14%    passed     74.09%
+  54  GoG_G5_15_Eh_GH                             27.78%    passed     88.59%
+  55  GoG_G1_13_Eh_ST                             24.90%    passed     93.13%
+  56  GoG_G7_52_Eh_AN                             24.52%    passed     95.65%
+  57  GoG_G9_17_Eh_GH                             24.90%    passed     97.86%
+  58  GoG_G6_10_Eh_BI                             34.29%    passed     82.42%
+  59  GoG_G7_54_Eh_AN_2                           83.91%    passed     92.13%
+  60  GoG_G8_73_Eh_GH_1                           55.56%    passed     90.52%
+  61  GoG_G8_90_Eh_GH_1                           71.65%    passed     95.16%
+  62  Bartonella.sp_Eidolon.helvum_E5_B39233_GH   33.14%    passed     74.09%
+  63  GoG_G1_24_Eh_ST                             26.82%    passed     95.10%
+  64  GoG_G1_14_Eh_ST                             26.63%    passed     93.67%
+  65  GoG_G2_66_Eh_ST                             24.71%    passed     95.56%
+  66  GoG_G7_49_Eh_AN                             24.71%    passed     95.56%
+  67  GoG_G8_52_Eh_AN                             24.71%    passed     95.56%
+  68  GoG_G3_21_Eh_PR                             38.12%    passed     68.43%
+  69  GoG_G8_73_Eh_GH_2                           36.78%    passed     81.93%
+  70  GoG_G3_70_Eh_PR                             24.90%    passed     95.09%
+  71  GoG_G9_4_Eh_GH                              24.90%    passed     93.59%
+  72  GoG_G7_11_Eh_BI                             24.71%    passed     95.56%
+  73  GoG_G8_42_Eh_AN                             24.71%    passed     95.56%
+  74  GoG_G8_59_Eh_UNK                            24.71%    passed     95.56%
+  75  GoG_G8_58_Eh_AN                             24.90%    passed     98.05%
+  76  GoG_G9_57_Eh_GH                             27.01%    passed     95.38%
+  77  GoG_G1_36_Eh_ST                             37.93%    passed     75.08%
+  78  GoG_G8_9_Eh_AN                              24.90%    passed     95.12%
+  79  Bartonella.sp_Eidolon.helvum_E5_B39296_GH   33.14%    passed     60.09%
+  80  Bartonella.sp_Eidolon.helvum_E5_B40908_UG   33.14%    passed     60.09%
+  81  GoG_G1_29_Eh_ST                             26.82%    passed     88.00%
+  82  GoG_G9_18_Eh_GH                             24.52%    passed     91.74%
+  83  GoG_G9_66_Eh_GH                             24.52%    passed     91.74%
+  84  GoG_G6_53_Eh_BI                             34.29%    passed     68.25%
+  85  GoG_G4_58_Eh_BI                             33.14%    passed     68.95%
+  86  GoG_G9_84_Eh_GH                             26.44%    passed     90.60%
+  87  GoG_G8_91_Eh_GH                             34.48%    passed     62.60%
+  88  GoG_G3_89_Eh_ST                             25.10%    passed     84.65%
+  89  GoG_G8_51_Eh_AN                             27.01%    passed     89.36%
+  90  GoG_G8_65_Eh_PR                             24.71%    passed     90.86%
+  91  GoG_G6_93_Eh_BI                             24.52%    passed     90.63%
+  92  GoG_G1_6_Eh_PR                              25.10%    passed     87.51%
+  93  GoG_G8_57_Eh_AN                             27.39%    passed     90.90%
+  94  GoG_G8_61_Eh_UNK                            26.44%    passed     96.57%
+  95  GoG_G4_47_Eh_BI                             29.50%    passed     96.48%
+  96  GoG_G3_4_Eh_ST                              28.35%    passed     91.56%
+  97  GoG_G7_56_Eh_AN                             27.59%    passed     94.54%
+  98  GoG_G2_36_Eh_ST                             41.76%    passed     32.49%
+  99  GoG_G8_62_Eh_UNK                            26.82%    passed     92.27%
+ 100  GoG_G8_18_Eh_AN                             25.67%    passed     86.43%
+ 101  GoG_G7_4_Eh_BI                              26.82%    passed     88.08%
+ 102  GoG_G8_63_Eh_ST                             24.52%    passed     91.04%
+ 103  GoG_G7_62_Eh_AN_2                           70.88%    passed     58.11%
+ 104  GoG_G8_47_Eh_AN                             24.52%    passed     91.74%
+ 105  GoG_G7_17_Eh_BI_2                           69.35%    passed     65.60%
+ 106  GoG_G6_11_Eh_BI_1                           35.82%    passed     80.42%
+ 107  GoG_G9_52_Eh_GH_1                           72.41%    passed      8.57%
+ 108  GoG_G8_40_Eh_AN                             50.57%    passed     63.73%
+ 109  GoG_G9_53_Eh_GH                             79.89%    passed     57.40%
+ 110  GoG_G6_11_Eh_BI_2                           47.89%    passed     58.41%
+ 111  GoG_G9_52_Eh_GH_2                           75.86%    passed     45.59%
+ 112  GoG_G11_4_Eh_GH_1                           40.42%    passed     78.92%
+ 113  GoG_G3_23_Eh_PR                             26.82%    passed     93.41%
+ 114  GoG_G4_6_Eh_ST                              25.29%    passed     94.01%
+ 115  GoG_G11_12_Eh_GH                            33.91%    passed     74.71%
+ 116  GoG_G1_1_Eh_PR                              74.90%    passed     66.33%
+ 117  GoG_G2_79_Eh_ST                             75.67%    passed     44.77%
+ 118  1-07_Eid.hel_E2-114_B42976_KE               38.70%    passed     61.03%
+ 119  GoG_G3_50_Eh_ST                             25.10%    passed     57.37%
+ 120  GoG_G3_90_Eh_ST                             26.82%    passed     46.23%
+ 121  GoG_G7_60_Eh_AN                             24.71%    passed     52.43%
+ 122  GoG_G9_20_Eh_GH                             61.30%    passed     81.95%
+ 123  Bartonella.sp_Eidolon.helvum_E2_B23979_KE   33.33%    passed     39.55%
+ 124  GoG_G2_50_Eh_ST                             27.97%    passed     42.50%
+ 125  GoG_G9_91_Eh_GH                             62.64%    passed     91.56%
+ 126  GoG_G2_33_Eh_ST                             27.01%    passed     42.05%
+ 127  GoG_G8_55_Eh_AN                             34.48%    passed     16.85%
+ 128  GoG_G3_74_Eh_ST                             24.90%    passed     52.34%
+ 129  GoG_G9_13_Eh_GH                             24.90%    passed     52.34%
+ 130  GoG_G2_91_Eh_ST                             27.20%    passed     42.69%
+ 131  GoG_G1_18_Eh_ST                             28.54%    passed     43.23%
+ 132  GoG_G7_36_Eh_AN                             31.99%    passed     29.92%
+ 133  GoG_G9_5_Eh_GH                              34.48%    passed     17.33%
+ 134  GoG_G7_92_Eh_AN                             24.90%    passed     47.98%
+ 135  GoG_G9_61_Eh_GH                             25.29%    passed     57.50%
+ 136  GoG_G9_7_Eh_GH                              38.70%    passed     80.52%
+ 137  GoG_G1_41_Eh_PR                             58.05%    passed     94.19%
+ 138  GoG_G7_25_Eh_AN                             61.88%    passed     97.32%
+ 139  Bartonella.sp_Eidolon.helvum_E2_B24225_KE   38.12%    passed     73.46%
+ 140  GoG_G1_15_Eh_ST                             30.08%    passed     77.70%
+ 141  GoG_G2_26_Eh_ST                             31.99%    passed     65.12%
+ 142  Bartonella.sp_Eidolon.helvum_E2_B39294_GH   38.12%    passed     63.46%
+ 143  Bartonella.sp_Eidolon.helvum_E2_B40396_TA   38.12%    passed     63.46%
+ 144  GoG_G2_70_Eh_ST                             30.08%    passed     77.82%
+ 145  GoG_G3_58_Eh_ST                             30.27%    passed     76.96%
+ 146  GoG_G3_75_Eh_PR                             29.69%    passed     72.10%
+ 147  GoG_G9_32_Eh_GH                             29.69%    passed     72.10%
+ 148  GoG_G3_77_Eh_ST                             30.27%    passed     76.96%
+ 149  GoG_G4_1_Eh_ST                              30.08%    passed     74.47%
+ 150  GoG_G3_2_Eh_ST                              31.99%    passed     59.27%
+ 151  GoG_G7_47_Eh_AN                             31.80%    passed     60.51%
+ 152  GoG_G2_64_Eh_ST                             31.42%    passed     54.04%
+ 153  GoG_G3_52_Eh_ST                             32.18%    passed     66.80%
+ 154  Bartonella.sp_Eidolon.helvum_E2_B40400_TA   38.12%    passed     82.30%
+ 155  GoG_G1_3_Eh_PR                              31.80%    passed     82.83%
+ 156  GoG_G3_66_Eh_PR                             29.69%    passed     86.40%
+ 157  GoG_G6_23_Eh_BI                             35.44%    passed     92.71%
+ 158  GoG_G3_16_Eh_PR                             31.99%    passed     74.52%
+ 159  GoG_G3_22_Eh_PR                             31.80%    passed     77.73%
+ 160  GoG_G7_76_Eh_AN                             31.80%    passed     81.46%
+ 161  GoG_G3_45_Eh_PR                             40.23%    passed     65.31%
+ 162  GoG_G8_68_Eh_GH_2                           37.93%    passed     90.37%
+ 163  GoG_G8_68_Eh_GH_1                           57.66%    passed     73.70%
+ 164  GoG_G8_22_Eh_AN                             31.61%    passed     85.13%
+ 165  GoG_G7_91_Eh_AN                             30.27%    passed     80.91%
+ 166  GoG_G7_54_Eh_AN_1                           83.14%    passed     90.40%
+ 167  1-08_Eid.hel_E3-106_B42977_KE               29.12%    passed     34.65%
+ 168  GoG_G2_68_Eh_ST                             28.74%    passed     33.31%
+ 169  GoG_G1_38_Eh_ST                             30.65%    passed     45.56%
+ 170  GoG_G2_80_Eh_ST                             31.61%    passed     41.58%
+ 171  Bartonella.sp_Eidolon.helvum_E3_B32138_NI   37.16%    passed     24.39%
+ 172  Bartonella.sp_Eidolon.helvum_E3_B39300_GH   37.16%    passed     24.39%
+ 173  GoG_G6_5_Eh_BI_2                            45.02%    passed     37.37%
+ 174  GoG_G6_50_Eh_BI_1                           75.48%    passed     31.65%
+ 175  GoG_G9_34_Eh_GH                             28.93%    passed     34.05%
+ 176  1-14_Eid.hel_E-Nig-718_B42983_NI            35.63%    passed     17.93%
+ 177  GoG_G6_89_Eh_BI                             29.31%    passed     35.11%
+ 178  GoG_G11_10_Eh_GH                            44.64%    passed     19.29%
+ 179  GoG_G11_11_Eh_GH                            44.64%    passed     19.29%
+ 180  GoG_G11_14_Eh_GH                            44.64%    passed     19.29%
+ 181  GoG_G9_31_Eh_GH                             50.57%    passed     26.76%
+ 182  GoG_G1_16_Eh_ST                             31.80%    passed     41.92%
+ 183  GoG_G7_26_Eh_AN                             28.54%    passed     39.96%
+ 184  GoG_G1_17_Eh_ST                             28.35%    passed     48.17%
+ 185  GoG_G7_65_Eh_AN                             39.08%    passed     40.56%
+ 186  GoG_G11_16_Eh_GH                            40.42%    passed     39.30%
+ 187  GoG_G9_35_Eh_GH                             28.74%    passed     43.53%
+ 188  GoG_G6_56_Eh_BI                             38.12%    passed     41.36%
+ 189  GoG_G9_23_Eh_GH                             29.12%    passed     37.34%
+ 190  GoG_G9_41_Eh_GH                             29.12%    passed     37.34%
+ 191  GoG_G4_69_Eh_BI                             30.65%    passed     33.54%
+ 192  GoG_G6_66_Eh_BI                             29.50%    passed     36.77%
+ 193  GoG_G8_37_Eh_AN                             31.80%    passed     30.33%
+ 194  GoG_G7_29_Eh_AN                             28.54%    passed     39.96%
+ 195  GoG_G8_53_Eh_AN                             29.50%    passed     35.41%
+ 196  GoG_G7_72_Eh_AN                             30.84%    passed     41.43%
+ 197  GoG_G6_3_Eh_BI                              38.31%    passed     43.96%
+ 198  GoG_G6_50_Eh_BI_2                           38.31%    passed     43.96%
+ 199  GoG_G8_93_Eh_GH                             38.31%    passed     43.96%
+ 200  GoG_G6_5_Eh_BI_1                            52.68%    passed     19.27%
+ 201  GoG_G2_65_Eh_ST                             30.65%    passed     57.94%
+ 202  1-01_Rou.aeg_Ra-191_B42969_KE               29.89%    passed     34.50%
+ 203  GoG_G3_41_Ra_PR                             31.42%    passed     44.76%
+ 204  GoG_G10_11_Ra_GH                            31.61%    passed     48.87%
+ 205  GoG_G10_48_Ra_GH                            31.42%    passed     44.76%
+ 206  GoG_G10_30_Ra_GH                            29.12%    passed     39.85%
+ 207  GoG_G10_36_Ra_GH                            29.12%    passed     39.85%
+ 208  GoG_G10_19_Ra_GH                            41.76%    passed     20.66%
+ 209  GoG_G10_45_Ra_GH                            29.31%    passed     40.11%
+ 210  GoG_G10_31_Ra_GH                            29.31%    passed     40.11%
+ 211  GoG_G10_50_Ra_GH                            29.50%    passed     36.77%
+ 212  GoG_G10_18_Ra_GH                            29.50%    passed     37.37%
+ 213  GoG_G10_51_Ra_GH                            29.50%    passed     37.37%
+ 214  GoG_G10_35_Ra_GH                            29.12%    passed     47.20%
+ 215  GoG_G10_20_Ra_GH                            41.38%    passed     55.82%
+ 216  GoG_G10_43_Ra_GH                            29.50%    passed     40.79%
+ 217  1-02_Rou.aeg_Ra-255_B42970_KE               33.72%    passed     46.01%
+ 218  GoG_G2_55_Ra_ST                             32.76%    passed     38.45%
+ 219  GoG_G3_14_Ra_PR                             41.19%    passed     44.46%
+ 220  GoG_G3_15_Ra_PR                             31.80%    passed     48.34%
+ 221  GoG_G3_18_Ra_PR                             30.84%    passed     28.68%
+ 222  GoG_G10_44_Ra_GH                            28.74%    passed     20.68%
+ 223  GoG_G10_21_Ra_GH                            29.31%    passed     25.40%
+ 224  GoG_G10_52_Ra_GH                            29.31%    passed     22.42%
+ 225  GoG_G10_24_Ra_GH                            28.74%    passed     25.23%
+ 226  GoG_G9_69_Eh_GH_1                           53.45%    passed     52.11%
+ 227  Bartonella.sp_Eidolon.helvum_E4_B39301_GH   39.46%    passed     63.01%
+ 228  GoG_G2_38_Eh_ST                             37.74%    passed     48.92%
+ 229  GoG_G3_6_Eh_ST                              40.61%    passed     73.30%
+ 230  GoG_G4_14_Eh_ST                             40.80%    passed     74.40%
+ 231  GoG_G6_28_Eh_BI                             75.10%    passed     80.40%
+ 232  GoG_G6_72_Eh_BI                             75.48%    passed     78.99%
+ 233  GoG_G6_26_Eh_BI                             37.16%    passed     51.69%
+ 234  GoG_G6_51_Eh_UNK                            39.46%    passed     63.01%
+ 235  GoG_G6_63_Eh_BI                             39.46%    passed     63.01%
+ 236  GoG_G9_42_Eh_GH                             39.46%    passed     63.01%
+ 237  GoG_G6_68_Eh_BI                             39.27%    passed     61.99%
+ 238  GoG_G6_74_Eh_BI                             39.27%    passed     61.99%
+ 239  GoG_G9_69_Eh_GH_2                           61.30%    passed     59.47%
+ 240  GoG_G3_56_Eh_ST                             37.74%    passed     49.26%
+ 241  GoG_G4_21_Eh_PR                             37.74%    passed     49.26%
+ 242  GoG_G5_3_Eh_GH                              37.74%    passed     49.26%
+ 243  GoG_G5_13_Eh_GH                             37.74%    passed     49.26%
+ 244  GoG_G1_33_Eh_ST                             37.55%    passed     47.78%
+ 245  GoG_G2_3_Eh_PR                              37.55%    passed     47.78%
+ 246  GoG_G3_33_Eh_ST                             37.55%    passed     47.78%
+ 247  GoG_G9_14_Eh_GH                             37.36%    passed     45.63%
+ 248  GoG_G9_21_Eh_GH                             37.16%    passed     51.68%
+ 249  GoG_G9_39_Eh_GH                             37.16%    passed     51.68%
+ 250  GoG_G9_44_Eh_GH                             37.16%    passed     51.68%
+ 251  GoG_G10_7_Eh_GH                             37.16%    passed     51.68%
+ 252  GoG_G2_4_Eh_PR                              40.23%    passed     63.31%
+ 253  GoG_G9_80_Eh_GH                             46.93%    passed     46.32%
+ 254  GoG_G8_67_Eh_GH                             37.16%    passed     51.68%
+ 255  GoG_G9_54_Eh_GH                             37.16%    passed     51.68%
+ 256  GoG_G7_81_Eh_AN                             40.04%    passed     63.82%
+ 257  GoG_G9_87_Eh_GH                             38.70%    passed     56.94%
+ 258  GoG_G6_14_Eh_BI                             45.59%    passed     44.76%
+ 259  GoG_G9_77_Eh_GH                             49.43%    passed     46.32%
+ 260  GoG_G11_5_Eh_GH                             49.43%    passed     46.32%
+ 261  GoG_G6_58_Eh_BI                             49.23%    passed     47.48%
+ 262  GoG_G11_1_Eh_GH                             49.23%    passed     47.48%
+ 263  GoG_G2_16_Eh_PR                             37.93%    passed     50.46%
+ 264  GoG_G1_30_Eh_ST                             45.98%    passed     49.67%
+ 265  GoG_G9_43_Eh_GH                             37.74%    passed     49.26%
+ 266  GoG_G6_25_Eh_BI                             48.08%    passed     44.32%
+ 267  GoG_G6_27_Eh_BI                             41.95%    passed     60.01%
+ 268  GoG_G6_41_Eh_BI                             41.95%    passed     60.01%
+ 269  GoG_G2_54_Eh_PR                             37.36%    passed     53.02%
+ 270  GoG_G8_19_Eh_AN                             37.36%    passed     53.02%
+ 271  GoG_G9_63_Eh_GH                             37.36%    passed     53.02%
+ 272  GoG_G3_80_Eh_PR                             37.36%    passed     53.02%
+ 273  GoG_G3_81_Eh_PR                             37.36%    passed     53.02%
+ 274  GoG_G3_82_Eh_PR                             37.36%    passed     53.02%
+ 275  GoG_G4_24_Eh_ST                             37.36%    passed     53.02%
+ 276  GoG_G6_35_Eh_BI                             37.36%    passed     53.02%
+ 277  GoG_G6_44_Eh_BI                             37.36%    passed     53.02%
+ 278  GoG_G6_92_Eh_BI                             37.36%    passed     53.02%
+ 279  GoG_G8_71_Eh_GH                             37.36%    passed     53.02%
+ 280  GoG_G8_83_Eh_GH                             37.36%    passed     53.02%
+ 281  GoG_G9_33_Eh_GH                             37.36%    passed     53.02%
+ 282  GoG_G9_60_Eh_GH                             37.36%    passed     53.02%
+ 283  GoG_G6_88_Eh_BI                             37.16%    passed     59.16%
+ 284  GoG_G8_33_Eh_AN_2                           45.98%    passed     47.98%
+ 285  GoG_G4_23_Eh_ST                             39.08%    passed     51.44%
+ 286  GoG_G6_90_Eh_BI                             37.55%    passed     54.14%
+ 287  GoG_G4_16_Eh_PR                             40.04%    passed     43.28%
+ 288  GoG_G3_85_Eh_PR                             37.55%    passed     54.14%
+ 289  GoG_G8_84_Eh_GH                             37.55%    passed     54.14%
+ 290  GoG_G6_71_Eh_BI                             41.76%    passed     58.74%
+ 291  GoG_G8_3_Eh_AN                              41.76%    passed     58.74%
+ 292  GoG_G3_63_Eh_ST                             39.85%    passed     49.32%
+ 293  GoG_G3_71_Eh_PR                             39.85%    passed     49.32%
+ 294  GoG_G4_62_Eh_BI                             39.85%    passed     49.32%
+ 295  GoG_G3_83_Eh_PR                             39.85%    passed     49.32%
+ 296  GoG_G8_78_Eh_GH                             39.85%    passed     49.32%
+ 297  GoG_G3_59_Eh_ST                             37.93%    passed     50.46%
+ 298  GoG_G4_15_Eh_PR                             37.93%    passed     50.46%
+ 299  GoG_G7_58_Eh_AN                             37.36%    passed     52.56%
+ 300  GoG_G3_7_Eh_ST                              38.12%    passed     51.90%
+ 301  GoG_G2_20_Eh_ST                             37.36%    passed     52.56%
+ 302  GoG_G6_40_Eh_BI                             37.36%    passed     52.56%
+ 303  GoG_G6_9_Eh_BI                              50.57%    passed     50.96%
+ 304  GoG_G8_31_Eh_AN                             48.28%    passed     47.52%
+ 305  GoG_G8_12_Eh_AN                             37.36%    passed     60.15%
+ 306  GoG_G3_31_Eh_ST                             37.55%    passed     54.05%
+ 307  GoG_G8_74_Eh_GH                             37.36%    passed     60.15%
+ 308  GoG_G9_56_Eh_GH                             37.55%    passed     54.05%
+ 309  GoG_G6_13_Eh_BI                             42.34%    passed     63.66%
+ 310  GoG_G7_13_Eh_BI                             39.85%    passed     50.82%
+ 311  GoG_G2_92_Eh_ST                             38.51%    passed     54.88%
+ 312  GoG_G3_30_Eh_ST                             37.55%    passed     55.45%
+ 313  GoG_G1_32_Eh_ST                             38.89%    passed     50.61%
+ 314  GoG_G3_54_Eh_PR                             37.55%    passed     47.78%
+ 315  GoG_G5_9_Eh_GH                              38.70%    passed     56.84%
+ 316  GoG_G2_84_Eh_ST                             39.46%    passed     55.56%
+ 317  GoG_G2_76_Eh_PR                             38.89%    passed     57.75%
+ 318  GoG_G9_6_Eh_GH                              37.36%    passed     53.93%
+ 319  GoG_G9_72_Eh_GH                             37.36%    passed     53.02%
+ 320  GoG_G4_4_Eh_ST                              37.74%    passed     47.98%
+ 321  GoG_G9_74_Eh_GH                             47.13%    passed     47.22%
+ 322  GoG_G1_20_Eh_PR                             39.85%    passed     65.40%
+ 323  GoG_G4_10_Eh_ST                             39.85%    passed     65.40%
+ 324  GoG_G3_5_Eh_ST                              37.93%    passed     58.10%
+ 325  GoG_G3_28_Eh_PR                             38.31%    passed     53.12%
+ 326  GoG_G6_8_Eh_BI                              45.59%    passed     53.76%
+ 327  GoG_G9_78_Eh_GH                             49.62%    passed     40.64%
+ 328  GoG_G6_7_Eh_BI                              45.98%    passed     42.59%
+ 329  GoG_G9_79_Eh_GH                             49.81%    passed     35.14%
+ 330  GoG_G3_42_Eh_ST                             39.46%    passed     54.55%
+ 331  GoG_G1_4_Eh_PR                              39.08%    passed     52.79%
+ 332  GoG_G2_85_Eh_ST                             39.27%    passed     45.90%
+ 333  GoG_G9_59_Eh_GH                             37.16%    passed     50.86%
+ 334  GoG_G1_2_Eh_ST                              39.27%    passed     52.14%
+ 335  GoG_G9_93_Eh_GH                             37.55%    passed     49.32%
+ 336  GoG_G8_33_Eh_AN_1                           46.93%    passed     43.18%
+ 337  GoG_G2_72_Eh_PR                             37.74%    passed     55.68%
+ 338  GoG_G2_60_Eh_ST                             39.46%    passed     47.06%
+ 339  GoG_G4_54_Eh_BI                             38.89%    passed     48.06%
+ 340  GoG_G8_87_Eh_GH                             37.55%    passed     61.39%
+ 341  GoG_G8_34_Eh_AN                             39.27%    passed     69.10%
+ 342  GoG_G8_39_Eh_AN                             39.27%    passed     60.32%
+ 343  GoG_G4_41_Eh_BI                             38.51%    passed     62.93%
+ 344  GoG_G6_6_Eh_BI                              62.26%    passed     43.39%
+ 345  GoG_G9_29_Eh_GH                             39.66%    passed      8.99%
+ 346  GoG_G4_19_Eh_ST                             79.89%    passed     28.80%
+ 347  1-09_Eid.hel_Ew-111_B42978_KE               33.14%    passed     86.84%
+ 348  GoG_G7_19_Eh_BI                             79.50%    passed     40.28%
+ 349  GoG_G7_10_Eh_BI                             25.48%    passed     85.74%
+ 350  GoG_G7_50_Eh_AN                             62.26%    passed     76.88%
+ 351  GoG_G6_1_Eh_BI                              23.18%    passed     86.87%
+ 352  GoG_G7_16_Eh_BI                             23.18%    passed     86.87%
+ 353  GoG_G9_15_Eh_GH                             23.18%    passed     86.87%
+ 354  GoG_G8_89_Eh_GH                             22.99%    passed     88.66%
+ 355  GoG_G5_8_Eh_GH                              23.75%    passed     89.07%
+ 356  GoG_G2_2_Eh_ST                              25.67%    passed     77.45%
+ 357  GoG_G2_74_Eh_PR                             25.67%    passed     77.45%
+ 358  GoG_G4_87_Eh_BI                             25.67%    passed     77.45%
+ 359  GoG_G5_10_Eh_GH                             25.67%    passed     77.45%
+ 360  GoG_G5_11_Eh_GH                             25.67%    passed     77.45%
+ 361  GoG_G4_89_Eh_BI                             26.25%    passed     73.20%
+ 362  GoG_G6_32_Eh_BI                             36.40%    passed     75.52%
+ 363  GoG_G4_67_Eh_BI                             31.61%    passed     73.06%
+ 364  GoG_G6_61_Hm_BI                             67.62%    passed     66.53%
+ 365  GoG_G8_48_Eh_AN_2                           48.47%    passed     89.27%
+ 366  GoG_G8_2_Eh_AN                              23.18%    passed     86.87%
+ 367  GoG_G1_25_Eh_ST                             25.67%    passed     77.78%
+ 368  GoG_G2_8_Eh_ST                              31.42%    passed     66.20%
+ 369  GoG_G3_69_Eh_ST                             31.42%    passed     66.20%
+ 370  GoG_G6_16_Eh_BI                             31.61%    passed     70.69%
+ 371  GoG_G6_18_Eh_BI                             31.61%    passed     70.69%
+ 372  GoG_G9_65_Eh_GH                             31.61%    passed     70.69%
+ 373  GoG_G6_48_Eh_BI                             32.95%    passed     67.13%
+ 374  GoG_G7_74_Eh_AN                             32.95%    passed     67.13%
+ 375  GoG_G8_38_Eh_AN                             32.95%    passed     67.13%
+ 376  GoG_G8_82_Eh_GH                             32.95%    passed     67.13%
+ 377  GoG_G9_73_Eh_GH                             32.95%    passed     67.13%
+ 378  GoG_G10_6_Eh_GH                             32.95%    passed     67.13%
+ 379  GoG_G9_92_Eh_GH                             34.29%    passed     53.31%
+ 380  GoG_G7_27_Eh_AN_1                           59.96%    passed     61.98%
+ 381  GoG_G9_88_Eh_GH                             59.96%    passed     61.98%
+ 382  GoG_G9_50_Eh_GH_1                           59.39%    passed     49.46%
+ 383  GoG_G6_49_Eh_BI                             32.95%    passed     67.13%
+ 384  GoG_G7_70_Eh_AN                             23.37%    passed     79.88%
+ 385  GoG_G7_75_Eh_AN                             25.86%    passed     75.51%
+ 386  GoG_G8_85_Eh_GH                             25.86%    passed     75.51%
+ 387  GoG_G10_1_Eh_GH                             25.86%    passed     75.51%
+ 388  GoG_G7_71_Eh_AN                             26.25%    passed     69.99%
+ 389  GoG_G7_77_Eh_AN                             26.25%    passed     69.99%
+ 390  GoG_G6_60_Hm_BI                             26.44%    passed     74.31%
+ 391  GoG_G7_80_Eh_AN                             26.44%    passed     74.31%
+ 392  GoG_G7_83_Eh_AN                             26.44%    passed     74.31%
+ 393  GoG_G7_68_Eh_AN                             27.01%    passed     76.74%
+ 394  GoG_G8_28_Eh_AN                             27.78%    passed     77.75%
+ 395  GoG_G4_30_Eh_BI                             28.74%    passed     71.84%
+ 396  GoG_G8_26_Eh_AN                             28.74%    passed     71.84%
+ 397  GoG_G7_46_Eh_AN                             23.56%    passed     88.36%
+ 398  GoG_G1_9_Eh_ST                              25.67%    passed     77.78%
+ 399  GoG_G1_27_Eh_ST                             25.48%    passed     79.70%
+ 400  GoG_G2_63_Eh_ST                             25.48%    passed     79.70%
+ 401  GoG_G2_73_Eh_PR                             25.48%    passed     79.70%
+ 402  GoG_G3_12_Eh_PR                             25.48%    passed     79.70%
+ 403  GoG_G3_26_Eh_PR                             25.48%    passed     79.70%
+ 404  GoG_G3_35_Eh_ST                             25.48%    passed     79.70%
+ 405  GoG_G4_2_Eh_ST                              25.48%    passed     79.70%
+ 406  GoG_G2_94_Eh_ST                             25.29%    passed     81.27%
+ 407  GoG_G3_43_Eh_ST                             23.75%    passed     89.07%
+ 408  GoG_G3_44_Eh_PR                             23.95%    passed     87.00%
+ 409  GoG_G4_18_Eh_ST                             25.86%    passed     75.65%
+ 410  GoG_G3_34_Eh_ST                             23.37%    passed     84.79%
+ 411  GoG_G3_86_Eh_ST                             23.37%    passed     84.79%
+ 412  GoG_G6_45_Eh_BI                             23.37%    passed     84.79%
+ 413  GoG_G6_64_Eh_BI                             23.37%    passed     84.79%
+ 414  GoG_G6_65_Eh_BI                             23.37%    passed     84.79%
+ 415  GoG_G6_69_Eh_BI                             23.37%    passed     84.79%
+ 416  GoG_G6_75_Eh_BI                             23.37%    passed     84.79%
+ 417  GoG_G6_78_Eh_BI                             23.37%    passed     84.79%
+ 418  GoG_G6_84_Eh_BI                             23.37%    passed     84.79%
+ 419  GoG_G6_86_Eh_BI                             23.37%    passed     84.79%
+ 420  GoG_G6_87_Eh_BI                             23.37%    passed     84.79%
+ 421  GoG_G6_91_Eh_BI                             23.37%    passed     84.79%
+ 422  GoG_G7_24_Eh_AN                             23.37%    passed     84.79%
+ 423  GoG_G7_32_Eh_AN                             23.37%    passed     84.79%
+ 424  GoG_G7_87_Eh_AN                             23.37%    passed     84.79%
+ 425  GoG_G8_10_Eh_AN                             23.37%    passed     84.79%
+ 426  GoG_G8_41_Eh_AN                             23.37%    passed     84.79%
+ 427  GoG_G8_64_Eh_PR                             23.37%    passed     84.79%
+ 428  GoG_G8_69_Eh_GH                             23.37%    passed     84.79%
+ 429  GoG_G8_70_Eh_GH                             23.37%    passed     84.79%
+ 430  GoG_G8_72_Eh_GH                             23.37%    passed     84.79%
+ 431  GoG_G8_80_Eh_GH                             23.37%    passed     84.79%
+ 432  GoG_G9_36_Eh_GH                             23.37%    passed     84.79%
+ 433  GoG_G9_38_Eh_GH                             23.37%    passed     84.79%
+ 434  GoG_G9_49_Eh_GH                             23.37%    passed     84.79%
+ 435  GoG_G9_62_Eh_GH                             23.37%    passed     84.79%
+ 436  GoG_G9_68_Eh_GH                             23.37%    passed     84.79%
+ 437  GoG_G9_70_Eh_GH                             23.37%    passed     84.79%
+ 438  GoG_G7_51_Eh_AN                             25.48%    passed     79.70%
+ 439  GoG_G8_8_Eh_AN                              25.48%    passed     79.70%
+ 440  GoG_G9_12_Eh_GH                             25.48%    passed     79.70%
+ 441  GoG_G9_24_Eh_GH                             25.48%    passed     79.70%
+ 442  GoG_G6_70_Eh_BI                             23.18%    passed     81.38%
+ 443  GoG_G7_41_Eh_AN                             23.75%    passed     89.07%
+ 444  GoG_G9_10_Eh_GH                             23.56%    passed     87.75%
+ 445  GoG_G7_43_Eh_AN                             24.14%    passed     84.64%
+ 446  GoG_G7_37_Eh_AN                             25.67%    passed     77.78%
+ 447  GoG_G8_30_Eh_AN                             25.67%    passed     77.78%
+ 448  GoG_G8_44_Eh_AN                             25.67%    passed     77.78%
+ 449  GoG_G9_22_Eh_GH                             25.67%    passed     77.78%
+ 450  GoG_G8_29_Eh_AN                             27.39%    passed     77.54%
+ 451  GoG_G10_4_Eh_GH                             35.25%    passed     72.13%
+ 452  GoG_G3_92_Eh_ST                             71.65%    passed     46.53%
+ 453  GoG_G11_6_Eh_GH                             40.04%    passed     61.40%
+ 454  GoG_G11_17_Eh_GH                            40.04%    passed     61.40%
+ 455  GoG_G8_6_Eh_AN                              23.37%    passed     85.42%
+ 456  GoG_G8_7_Eh_AN                              23.37%    passed     85.42%
+ 457  GoG_G8_13_Eh_AN                             23.37%    passed     85.42%
+ 458  GoG_G8_15_Eh_AN                             23.95%    passed     87.99%
+ 459  GoG_G8_11_Eh_AN                             24.14%    passed     80.23%
+ 460  GoG_G8_17_Eh_AN                             25.29%    passed     83.81%
+ 461  GoG_G2_24_Eh_ST                             25.86%    passed     78.57%
+ 462  GoG_G1_12_Eh_ST                             23.75%    passed     91.51%
+ 463  GoG_G4_33_Eh_BI                             34.48%    passed     76.35%
+ 464  GoG_G2_44_Eh_PR                             24.33%    passed     85.72%
+ 465  GoG_G2_5_Eh_ST                              25.67%    passed     80.31%
+ 466  GoG_G4_91_Eh_BI                             24.14%    passed     80.23%
+ 467  GoG_G4_74_Eh_BI                             23.56%    passed     83.43%
+ 468  GoG_G4_76_Eh_BI                             23.56%    passed     83.43%
+ 469  GoG_G7_73_Eh_AN                             23.56%    passed     83.43%
+ 470  GoG_G7_78_Eh_AN                             23.56%    passed     83.43%
+ 471  GoG_G7_85_Eh_AN                             23.56%    passed     83.43%
+ 472  GoG_G8_27_Eh_AN                             23.56%    passed     83.43%
+ 473  GoG_G8_86_Eh_GH                             23.56%    passed     83.43%
+ 474  GoG_G9_16_Eh_GH                             23.56%    passed     83.43%
+ 475  GoG_G9_30_Eh_GH                             23.56%    passed     83.43%
+ 476  GoG_G9_40_Eh_GH                             23.56%    passed     83.43%
+ 477  GoG_G9_48_Eh_GH                             23.56%    passed     83.43%
+ 478  GoG_G9_58_Eh_GH                             23.56%    passed     83.43%
+ 479  GoG_G9_86_Eh_GH                             23.56%    passed     83.43%
+ 480  GoG_G6_62_Eh_BI                             23.37%    passed     79.88%
+ 481  GoG_G7_79_Eh_AN                             25.86%    passed     82.29%
+ 482  GoG_G8_46_Eh_AN                             25.29%    passed     82.56%
+ 483  GoG_G4_78_Eh_BI                             30.08%    passed     84.18%
+ 484  GoG_G9_67_Eh_GH                             23.37%    passed     85.42%
+ 485  GoG_G4_20_Eh_PR                             23.56%    passed     83.43%
+ 486  GoG_G8_81_Eh_GH                             25.86%    passed     75.51%
+ 487  GoG_G4_68_Eh_BI                             26.25%    passed     79.53%
+ 488  GoG_G8_60_Eh_UNK                            23.75%    passed     81.73%
+ 489  GoG_G9_46_Eh_GH                             23.75%    passed     81.73%
+ 490  GoG_G9_8_Eh_GH                              25.86%    passed     75.51%
+ 491  GoG_G6_19_Eh_BI                             33.33%    passed     65.83%
+ 492  GoG_G6_42_Eh_BI                             23.18%    passed     81.38%
+ 493  GoG_G7_28_Eh_AN                             27.20%    passed     79.72%
+ 494  GoG_G6_43_Eh_BI                             25.67%    passed     83.14%
+ 495  GoG_G7_34_Eh_AN                             23.18%    passed     85.81%
+ 496  GoG_G8_54_Eh_AN                             23.95%    passed     81.26%
+ 497  GoG_G6_83_Eh_BI                             23.56%    passed     83.43%
+ 498  GoG_G9_55_Eh_GH                             23.56%    passed     82.43%
+ 499  GoG_G7_66_Eh_AN                             23.18%    passed     75.93%
+ 500  GoG_G2_12_Eh_PR                             25.86%    passed     81.80%
+ 501  GoG_G2_37_Eh_ST                             24.14%    passed     89.75%
+ 502  GoG_G2_51_Eh_ST                             24.14%    passed     91.18%
+ 503  GoG_G5_14_Eh_GH                             25.67%    passed     77.45%
+ 504  GoG_G2_19_Eh_ST                             27.20%    passed     73.05%
+ 505  GoG_G7_23_Eh_AN                             23.37%    passed     84.79%
+ 506  GoG_G8_14_Eh_AN                             25.86%    passed     75.65%
+ 507  GoG_G8_21_Eh_AN                             27.78%    passed     73.41%
+ 508  GoG_G8_49_Eh_AN                             23.56%    passed     77.49%
+ 509  GoG_G8_25_Eh_AN                             26.25%    passed     73.20%
+ 510  GoG_G6_37_Eh_BI                             25.48%    passed     79.70%
+ 511  GoG_G7_63_Eh_AN_1                           68.58%    passed     73.25%
+ 512  GoG_G3_32_Eh_ST                             25.86%    passed     78.24%
+ 513  GoG_G7_31_Eh_AN                             23.56%    passed     77.49%
+ 514  GoG_G7_6_Eh_BI                              34.10%    passed     75.67%
+ 515  GoG_G7_38_Eh_AN                             31.99%    passed     70.68%
+ 516  GoG_G8_4_Eh_AN                              23.75%    passed     81.17%
+ 517  GoG_G7_35_Eh_AN                             27.78%    passed     72.07%
+ 518  GoG_G8_5_Eh_AN                              22.99%    passed     83.61%
+ 519  GoG_G7_86_Eh_AN                             23.56%    passed     77.49%
+ 520  GoG_G6_46_Eh_BI                             25.29%    passed     78.50%
+ 521  GoG_G7_63_Eh_AN_2                           59.58%    passed     99.51%
+ 522  GoG_G3_72_Eh_PR                             32.18%    passed     88.33%
+ 523  GoG_G6_85_Eh_BI                             23.18%    passed     83.07%
+ 524  GoG_G7_27_Eh_AN_2                           41.95%    passed     97.57%
+ 525  GoG_G7_93_Eh_AN                             31.99%    passed     92.67%
+ 526  GoG_G9_37_Eh_GH                             23.75%    passed     81.73%
+ 527  GoG_G1_43_Eh_UNK                            23.95%    passed     90.48%
+ 528  GoG_G5_6_Eh_GH                              26.25%    passed     76.24%
+ 529  GoG_G4_83_Eh_BI                             30.27%    passed     78.26%
+ 530  GoG_G4_49_Eh_BI                             35.44%    passed     76.68%
+ 531  GoG_G4_79_Eh_BI                             25.29%    passed     79.61%
+ 532  GoG_G4_53_Eh_BI                             26.44%    passed     83.99%
+ 533  GoG_G2_67_Eh_ST                             25.86%    passed     78.57%
+ 534  GoG_G1_5_Eh_PR                              26.44%    passed     63.23%
+ 535  GoG_G7_39_Eh_AN                             29.89%    passed     81.13%
+ 536  GoG_G11_18_Eh_GH                            32.57%    passed     92.36%
+ 537  GoG_G8_48_Eh_AN_1                           32.57%    passed     88.17%
+ 538  GoG_G6_2_Eh_BI                              30.27%    passed     97.83%
+ 539  GoG_G4_57_Eh_BI                             32.57%    passed     62.39%
+ 540  GoG_G11_9_Eh_GH                             42.53%    passed     56.22%
+ 541  GoG_G9_50_Eh_GH_2                           34.10%    passed     94.05%
+ 542  GoG_G11_2_Eh_GH                             59.96%    passed     92.38%
+WARNING: 49 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                       34.53%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: GoG_G4_22_Eh_PR is identical to GoG_G4_85_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G7_53_Eh_AN_3 is identical to GoG_G7_53_Eh_AN_1 but kept for subsequent analysis
+NOTE: GoG_G9_25_Eh_GH is identical to GoG_G6_59_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G7_49_Eh_AN is identical to GoG_G2_66_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G8_42_Eh_AN is identical to GoG_G7_11_Eh_BI but kept for subsequent analysis
+NOTE: Bartonella.sp_Eidolon.helvum_E5_B40908_UG is identical to Bartonella.sp_Eidolon.helvum_E5_B39296_GH but kept for subsequent analysis
+NOTE: GoG_G9_66_Eh_GH is identical to GoG_G9_18_Eh_GH but kept for subsequent analysis
+NOTE: GoG_G9_13_Eh_GH is identical to GoG_G3_74_Eh_ST but kept for subsequent analysis
+NOTE: Bartonella.sp_Eidolon.helvum_E2_B40396_TA is identical to Bartonella.sp_Eidolon.helvum_E2_B39294_GH but kept for subsequent analysis
+NOTE: GoG_G9_32_Eh_GH is identical to GoG_G3_75_Eh_PR but kept for subsequent analysis
+NOTE: Bartonella.sp_Eidolon.helvum_E3_B39300_GH is identical to Bartonella.sp_Eidolon.helvum_E3_B32138_NI but kept for subsequent analysis
+NOTE: GoG_G11_11_Eh_GH is identical to GoG_G11_10_Eh_GH but kept for subsequent analysis
+NOTE: GoG_G9_41_Eh_GH is identical to GoG_G9_23_Eh_GH but kept for subsequent analysis
+NOTE: GoG_G6_50_Eh_BI_2 is identical to GoG_G6_3_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G10_48_Ra_GH is identical to GoG_G3_41_Ra_PR but kept for subsequent analysis
+NOTE: GoG_G10_36_Ra_GH is identical to GoG_G10_30_Ra_GH but kept for subsequent analysis
+NOTE: GoG_G10_31_Ra_GH is identical to GoG_G10_45_Ra_GH but kept for subsequent analysis
+NOTE: GoG_G10_51_Ra_GH is identical to GoG_G10_18_Ra_GH but kept for subsequent analysis
+NOTE: GoG_G6_51_Eh_UNK is identical to Bartonella.sp_Eidolon.helvum_E4_B39301_GH but kept for subsequent analysis
+NOTE: GoG_G6_74_Eh_BI is identical to GoG_G6_68_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G4_21_Eh_PR is identical to GoG_G3_56_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G2_3_Eh_PR is identical to GoG_G1_33_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G9_39_Eh_GH is identical to GoG_G9_21_Eh_GH but kept for subsequent analysis
+NOTE: GoG_G11_5_Eh_GH is identical to GoG_G9_77_Eh_GH but kept for subsequent analysis
+NOTE: GoG_G11_1_Eh_GH is identical to GoG_G6_58_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G6_41_Eh_BI is identical to GoG_G6_27_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G8_19_Eh_AN is identical to GoG_G2_54_Eh_PR but kept for subsequent analysis
+NOTE: GoG_G8_84_Eh_GH is identical to GoG_G3_85_Eh_PR but kept for subsequent analysis
+NOTE: GoG_G8_3_Eh_AN is identical to GoG_G6_71_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G3_71_Eh_PR is identical to GoG_G3_63_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G4_15_Eh_PR is identical to GoG_G3_59_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G2_20_Eh_ST is identical to GoG_G7_58_Eh_AN but kept for subsequent analysis
+NOTE: GoG_G9_56_Eh_GH is identical to GoG_G3_31_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G4_10_Eh_ST is identical to GoG_G1_20_Eh_PR but kept for subsequent analysis
+NOTE: GoG_G7_16_Eh_BI is identical to GoG_G6_1_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G2_74_Eh_PR is identical to GoG_G2_2_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G3_69_Eh_ST is identical to GoG_G2_8_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G6_18_Eh_BI is identical to GoG_G6_16_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G7_74_Eh_AN is identical to GoG_G6_48_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G9_88_Eh_GH is identical to GoG_G7_27_Eh_AN_1 but kept for subsequent analysis
+NOTE: GoG_G8_85_Eh_GH is identical to GoG_G7_75_Eh_AN but kept for subsequent analysis
+NOTE: GoG_G7_77_Eh_AN is identical to GoG_G7_71_Eh_AN but kept for subsequent analysis
+NOTE: GoG_G7_80_Eh_AN is identical to GoG_G6_60_Hm_BI but kept for subsequent analysis
+NOTE: GoG_G8_26_Eh_AN is identical to GoG_G4_30_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G7_37_Eh_AN is identical to GoG_G1_9_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G2_63_Eh_ST is identical to GoG_G1_27_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G7_41_Eh_AN is identical to GoG_G3_43_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G3_86_Eh_ST is identical to GoG_G3_34_Eh_ST but kept for subsequent analysis
+NOTE: GoG_G11_17_Eh_GH is identical to GoG_G11_6_Eh_GH but kept for subsequent analysis
+NOTE: GoG_G8_7_Eh_AN is identical to GoG_G8_6_Eh_AN but kept for subsequent analysis
+NOTE: GoG_G4_76_Eh_BI is identical to GoG_G4_74_Eh_BI but kept for subsequent analysis
+NOTE: GoG_G9_46_Eh_GH is identical to GoG_G8_60_Eh_UNK but kept for subsequent analysis
+NOTE: 91 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: GoG_G4_27_Eh_ST (identical to GoG_G4_85_Eh_BI) is ignored but added at the end
+NOTE: GoG_G8_52_Eh_AN (identical to GoG_G2_66_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_59_Eh_UNK (identical to GoG_G7_11_Eh_BI) is ignored but added at the end
+NOTE: GoG_G11_14_Eh_GH (identical to GoG_G11_10_Eh_GH) is ignored but added at the end
+NOTE: GoG_G6_63_Eh_BI (identical to Bartonella.sp_Eidolon.helvum_E4_B39301_GH) is ignored but added at the end
+NOTE: GoG_G9_42_Eh_GH (identical to Bartonella.sp_Eidolon.helvum_E4_B39301_GH) is ignored but added at the end
+NOTE: GoG_G5_3_Eh_GH (identical to GoG_G3_56_Eh_ST) is ignored but added at the end
+NOTE: GoG_G5_13_Eh_GH (identical to GoG_G3_56_Eh_ST) is ignored but added at the end
+NOTE: GoG_G3_33_Eh_ST (identical to GoG_G1_33_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_44_Eh_GH (identical to GoG_G9_21_Eh_GH) is ignored but added at the end
+NOTE: GoG_G10_7_Eh_GH (identical to GoG_G9_21_Eh_GH) is ignored but added at the end
+NOTE: GoG_G8_67_Eh_GH (identical to GoG_G9_21_Eh_GH) is ignored but added at the end
+NOTE: GoG_G9_54_Eh_GH (identical to GoG_G9_21_Eh_GH) is ignored but added at the end
+NOTE: GoG_G9_63_Eh_GH (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G3_80_Eh_PR (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G3_81_Eh_PR (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G3_82_Eh_PR (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G4_24_Eh_ST (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G6_35_Eh_BI (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G6_44_Eh_BI (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G6_92_Eh_BI (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G8_71_Eh_GH (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G8_83_Eh_GH (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G9_33_Eh_GH (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G9_60_Eh_GH (identical to GoG_G2_54_Eh_PR) is ignored but added at the end
+NOTE: GoG_G4_62_Eh_BI (identical to GoG_G3_63_Eh_ST) is ignored but added at the end
+NOTE: GoG_G3_83_Eh_PR (identical to GoG_G3_63_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_78_Eh_GH (identical to GoG_G3_63_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_40_Eh_BI (identical to GoG_G7_58_Eh_AN) is ignored but added at the end
+NOTE: GoG_G9_15_Eh_GH (identical to GoG_G6_1_Eh_BI) is ignored but added at the end
+NOTE: GoG_G4_87_Eh_BI (identical to GoG_G2_2_Eh_ST) is ignored but added at the end
+NOTE: GoG_G5_10_Eh_GH (identical to GoG_G2_2_Eh_ST) is ignored but added at the end
+NOTE: GoG_G5_11_Eh_GH (identical to GoG_G2_2_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_65_Eh_GH (identical to GoG_G6_16_Eh_BI) is ignored but added at the end
+NOTE: GoG_G8_38_Eh_AN (identical to GoG_G6_48_Eh_BI) is ignored but added at the end
+NOTE: GoG_G8_82_Eh_GH (identical to GoG_G6_48_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_73_Eh_GH (identical to GoG_G6_48_Eh_BI) is ignored but added at the end
+NOTE: GoG_G10_6_Eh_GH (identical to GoG_G6_48_Eh_BI) is ignored but added at the end
+NOTE: GoG_G6_49_Eh_BI (identical to GoG_G6_48_Eh_BI) is ignored but added at the end
+NOTE: GoG_G10_1_Eh_GH (identical to GoG_G7_75_Eh_AN) is ignored but added at the end
+NOTE: GoG_G7_83_Eh_AN (identical to GoG_G6_60_Hm_BI) is ignored but added at the end
+NOTE: GoG_G8_30_Eh_AN (identical to GoG_G1_9_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_44_Eh_AN (identical to GoG_G1_9_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_22_Eh_GH (identical to GoG_G1_9_Eh_ST) is ignored but added at the end
+NOTE: GoG_G2_73_Eh_PR (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G3_12_Eh_PR (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G3_26_Eh_PR (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G3_35_Eh_ST (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G4_2_Eh_ST (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G7_51_Eh_AN (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_8_Eh_AN (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_12_Eh_GH (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_24_Eh_GH (identical to GoG_G1_27_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_45_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_64_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_65_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_69_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_75_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_78_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_84_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_86_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_87_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G6_91_Eh_BI (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G7_24_Eh_AN (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G7_32_Eh_AN (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G7_87_Eh_AN (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_10_Eh_AN (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_41_Eh_AN (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_64_Eh_PR (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_69_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_70_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_72_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_80_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_36_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_38_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_49_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_62_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_68_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G9_70_Eh_GH (identical to GoG_G3_34_Eh_ST) is ignored but added at the end
+NOTE: GoG_G8_13_Eh_AN (identical to GoG_G8_6_Eh_AN) is ignored but added at the end
+NOTE: GoG_G7_73_Eh_AN (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G7_78_Eh_AN (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G7_85_Eh_AN (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G8_27_Eh_AN (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G8_86_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_16_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_30_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_40_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_48_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_58_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+NOTE: GoG_G9_86_Eh_GH (identical to GoG_G4_74_Eh_BI) is ignored but added at the end
+Alignment was printed to /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.041 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -3185.071
+Optimal log-likelihood: -3184.980
+Rate parameters:  A-C: 0.59789  A-G: 3.29615  A-T: 1.18807  C-G: 0.96306  C-T: 2.40767  G-T: 1.00000
+Base frequencies:  A: 0.219  C: 0.190  G: 0.267  T: 0.323
+Proportion of invariable sites: 0.275
+Gamma shape alpha: 1.495
+Parameters optimization took 1 rounds (0.334 sec)
+Time for fast ML tree search: 4.266 seconds
+
+NOTE: ModelFinder requires 60 MB RAM!
+ModelFinder will test up to 286 DNA models (sample size: 522) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         3284.315     907 8382.629     1655494.629  12244.334
+  2  GTR+F+I       3198.175     908 8212.349     1658956.349  12078.311
+  3  GTR+F+G4      3187.516     908 8191.032     1658935.032  12056.994
+  4  GTR+F+I+G4    3184.971     909 8187.943     1662567.943  12058.163
+  5  GTR+F+R2      3191.169     909 8200.338     1662580.338  12070.558
+  6  GTR+F+R3      3161.239     911 8144.478     1669808.478  12023.213
+  7  GTR+F+R4      3158.882     913 8143.765     1677107.765  12031.015
+ 19  SYM+R3        3173.639     908 8163.279     1658907.279  12029.241
+ 20  SYM+R4        3171.760     910 8163.520     1666183.520  12037.998
+ 32  TVM+F+R3      3163.232     910 8146.464     1666166.464  12020.941
+ 33  TVM+F+R4      3160.121     912 8144.241     1673456.241  12027.234
+ 45  TVMe+R3       3175.677     907 8165.355     1655277.355  12027.059
+ 46  TVMe+R4       3174.447     909 8166.895     1662546.895  12037.114
+ 58  TIM3+F+R3     3162.348     909 8142.696     1662522.696  12012.916
+ 59  TIM3+F+R4     3159.874     911 8141.748     1669805.748  12020.483
+ 71  TIM3e+R3      3174.857     906 8161.715     1651645.715  12019.162
+ 72  TIM3e+R4      3173.156     908 8162.311     1658906.311  12028.273
+ 84  TIM2+F+R3     3164.710     909 8147.421     1662527.421  12017.641
+ 85  TIM2+F+R4     3161.944     911 8145.887     1669809.887  12024.622
+ 97  TIM2e+R3      3185.472     906 8182.944     1651666.944  12040.390
+ 98  TIM2e+R4      3184.273     908 8184.547     1658928.547  12050.509
+110  TIM+F+R3      3163.756     909 8145.513     1662525.513  12015.733
+111  TIM+F+R4      3162.601     911 8147.203     1669811.203  12025.938
+123  TIMe+R3       3184.970     906 8181.941     1651665.941  12039.388
+124  TIMe+R4       3182.606     908 8181.213     1658925.213  12047.175
+136  TPM3u+F+R3    3164.390     908 8144.780     1658888.780  12010.742
+137  TPM3u+F+R4    3162.995     910 8145.990     1666165.990  12020.467
+149  TPM3+F+R3     3164.356     908 8144.712     1658888.712  12010.675
+150  TPM3+F+R4     3163.035     910 8146.069     1666166.069  12020.547
+162  TPM2u+F+R3    3166.607     908 8149.214     1658893.214  12015.176
+163  TPM2u+F+R4    3165.709     910 8151.418     1666171.418  12025.895
+175  TPM2+F+R3     3166.607     908 8149.214     1658893.214  12015.176
+176  TPM2+F+R4     3165.709     910 8151.418     1666171.418  12025.895
+188  K3Pu+F+R3     3165.639     908 8147.278     1658891.278  12013.240
+189  K3Pu+F+R4     3163.042     910 8146.084     1666166.084  12020.561
+201  K3P+R3        3187.244     905 8184.488     1648044.488  12037.678
+202  K3P+R4        3184.854     907 8183.708     1655295.708  12045.413
+214  TN+F+R3       3164.759     908 8145.518     1658889.518  12011.480
+215  TN+F+R4       3162.701     910 8145.403     1666165.403  12019.880
+227  TNe+R3        3185.555     905 8181.110     1648041.110  12034.299
+228  TNe+R4        3183.110     907 8180.219     1655292.219  12041.924
+240  HKY+F+R3      3166.673     907 8147.345     1655259.345  12009.050
+241  HKY+F+R4      3165.959     909 8149.918     1662529.918  12020.138
+253  K2P+R3        3187.855     904 8183.711     1644423.711  12032.642
+254  K2P+R4        3185.139     906 8182.279     1651666.279  12039.726
+266  F81+F+R3      3218.542     906 8249.083     1651733.083  12106.530
+267  F81+F+R4      3216.006     908 8248.012     1658992.012  12113.974
+279  JC+R3         3234.498     903 8274.995     1640898.995  12119.669
+280  JC+R4         3233.887     905 8277.774     1648137.774  12130.963
+Akaike Information Criterion:           TIM3+F+R4
+Corrected Akaike Information Criterion: JC+R3
+Bayesian Information Criterion:         HKY+F+R3
+Best-fit model: HKY+F+R3 chosen according to BIC
+
+All model information printed to /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.model.gz
+CPU time for ModelFinder: 570.335 seconds (0h:9m:30s)
+Wall-clock time for ModelFinder: 619.311 seconds (0h:10m:19s)
+Generating 1000 samples for ultrafast bootstrap (seed: 438663)...
+
+NOTE: 19 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3166.673
+Optimal log-likelihood: -3166.661
+Rate parameters:  A-C: 1.00000  A-G: 2.88634  A-T: 1.00000  C-G: 1.00000  C-T: 2.88634  G-T: 1.00000
+Base frequencies:  A: 0.219  C: 0.190  G: 0.267  T: 0.323
+Site proportion and rates:  (0.612,0.203) (0.378,1.710) (0.010,22.476)
+Parameters optimization took 1 rounds (0.500 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 4.625781 sec (of wall-clock time) 4.377912 sec(of CPU time)
+Computing RapidNJ tree took 0.020341 sec (of wall-clock time) 0.036688 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -3533.741
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.556 second
+Computing log-likelihood of 98 initial trees ... 4.508 seconds
+Current best score: -3160.074
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -3140.916
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -3133.022
+Iteration 10 / LogL: -3156.844 / Time: 0h:1m:53s
+Iteration 20 / LogL: -3154.458 / Time: 0h:4m:0s
+Finish initializing candidate tree set (20)
+Current best tree score: -3133.022 / CPU time: 234.359
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -3131.506
+Iteration 30 / LogL: -3133.533 / Time: 0h:5m:28s (0h:18m:31s left)
+Iteration 40 / LogL: -3151.696 / Time: 0h:6m:32s (0h:14m:44s left)
+Iteration 50 / LogL: -3135.147 / Time: 0h:7m:34s (0h:12m:4s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 52: -3131.065
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 53: -3130.354
+Iteration 60 / LogL: -3138.495 / Time: 0h:8m:25s (0h:13m:16s left)
+Iteration 70 / LogL: -3149.198 / Time: 0h:9m:9s (0h:11m:0s left)
+Iteration 80 / LogL: -3181.895 / Time: 0h:10m:0s (0h:9m:14s left)
+Iteration 90 / LogL: -3149.336 / Time: 0h:10m:43s (0h:7m:35s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 91: -3129.721
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 97: -3129.688
+Iteration 100 / LogL: -3130.817 / Time: 0h:11m:48s (0h:11m:34s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.925
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -3150.395 / Time: 0h:12m:37s (0h:10m:25s left)
+Iteration 120 / LogL: -3138.151 / Time: 0h:13m:18s (0h:8m:56s left)
+BETTER TREE FOUND at iteration 124: -3129.684
+Iteration 130 / LogL: -3152.674 / Time: 0h:14m:15s (0h:10m:23s left)
+Iteration 140 / LogL: -3144.322 / Time: 0h:15m:1s (0h:9m:4s left)
+BETTER TREE FOUND at iteration 141: -3129.684
+BETTER TREE FOUND at iteration 144: -3129.683
+Iteration 150 / LogL: -3149.224 / Time: 0h:15m:47s (0h:9m:57s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 160 / LogL: -3135.006 / Time: 0h:16m:58s (0h:8m:58s left)
+Iteration 170 / LogL: -3130.475 / Time: 0h:17m:46s (0h:7m:47s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 171: -3129.600
+Iteration 180 / LogL: -3135.444 / Time: 0h:18m:36s (0h:9m:27s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 189: -3129.487
+Iteration 190 / LogL: -3149.766 / Time: 0h:19m:56s (0h:10m:26s left)
+Iteration 200 / LogL: -3149.347 / Time: 0h:20m:54s (0h:9m:20s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.943
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -3148.429 / Time: 0h:21m:48s (0h:9m:23s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 217: -3129.379
+Iteration 220 / LogL: -3129.576 / Time: 0h:22m:52s (0h:10m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 225: -3129.362
+Iteration 230 / LogL: -3149.200 / Time: 0h:23m:58s (0h:9m:56s left)
+Iteration 240 / LogL: -3130.297 / Time: 0h:25m:18s (0h:9m:0s left)
+Iteration 250 / LogL: -3129.738 / Time: 0h:26m:26s (0h:7m:57s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 260 / LogL: -3135.283 / Time: 0h:27m:51s (0h:6m:59s left)
+Iteration 270 / LogL: -3147.529 / Time: 0h:29m:0s (0h:5m:55s left)
+Iteration 280 / LogL: -3129.379 / Time: 0h:30m:11s (0h:4m:52s left)
+Iteration 290 / LogL: -3163.741 / Time: 0h:30m:59s (0h:3m:45s left)
+Iteration 300 / LogL: -3129.373 / Time: 0h:32m:0s (0h:2m:40s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.936
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 301: -3129.283
+BETTER TREE FOUND at iteration 305: -3129.280
+Iteration 310 / LogL: -3129.797 / Time: 0h:33m:6s (0h:10m:10s left)
+Iteration 320 / LogL: -3133.798 / Time: 0h:34m:19s (0h:9m:8s left)
+BETTER TREE FOUND at iteration 327: -3129.277
+Iteration 330 / LogL: -3134.601 / Time: 0h:35m:12s (0h:10m:22s left)
+Iteration 340 / LogL: -3135.302 / Time: 0h:36m:28s (0h:9m:21s left)
+Iteration 350 / LogL: -3129.328 / Time: 0h:37m:34s (0h:8m:17s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 360 / LogL: -3167.893 / Time: 0h:38m:32s (0h:7m:11s left)
+Iteration 370 / LogL: -3141.402 / Time: 0h:39m:30s (0h:6m:6s left)
+Iteration 380 / LogL: -3137.134 / Time: 0h:40m:45s (0h:5m:3s left)
+Iteration 390 / LogL: -3132.148 / Time: 0h:41m:55s (0h:3m:59s left)
+Iteration 400 / LogL: -3132.149 / Time: 0h:42m:47s (0h:2m:53s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.921
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 410 / LogL: -3167.808 / Time: 0h:43m:57s (0h:9m:40s left)
+Iteration 420 / LogL: -3138.446 / Time: 0h:45m:13s (0h:8m:38s left)
+Iteration 430 / LogL: -3135.485 / Time: 0h:46m:18s (0h:7m:33s left)
+Iteration 440 / LogL: -3147.660 / Time: 0h:47m:25s (0h:6m:28s left)
+Iteration 450 / LogL: -3134.224 / Time: 0h:48m:34s (0h:5m:24s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 460 / LogL: -3173.365 / Time: 0h:49m:36s (0h:4m:19s left)
+Iteration 470 / LogL: -3136.109 / Time: 0h:50m:46s (0h:3m:14s left)
+Iteration 480 / LogL: -3129.714 / Time: 0h:51m:59s (0h:2m:10s left)
+Iteration 490 / LogL: -3133.139 / Time: 0h:53m:12s (0h:1m:5s left)
+Iteration 500 / LogL: -3144.510 / Time: 0h:54m:20s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.927
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 510 / LogL: -3129.306 / Time: 0h:55m:34s (0h:9m:49s left)
+Iteration 520 / LogL: -3135.460 / Time: 0h:56m:52s (0h:8m:46s left)
+Iteration 530 / LogL: -3129.298 / Time: 0h:58m:12s (0h:7m:42s left)
+Iteration 540 / LogL: -3133.851 / Time: 0h:59m:23s (0h:6m:36s left)
+Iteration 550 / LogL: -3129.612 / Time: 1h:0m:36s (0h:5m:31s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 560 / LogL: -3129.278 / Time: 1h:1m:51s (0h:4m:25s left)
+Iteration 570 / LogL: -3137.521 / Time: 1h:3m:10s (0h:3m:19s left)
+Iteration 580 / LogL: -3134.841 / Time: 1h:4m:28s (0h:2m:13s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 586: -3128.726
+BETTER TREE FOUND at iteration 589: -3128.717
+Iteration 590 / LogL: -3131.836 / Time: 1h:5m:45s (0h:11m:3s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 594: -3128.696
+Iteration 600 / LogL: -3131.213 / Time: 1h:6m:59s (0h:10m:30s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.925
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 610 / LogL: -3129.085 / Time: 1h:8m:31s (0h:10m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 615: -3128.486
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 617: -3128.462
+Iteration 620 / LogL: -3129.962 / Time: 1h:9m:53s (0h:10m:57s left)
+Iteration 630 / LogL: -3232.903 / Time: 1h:11m:5s (0h:9m:49s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 639: -3128.382
+Iteration 640 / LogL: -3128.384 / Time: 1h:12m:27s (0h:11m:13s left)
+Iteration 650 / LogL: -3132.554 / Time: 1h:13m:50s (0h:10m:7s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 660 / LogL: -3128.383 / Time: 1h:15m:22s (0h:9m:2s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 669: -3128.361
+Iteration 670 / LogL: -3166.072 / Time: 1h:16m:46s (0h:11m:21s left)
+Iteration 680 / LogL: -3153.785 / Time: 1h:18m:11s (0h:10m:14s left)
+Iteration 690 / LogL: -3134.363 / Time: 1h:19m:25s (0h:9m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 695: -3128.347
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 700: -3127.979
+Iteration 700 / LogL: -3127.979 / Time: 1h:20m:51s (0h:11m:34s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.936
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 710 / LogL: -3128.344 / Time: 1h:22m:21s (0h:10m:27s left)
+Iteration 720 / LogL: -3128.015 / Time: 1h:23m:49s (0h:9m:19s left)
+Iteration 730 / LogL: -3152.157 / Time: 1h:25m:16s (0h:8m:11s left)
+BETTER TREE FOUND at iteration 739: -3127.973
+Iteration 740 / LogL: -3130.979 / Time: 1h:27m:0s (0h:11m:39s left)
+Iteration 750 / LogL: -3127.978 / Time: 1h:28m:32s (0h:10m:31s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 760 / LogL: -3127.973 / Time: 1h:30m:6s (0h:9m:22s left)
+Iteration 770 / LogL: -3164.961 / Time: 1h:31m:36s (0h:8m:13s left)
+Iteration 780 / LogL: -3135.706 / Time: 1h:33m:19s (0h:7m:4s left)
+Iteration 790 / LogL: -3156.922 / Time: 1h:34m:43s (0h:5m:52s left)
+Iteration 800 / LogL: -3163.267 / Time: 1h:36m:4s (0h:4m:41s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.929
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 810 / LogL: -3134.241 / Time: 1h:37m:43s (0h:10m:52s left)
+BETTER TREE FOUND at iteration 818: -3127.968
+Iteration 820 / LogL: -3128.227 / Time: 1h:39m:20s (0h:11m:53s left)
+Iteration 830 / LogL: -3134.622 / Time: 1h:40m:51s (0h:10m:42s left)
+Iteration 840 / LogL: -3136.211 / Time: 1h:42m:19s (0h:9m:30s left)
+Iteration 850 / LogL: -3134.687 / Time: 1h:44m:2s (0h:8m:19s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 860 / LogL: -3141.049 / Time: 1h:45m:41s (0h:7m:8s left)
+Iteration 870 / LogL: -3127.971 / Time: 1h:47m:16s (0h:5m:55s left)
+Iteration 880 / LogL: -3179.760 / Time: 1h:48m:48s (0h:4m:42s left)
+Iteration 890 / LogL: -3128.251 / Time: 1h:50m:22s (0h:3m:28s left)
+Iteration 900 / LogL: -3130.559 / Time: 1h:51m:59s (0h:2m:14s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.900
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 910 / LogL: -3128.000 / Time: 1h:53m:39s (0h:11m:15s left)
+Iteration 920 / LogL: -3130.567 / Time: 1h:55m:16s (0h:10m:2s left)
+Iteration 930 / LogL: -3128.409 / Time: 1h:56m:49s (0h:8m:48s left)
+Iteration 940 / LogL: -3127.970 / Time: 1h:58m:23s (0h:7m:33s left)
+Iteration 950 / LogL: -3130.957 / Time: 1h:59m:55s (0h:6m:19s left)
+Log-likelihood cutoff on original alignment: -3176.692
+Iteration 960 / LogL: -3163.999 / Time: 2h:1m:42s (0h:5m:4s left)
+Iteration 970 / LogL: -3127.983 / Time: 2h:3m:23s (0h:3m:49s left)
+BETTER TREE FOUND at iteration 975: -3127.968
+Iteration 980 / LogL: -3149.475 / Time: 2h:5m:7s (0h:12m:8s left)
+Iteration 990 / LogL: -3172.997 / Time: 2h:7m:27s (0h:10m:57s left)
+Iteration 1000 / LogL: -3130.793 / Time: 2h:10m:18s (0h:9m:46s left)
+Log-likelihood cutoff on original alignment: -3176.692
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.892
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+WARNING: bootstrap analysis did not converge. You should rerun with higher number of iterations (-nm option)
+TREE SEARCH COMPLETED AFTER 1001 ITERATIONS / Time: 2h:10m:54s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -3127.968
+Optimal log-likelihood: -3127.966
+Rate parameters:  A-C: 1.00000  A-G: 3.05566  A-T: 1.00000  C-G: 1.00000  C-T: 3.05566  G-T: 1.00000
+Base frequencies:  A: 0.219  C: 0.190  G: 0.267  T: 0.323
+Site proportion and rates:  (0.588,0.183) (0.402,1.741) (0.009,20.232)
+Parameters optimization took 1 rounds (0.712 sec)
+BEST SCORE FOUND : -3127.966
+Creating bootstrap support values...
+Split supports printed to NEXUS file /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.splits.nex
+Total tree length: 2.116
+
+Total number of iterations: 1001
+CPU time used for tree search: 7590.856 sec (2h:6m:30s)
+Wall-clock time used for tree search: 7848.126 sec (2h:10m:48s)
+Total CPU time used: 7608.428 sec (2h:6m:48s)
+Total wall-clock time used: 7867.850 sec (2h:11m:7s)
+
+Computing bootstrap consensus tree...
+Reading input file /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.splits.nex...
+451 taxa and 26508 splits.
+Consensus tree written to /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.contree
+Reading input trees file /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.contree
+Log-likelihood of consensus tree: -3128.815
+
+Analysis results written to: 
+  IQ-TREE report:                /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.iqtree
+  Maximum-likelihood tree:       /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.treefile
+  Likelihood distances:          /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.splits.nex
+  Consensus tree:                /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.contree
+  Screen log file:               /Applications/iqtree-2.1.3-MacOSX/bin/ITS_seqs_revcomp_correct_mafft.fasta.log
+
+Date and Time: Tue Apr 23 22:16:30 2024

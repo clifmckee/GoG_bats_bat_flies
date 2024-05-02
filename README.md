@@ -3,4 +3,4 @@ Data and code for the analysis of *Bartonella* prevalence and diversity in bat f
 
 Shape files for bat geographic ranges (and all other terrestrial mammals) are available from [IUCN](https://www.iucnredlist.org/resources/spatial-data-download).
 
-One large (100 MB) data file 'mammterr.RData' is available by request ([clifton.mckee@gmail.com](mailto:clifton.mckee@gmail.com)).
+One large (300 MB) data file 'mammterr.RData' is available by request ([clifton.mckee@gmail.com](mailto:clifton.mckee@gmail.com)).
