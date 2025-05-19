@@ -4,3 +4,5 @@ Files from [McKee et al. (2024) Parasitology](https://doi.org/10.1017/S003118202
 Shape files for bat geographic ranges (and all other terrestrial mammals) are available from [IUCN](https://www.iucnredlist.org/resources/spatial-data-download).
 
 One large (300 MB) data file 'mammterr.RData' is available by request ([clifton.mckee@gmail.com](mailto:clifton.mckee@gmail.com)).
+
+![](./Results/GoG_graphical_abstract_annotated.pdf)
